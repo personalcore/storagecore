@@ -7,10 +7,10 @@ import (
 	"sort"
 	"strings"
 
-	"github.com/rclone/rclone/fs"
-	"github.com/rclone/rclone/fs/accounting"
-	"github.com/rclone/rclone/fs/filter"
-	"github.com/rclone/rclone/lib/bucket"
+	"github.com/personalcore/storagecore/fs"
+	"github.com/personalcore/storagecore/fs/accounting"
+	"github.com/personalcore/storagecore/fs/filter"
+	"github.com/personalcore/storagecore/lib/bucket"
 )
 
 // DirSorted reads Object and *Dir into entries for the given Fs.

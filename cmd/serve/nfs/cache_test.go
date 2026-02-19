@@ -9,9 +9,9 @@ import (
 	"sync"
 	"testing"
 
-	"github.com/rclone/rclone/fs"
-	"github.com/rclone/rclone/fs/object"
-	"github.com/rclone/rclone/vfs"
+	"github.com/personalcore/storagecore/fs"
+	"github.com/personalcore/storagecore/fs/object"
+	"github.com/personalcore/storagecore/vfs"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 )

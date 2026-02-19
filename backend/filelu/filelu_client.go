@@ -8,10 +8,10 @@ import (
 	"net/url"
 	"strings"
 
-	"github.com/rclone/rclone/backend/filelu/api"
-	"github.com/rclone/rclone/fs"
-	"github.com/rclone/rclone/fs/fserrors"
-	"github.com/rclone/rclone/lib/rest"
+	"github.com/personalcore/storagecore/backend/filelu/api"
+	"github.com/personalcore/storagecore/fs"
+	"github.com/personalcore/storagecore/fs/fserrors"
+	"github.com/personalcore/storagecore/lib/rest"
 )
 
 // multipartInit starts a new multipart upload and returns server details.

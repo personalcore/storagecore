@@ -6,8 +6,8 @@ import (
 	"path/filepath"
 	"strings"
 
-	"github.com/rclone/rclone/cmd/bisync/bilib"
-	"github.com/rclone/rclone/fs"
+	"github.com/personalcore/storagecore/cmd/bisync/bilib"
+	"github.com/personalcore/storagecore/fs"
 	"github.com/stretchr/testify/assert"
 	"gopkg.in/yaml.v3"
 )

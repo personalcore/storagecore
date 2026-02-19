@@ -8,8 +8,8 @@ import (
 	"fmt"
 	"log/slog"
 
-	"github.com/rclone/rclone/fs"
-	"github.com/rclone/rclone/lib/atexit"
+	"github.com/personalcore/storagecore/fs"
+	"github.com/personalcore/storagecore/lib/atexit"
 	"golang.org/x/sys/windows"
 	"golang.org/x/sys/windows/svc/eventlog"
 )

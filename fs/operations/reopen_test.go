@@ -6,11 +6,11 @@ import (
 	"io"
 	"testing"
 
-	"github.com/rclone/rclone/fs"
-	"github.com/rclone/rclone/fs/hash"
-	"github.com/rclone/rclone/fstest/mockobject"
-	"github.com/rclone/rclone/lib/pool"
-	"github.com/rclone/rclone/lib/readers"
+	"github.com/personalcore/storagecore/fs"
+	"github.com/personalcore/storagecore/fs/hash"
+	"github.com/personalcore/storagecore/fstest/mockobject"
+	"github.com/personalcore/storagecore/lib/pool"
+	"github.com/personalcore/storagecore/lib/readers"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 )

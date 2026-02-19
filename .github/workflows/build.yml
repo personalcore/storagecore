@@ -333,7 +333,7 @@ jobs:
           echo "RCLONE_NDK_VERSION=21" >> $GITHUB_ENV
 
       - name: arm-v7a gomobile build
-        run: env PATH=$PATH:~/go/bin gomobile bind -androidapi ${RCLONE_NDK_VERSION} -v -target=android/arm -javapkg=org.rclone -ldflags '-s -X github.com/rclone/rclone/fs.Version='${VERSION} github.com/rclone/rclone/librclone/gomobile
+        run: env PATH=$PATH:~/go/bin gomobile bind -androidapi ${RCLONE_NDK_VERSION} -v -target=android/arm -javapkg=org.rclone -ldflags '-s -X github.com/personalcore/storagecore/fs.Version='${VERSION} github.com/personalcore/storagecore/librclone/gomobile
 
       - name: arm-v7a Set environment variables
         run: |
@@ -346,7 +346,7 @@ jobs:
           echo 'CGO_LDFLAGS=-fuse-ld=lld -s -w' >> $GITHUB_ENV
 
       - name: arm-v7a build
-        run: go build -v -tags android -trimpath -ldflags '-s -X github.com/rclone/rclone/fs.Version='${VERSION} -o build/rclone-android-${RCLONE_NDK_VERSION}-armv7a .
+        run: go build -v -tags android -trimpath -ldflags '-s -X github.com/personalcore/storagecore/fs.Version='${VERSION} -o build/rclone-android-${RCLONE_NDK_VERSION}-armv7a .
 
       - name: arm64-v8a Set environment variables
         run: |
@@ -358,7 +358,7 @@ jobs:
           echo 'CGO_LDFLAGS=-fuse-ld=lld -s -w' >> $GITHUB_ENV
 
       - name: arm64-v8a build
-        run: go build -v -tags android -trimpath -ldflags '-s -X github.com/rclone/rclone/fs.Version='${VERSION} -o build/rclone-android-${RCLONE_NDK_VERSION}-armv8a .
+        run: go build -v -tags android -trimpath -ldflags '-s -X github.com/personalcore/storagecore/fs.Version='${VERSION} -o build/rclone-android-${RCLONE_NDK_VERSION}-armv8a .
 
       - name: x86 Set environment variables
         run: |
@@ -370,7 +370,7 @@ jobs:
           echo 'CGO_LDFLAGS=-fuse-ld=lld -s -w' >> $GITHUB_ENV
 
       - name: x86 build
-        run: go build -v -tags android -trimpath -ldflags '-s -X github.com/rclone/rclone/fs.Version='${VERSION} -o build/rclone-android-${RCLONE_NDK_VERSION}-x86 .
+        run: go build -v -tags android -trimpath -ldflags '-s -X github.com/personalcore/storagecore/fs.Version='${VERSION} -o build/rclone-android-${RCLONE_NDK_VERSION}-x86 .
 
       - name: x64 Set environment variables
         run: |
@@ -382,7 +382,7 @@ jobs:
           echo 'CGO_LDFLAGS=-fuse-ld=lld -s -w' >> $GITHUB_ENV
 
       - name: x64 build
-        run: go build -v -tags android -trimpath -ldflags '-s -X github.com/rclone/rclone/fs.Version='${VERSION} -o build/rclone-android-${RCLONE_NDK_VERSION}-x64 .
+        run: go build -v -tags android -trimpath -ldflags '-s -X github.com/personalcore/storagecore/fs.Version='${VERSION} -o build/rclone-android-${RCLONE_NDK_VERSION}-x64 .
 
       - name: Upload artifacts
         run: |

@@ -6,17 +6,17 @@ import (
 	"testing"
 
 	"github.com/mholt/archives"
-	_ "github.com/rclone/rclone/backend/local"
-	_ "github.com/rclone/rclone/backend/memory"
-	"github.com/rclone/rclone/fs"
-	"github.com/rclone/rclone/fs/operations"
-	"github.com/rclone/rclone/fstest"
+	_ "github.com/personalcore/storagecore/backend/local"
+	_ "github.com/personalcore/storagecore/backend/memory"
+	"github.com/personalcore/storagecore/fs"
+	"github.com/personalcore/storagecore/fs/operations"
+	"github.com/personalcore/storagecore/fstest"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 
-	"github.com/rclone/rclone/cmd/archive/create"
-	"github.com/rclone/rclone/cmd/archive/extract"
-	"github.com/rclone/rclone/cmd/archive/list"
+	"github.com/personalcore/storagecore/cmd/archive/create"
+	"github.com/personalcore/storagecore/cmd/archive/extract"
+	"github.com/personalcore/storagecore/cmd/archive/list"
 )
 
 var (

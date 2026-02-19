@@ -15,9 +15,9 @@ import (
 	"sync/atomic"
 	"time"
 
-	"github.com/rclone/rclone/fs"
-	"github.com/rclone/rclone/lib/file"
-	"github.com/rclone/rclone/lib/random"
+	"github.com/personalcore/storagecore/fs"
+	"github.com/personalcore/storagecore/lib/file"
+	"github.com/personalcore/storagecore/lib/random"
 )
 
 var (

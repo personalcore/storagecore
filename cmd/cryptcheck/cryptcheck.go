@@ -5,12 +5,12 @@ import (
 	"context"
 	"fmt"
 
-	"github.com/rclone/rclone/backend/crypt"
-	"github.com/rclone/rclone/cmd"
-	"github.com/rclone/rclone/cmd/check"
-	"github.com/rclone/rclone/fs"
-	"github.com/rclone/rclone/fs/hash"
-	"github.com/rclone/rclone/fs/operations"
+	"github.com/personalcore/storagecore/backend/crypt"
+	"github.com/personalcore/storagecore/cmd"
+	"github.com/personalcore/storagecore/cmd/check"
+	"github.com/personalcore/storagecore/fs"
+	"github.com/personalcore/storagecore/fs/hash"
+	"github.com/personalcore/storagecore/fs/operations"
 	"github.com/spf13/cobra"
 )
 

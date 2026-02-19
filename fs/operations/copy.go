@@ -15,13 +15,13 @@ import (
 	"time"
 	"unicode/utf8"
 
-	"github.com/rclone/rclone/fs"
-	"github.com/rclone/rclone/fs/accounting"
-	"github.com/rclone/rclone/fs/fserrors"
-	"github.com/rclone/rclone/fs/hash"
-	"github.com/rclone/rclone/lib/atexit"
-	"github.com/rclone/rclone/lib/pacer"
-	"github.com/rclone/rclone/lib/transform"
+	"github.com/personalcore/storagecore/fs"
+	"github.com/personalcore/storagecore/fs/accounting"
+	"github.com/personalcore/storagecore/fs/fserrors"
+	"github.com/personalcore/storagecore/fs/hash"
+	"github.com/personalcore/storagecore/lib/atexit"
+	"github.com/personalcore/storagecore/lib/pacer"
+	"github.com/personalcore/storagecore/lib/transform"
 )
 
 // State of the copy

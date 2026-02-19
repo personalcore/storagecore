@@ -29,21 +29,21 @@ import (
 	"sync/atomic"
 	"time"
 
-	"github.com/rclone/rclone/backend/drime/api"
-	"github.com/rclone/rclone/fs"
-	"github.com/rclone/rclone/fs/chunksize"
-	"github.com/rclone/rclone/fs/config"
-	"github.com/rclone/rclone/fs/config/configmap"
-	"github.com/rclone/rclone/fs/config/configstruct"
-	"github.com/rclone/rclone/fs/fserrors"
-	"github.com/rclone/rclone/fs/fshttp"
-	"github.com/rclone/rclone/fs/hash"
-	"github.com/rclone/rclone/lib/dircache"
-	"github.com/rclone/rclone/lib/encoder"
-	"github.com/rclone/rclone/lib/multipart"
-	"github.com/rclone/rclone/lib/pacer"
-	"github.com/rclone/rclone/lib/random"
-	"github.com/rclone/rclone/lib/rest"
+	"github.com/personalcore/storagecore/backend/drime/api"
+	"github.com/personalcore/storagecore/fs"
+	"github.com/personalcore/storagecore/fs/chunksize"
+	"github.com/personalcore/storagecore/fs/config"
+	"github.com/personalcore/storagecore/fs/config/configmap"
+	"github.com/personalcore/storagecore/fs/config/configstruct"
+	"github.com/personalcore/storagecore/fs/fserrors"
+	"github.com/personalcore/storagecore/fs/fshttp"
+	"github.com/personalcore/storagecore/fs/hash"
+	"github.com/personalcore/storagecore/lib/dircache"
+	"github.com/personalcore/storagecore/lib/encoder"
+	"github.com/personalcore/storagecore/lib/multipart"
+	"github.com/personalcore/storagecore/lib/pacer"
+	"github.com/personalcore/storagecore/lib/random"
+	"github.com/personalcore/storagecore/lib/rest"
 )
 
 const (
@@ -414,7 +414,7 @@ func NewFs(ctx context.Context, name, root string, m configmap.Mapper) (fs.Fs, e
 		f.features.Fill(ctx, &tempF)
 		// XXX: update the old f here instead of returning tempF, since
 		// `features` were already filled with functions having *f as a receiver.
-		// See https://github.com/rclone/rclone/issues/2182
+		// See https://github.com/personalcore/storagecore/issues/2182
 		f.dirCache = tempF.dirCache
 		f.root = tempF.root
 		// return an error with an fs which points to the parent

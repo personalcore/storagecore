@@ -10,12 +10,12 @@ import (
 
 	"github.com/spf13/cobra"
 
-	"github.com/rclone/rclone/cmd"
-	"github.com/rclone/rclone/cmd/mountlib"
-	"github.com/rclone/rclone/cmd/serve"
-	"github.com/rclone/rclone/fs/config/flags"
-	"github.com/rclone/rclone/vfs"
-	"github.com/rclone/rclone/vfs/vfsflags"
+	"github.com/personalcore/storagecore/cmd"
+	"github.com/personalcore/storagecore/cmd/mountlib"
+	"github.com/personalcore/storagecore/cmd/serve"
+	"github.com/personalcore/storagecore/fs/config/flags"
+	"github.com/personalcore/storagecore/vfs"
+	"github.com/personalcore/storagecore/vfs/vfsflags"
 )
 
 var (

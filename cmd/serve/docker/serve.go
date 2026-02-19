@@ -10,9 +10,9 @@ import (
 	"path/filepath"
 	"runtime"
 
-	"github.com/rclone/rclone/fs"
-	"github.com/rclone/rclone/lib/atexit"
-	"github.com/rclone/rclone/lib/file"
+	"github.com/personalcore/storagecore/fs"
+	"github.com/personalcore/storagecore/lib/atexit"
+	"github.com/personalcore/storagecore/lib/file"
 )
 
 // Server connects plugin with docker daemon by protocol

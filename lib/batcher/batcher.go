@@ -15,9 +15,9 @@ import (
 	"sync"
 	"time"
 
-	"github.com/rclone/rclone/fs"
-	"github.com/rclone/rclone/fs/fserrors"
-	"github.com/rclone/rclone/lib/atexit"
+	"github.com/personalcore/storagecore/fs"
+	"github.com/personalcore/storagecore/fs/fserrors"
+	"github.com/personalcore/storagecore/lib/atexit"
 )
 
 // Options for configuring the batcher

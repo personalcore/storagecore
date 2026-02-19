@@ -4,10 +4,10 @@ package md5sum
 import (
 	"context"
 
-	"github.com/rclone/rclone/cmd"
-	"github.com/rclone/rclone/cmd/hashsum"
-	"github.com/rclone/rclone/fs/hash"
-	"github.com/rclone/rclone/fs/operations"
+	"github.com/personalcore/storagecore/cmd"
+	"github.com/personalcore/storagecore/cmd/hashsum"
+	"github.com/personalcore/storagecore/fs/hash"
+	"github.com/personalcore/storagecore/fs/operations"
 	"github.com/spf13/cobra"
 )
 

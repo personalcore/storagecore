@@ -17,20 +17,20 @@ import (
 	"strconv"
 	"time"
 
-	"github.com/rclone/rclone/lib/encoder"
+	"github.com/personalcore/storagecore/lib/encoder"
 
-	"github.com/rclone/rclone/backend/hidrive/api"
-	"github.com/rclone/rclone/backend/hidrive/hidrivehash"
-	"github.com/rclone/rclone/fs"
-	"github.com/rclone/rclone/fs/config"
-	"github.com/rclone/rclone/fs/config/configmap"
-	"github.com/rclone/rclone/fs/config/configstruct"
-	"github.com/rclone/rclone/fs/config/obscure"
-	"github.com/rclone/rclone/fs/fserrors"
-	"github.com/rclone/rclone/fs/hash"
-	"github.com/rclone/rclone/lib/oauthutil"
-	"github.com/rclone/rclone/lib/pacer"
-	"github.com/rclone/rclone/lib/rest"
+	"github.com/personalcore/storagecore/backend/hidrive/api"
+	"github.com/personalcore/storagecore/backend/hidrive/hidrivehash"
+	"github.com/personalcore/storagecore/fs"
+	"github.com/personalcore/storagecore/fs/config"
+	"github.com/personalcore/storagecore/fs/config/configmap"
+	"github.com/personalcore/storagecore/fs/config/configstruct"
+	"github.com/personalcore/storagecore/fs/config/obscure"
+	"github.com/personalcore/storagecore/fs/fserrors"
+	"github.com/personalcore/storagecore/fs/hash"
+	"github.com/personalcore/storagecore/lib/oauthutil"
+	"github.com/personalcore/storagecore/lib/pacer"
+	"github.com/personalcore/storagecore/lib/rest"
 )
 
 const (

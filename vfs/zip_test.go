@@ -10,8 +10,8 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/rclone/rclone/fstest"
-	"github.com/rclone/rclone/lib/random"
+	"github.com/personalcore/storagecore/fstest"
+	"github.com/personalcore/storagecore/lib/random"
 	"github.com/stretchr/testify/require"
 )
 

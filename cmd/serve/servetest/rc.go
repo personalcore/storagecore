@@ -8,7 +8,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/rclone/rclone/fs/rc"
+	"github.com/personalcore/storagecore/fs/rc"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 )

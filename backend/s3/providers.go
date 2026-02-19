@@ -7,7 +7,7 @@ import (
 	"sort"
 	"strings"
 
-	"github.com/rclone/rclone/fs"
+	"github.com/personalcore/storagecore/fs"
 	orderedmap "github.com/wk8/go-ordered-map/v2"
 	"gopkg.in/yaml.v3"
 )

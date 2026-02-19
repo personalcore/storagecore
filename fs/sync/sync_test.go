@@ -18,16 +18,16 @@ import (
 
 	mutex "sync" // renamed as "sync" already in use
 
-	_ "github.com/rclone/rclone/backend/all" // import all backends
-	"github.com/rclone/rclone/cmd/bisync/bilib"
-	"github.com/rclone/rclone/fs"
-	"github.com/rclone/rclone/fs/accounting"
-	"github.com/rclone/rclone/fs/filter"
-	"github.com/rclone/rclone/fs/fserrors"
-	"github.com/rclone/rclone/fs/hash"
-	"github.com/rclone/rclone/fs/operations"
-	"github.com/rclone/rclone/fstest"
-	"github.com/rclone/rclone/lib/transform"
+	_ "github.com/personalcore/storagecore/backend/all" // import all backends
+	"github.com/personalcore/storagecore/cmd/bisync/bilib"
+	"github.com/personalcore/storagecore/fs"
+	"github.com/personalcore/storagecore/fs/accounting"
+	"github.com/personalcore/storagecore/fs/filter"
+	"github.com/personalcore/storagecore/fs/fserrors"
+	"github.com/personalcore/storagecore/fs/hash"
+	"github.com/personalcore/storagecore/fs/operations"
+	"github.com/personalcore/storagecore/fstest"
+	"github.com/personalcore/storagecore/lib/transform"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 	"golang.org/x/text/unicode/norm"

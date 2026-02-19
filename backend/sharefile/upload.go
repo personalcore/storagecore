@@ -15,11 +15,11 @@ import (
 	"strings"
 	"sync"
 
-	"github.com/rclone/rclone/backend/sharefile/api"
-	"github.com/rclone/rclone/fs"
-	"github.com/rclone/rclone/fs/accounting"
-	"github.com/rclone/rclone/lib/readers"
-	"github.com/rclone/rclone/lib/rest"
+	"github.com/personalcore/storagecore/backend/sharefile/api"
+	"github.com/personalcore/storagecore/fs"
+	"github.com/personalcore/storagecore/fs/accounting"
+	"github.com/personalcore/storagecore/lib/readers"
+	"github.com/personalcore/storagecore/lib/rest"
 )
 
 // largeUpload is used to control the upload of large files which need chunking

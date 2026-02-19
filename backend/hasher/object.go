@@ -8,9 +8,9 @@ import (
 	"path"
 	"time"
 
-	"github.com/rclone/rclone/fs"
-	"github.com/rclone/rclone/fs/hash"
-	"github.com/rclone/rclone/fs/operations"
+	"github.com/personalcore/storagecore/fs"
+	"github.com/personalcore/storagecore/fs/hash"
+	"github.com/personalcore/storagecore/fs/operations"
 )
 
 // obtain hash for an object

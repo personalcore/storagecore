@@ -9,8 +9,8 @@ import (
 	"runtime"
 	"strings"
 
-	"github.com/rclone/rclone/fs"
-	"github.com/rclone/rclone/fs/operations"
+	"github.com/personalcore/storagecore/fs"
+	"github.com/personalcore/storagecore/fs/operations"
 )
 
 // FsPath converts Fs to a suitable rclone argument

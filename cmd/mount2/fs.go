@@ -10,11 +10,11 @@ import (
 	"time"
 
 	"github.com/hanwen/go-fuse/v2/fuse"
-	"github.com/rclone/rclone/cmd/mountlib"
-	"github.com/rclone/rclone/fs"
-	"github.com/rclone/rclone/fs/fserrors"
-	"github.com/rclone/rclone/fs/log"
-	"github.com/rclone/rclone/vfs"
+	"github.com/personalcore/storagecore/cmd/mountlib"
+	"github.com/personalcore/storagecore/fs"
+	"github.com/personalcore/storagecore/fs/fserrors"
+	"github.com/personalcore/storagecore/fs/log"
+	"github.com/personalcore/storagecore/vfs"
 )
 
 // FS represents the top level filing system

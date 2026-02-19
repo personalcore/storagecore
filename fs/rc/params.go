@@ -12,7 +12,7 @@ import (
 	"strconv"
 	"time"
 
-	"github.com/rclone/rclone/fs"
+	"github.com/personalcore/storagecore/fs"
 )
 
 // Params is the input and output type for the Func

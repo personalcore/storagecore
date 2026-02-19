@@ -4,9 +4,9 @@ package ftp_test
 import (
 	"testing"
 
-	"github.com/rclone/rclone/backend/ftp"
-	"github.com/rclone/rclone/fstest"
-	"github.com/rclone/rclone/fstest/fstests"
+	"github.com/personalcore/storagecore/backend/ftp"
+	"github.com/personalcore/storagecore/fstest"
+	"github.com/personalcore/storagecore/fstest/fstests"
 )
 
 // TestIntegration runs integration tests against rclone FTP server

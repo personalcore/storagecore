@@ -13,10 +13,10 @@ import (
 	"sync"
 	"time"
 
-	"github.com/rclone/rclone/fs"
-	"github.com/rclone/rclone/fs/filter"
-	"github.com/rclone/rclone/fs/rc"
-	"github.com/rclone/rclone/lib/errcount"
+	"github.com/personalcore/storagecore/fs"
+	"github.com/personalcore/storagecore/fs/filter"
+	"github.com/personalcore/storagecore/fs/rc"
+	"github.com/personalcore/storagecore/lib/errcount"
 )
 
 // Handle describes what a server can do

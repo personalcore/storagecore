@@ -7,12 +7,12 @@ import (
 	"testing"
 	"time"
 
-	_ "github.com/rclone/rclone/backend/local"
-	"github.com/rclone/rclone/fs/operations"
-	"github.com/rclone/rclone/fstest"
-	"github.com/rclone/rclone/lib/ranges"
-	"github.com/rclone/rclone/lib/readers"
-	"github.com/rclone/rclone/vfs/vfscommon"
+	_ "github.com/personalcore/storagecore/backend/local"
+	"github.com/personalcore/storagecore/fs/operations"
+	"github.com/personalcore/storagecore/fstest"
+	"github.com/personalcore/storagecore/lib/ranges"
+	"github.com/personalcore/storagecore/lib/readers"
+	"github.com/personalcore/storagecore/vfs/vfscommon"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 )

@@ -12,9 +12,9 @@ import (
 	"os"
 	"strings"
 
-	"github.com/rclone/rclone/fs"
-	"github.com/rclone/rclone/lib/encoder"
-	"github.com/rclone/rclone/lib/transform"
+	"github.com/personalcore/storagecore/fs"
+	"github.com/personalcore/storagecore/lib/encoder"
+	"github.com/personalcore/storagecore/lib/transform"
 )
 
 type commands struct {

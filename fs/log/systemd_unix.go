@@ -8,7 +8,7 @@ import (
 	"log/slog"
 
 	"github.com/coreos/go-systemd/v22/journal"
-	"github.com/rclone/rclone/fs"
+	"github.com/personalcore/storagecore/fs"
 )
 
 // Enables systemd logs if configured or if auto-detected

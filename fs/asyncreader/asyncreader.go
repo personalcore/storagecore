@@ -8,9 +8,9 @@ import (
 	"io"
 	"sync"
 
-	"github.com/rclone/rclone/fs"
-	"github.com/rclone/rclone/lib/pool"
-	"github.com/rclone/rclone/lib/readers"
+	"github.com/personalcore/storagecore/fs"
+	"github.com/personalcore/storagecore/lib/pool"
+	"github.com/personalcore/storagecore/lib/readers"
 )
 
 const (

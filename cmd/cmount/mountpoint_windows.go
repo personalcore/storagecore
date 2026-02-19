@@ -9,9 +9,9 @@ import (
 	"path/filepath"
 	"regexp"
 
-	"github.com/rclone/rclone/cmd/mountlib"
-	"github.com/rclone/rclone/fs"
-	"github.com/rclone/rclone/lib/file"
+	"github.com/personalcore/storagecore/cmd/mountlib"
+	"github.com/personalcore/storagecore/fs"
+	"github.com/personalcore/storagecore/lib/file"
 )
 
 var isDriveRegex = regexp.MustCompile(`^[a-zA-Z]\:$`)

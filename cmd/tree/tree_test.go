@@ -6,9 +6,9 @@ import (
 	"testing"
 
 	"github.com/a8m/tree"
-	_ "github.com/rclone/rclone/backend/local"
-	"github.com/rclone/rclone/fs"
-	"github.com/rclone/rclone/fstest"
+	_ "github.com/personalcore/storagecore/backend/local"
+	"github.com/personalcore/storagecore/fs"
+	"github.com/personalcore/storagecore/fstest"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 )

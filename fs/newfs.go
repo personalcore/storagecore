@@ -14,9 +14,9 @@ import (
 	"strings"
 	"sync"
 
-	"github.com/rclone/rclone/fs/config/configmap"
-	"github.com/rclone/rclone/fs/config/configstruct"
-	"github.com/rclone/rclone/fs/fspath"
+	"github.com/personalcore/storagecore/fs/config/configmap"
+	"github.com/personalcore/storagecore/fs/config/configstruct"
+	"github.com/personalcore/storagecore/fs/fspath"
 )
 
 // Store the hashes of the overridden config

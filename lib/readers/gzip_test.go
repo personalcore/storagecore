@@ -6,7 +6,7 @@ import (
 	"io"
 	"testing"
 
-	"github.com/rclone/rclone/lib/random"
+	"github.com/personalcore/storagecore/lib/random"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 )

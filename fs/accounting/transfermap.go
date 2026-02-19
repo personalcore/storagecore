@@ -8,8 +8,8 @@ import (
 	"strings"
 	"sync"
 
-	"github.com/rclone/rclone/fs"
-	"github.com/rclone/rclone/fs/rc"
+	"github.com/personalcore/storagecore/fs"
+	"github.com/personalcore/storagecore/fs/rc"
 )
 
 // transferMap holds name to transfer map

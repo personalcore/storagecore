@@ -14,10 +14,10 @@ import (
 	"testing"
 	"time"
 
-	"github.com/rclone/rclone/backend/doi/api"
-	"github.com/rclone/rclone/fs"
-	"github.com/rclone/rclone/fs/config/configmap"
-	"github.com/rclone/rclone/fs/hash"
+	"github.com/personalcore/storagecore/backend/doi/api"
+	"github.com/personalcore/storagecore/fs"
+	"github.com/personalcore/storagecore/fs/config/configmap"
+	"github.com/personalcore/storagecore/fs/hash"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 )

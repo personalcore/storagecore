@@ -7,9 +7,9 @@ import (
 	"testing"
 	"time"
 
-	"github.com/rclone/rclone/fs"
-	"github.com/rclone/rclone/fs/hash"
-	"github.com/rclone/rclone/fs/object"
+	"github.com/personalcore/storagecore/fs"
+	"github.com/personalcore/storagecore/fs/hash"
+	"github.com/personalcore/storagecore/fs/object"
 	"github.com/stretchr/testify/assert"
 )
 

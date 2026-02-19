@@ -5,12 +5,12 @@ package vfs_test
 import (
 	"testing"
 
-	_ "github.com/rclone/rclone/backend/all" // import all the backends
-	"github.com/rclone/rclone/cmd/mountlib"
-	"github.com/rclone/rclone/fstest"
-	"github.com/rclone/rclone/vfs"
-	"github.com/rclone/rclone/vfs/vfscommon"
-	"github.com/rclone/rclone/vfs/vfstest"
+	_ "github.com/personalcore/storagecore/backend/all" // import all the backends
+	"github.com/personalcore/storagecore/cmd/mountlib"
+	"github.com/personalcore/storagecore/fstest"
+	"github.com/personalcore/storagecore/vfs"
+	"github.com/personalcore/storagecore/vfs/vfscommon"
+	"github.com/personalcore/storagecore/vfs/vfstest"
 )
 
 // TestFunctional runs more functional tests all the tests against all the

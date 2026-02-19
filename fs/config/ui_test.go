@@ -10,11 +10,11 @@ import (
 	"os"
 	"testing"
 
-	"github.com/rclone/rclone/fs"
-	"github.com/rclone/rclone/fs/config"
-	"github.com/rclone/rclone/fs/config/configfile"
-	"github.com/rclone/rclone/fs/config/obscure"
-	"github.com/rclone/rclone/fs/rc"
+	"github.com/personalcore/storagecore/fs"
+	"github.com/personalcore/storagecore/fs/config"
+	"github.com/personalcore/storagecore/fs/config/configfile"
+	"github.com/personalcore/storagecore/fs/config/obscure"
+	"github.com/personalcore/storagecore/fs/rc"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 )

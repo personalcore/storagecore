@@ -4,10 +4,10 @@ package copyto
 import (
 	"context"
 
-	"github.com/rclone/rclone/cmd"
-	"github.com/rclone/rclone/fs/operations"
-	"github.com/rclone/rclone/fs/operations/operationsflags"
-	"github.com/rclone/rclone/fs/sync"
+	"github.com/personalcore/storagecore/cmd"
+	"github.com/personalcore/storagecore/fs/operations"
+	"github.com/personalcore/storagecore/fs/operations/operationsflags"
+	"github.com/personalcore/storagecore/fs/sync"
 	"github.com/spf13/cobra"
 )
 

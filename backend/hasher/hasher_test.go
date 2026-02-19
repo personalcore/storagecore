@@ -5,12 +5,12 @@ import (
 	"path/filepath"
 	"testing"
 
-	"github.com/rclone/rclone/backend/hasher"
-	"github.com/rclone/rclone/fstest"
-	"github.com/rclone/rclone/fstest/fstests"
-	"github.com/rclone/rclone/lib/kv"
+	"github.com/personalcore/storagecore/backend/hasher"
+	"github.com/personalcore/storagecore/fstest"
+	"github.com/personalcore/storagecore/fstest/fstests"
+	"github.com/personalcore/storagecore/lib/kv"
 
-	_ "github.com/rclone/rclone/backend/all" // for integration tests
+	_ "github.com/personalcore/storagecore/backend/all" // for integration tests
 )
 
 // TestIntegration runs integration tests against the remote

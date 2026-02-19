@@ -12,12 +12,12 @@ import (
 	"os/exec"
 	"testing"
 
-	_ "github.com/rclone/rclone/backend/all"
-	"github.com/rclone/rclone/cmd"
-	"github.com/rclone/rclone/cmd/serve/servetest"
-	"github.com/rclone/rclone/fs"
-	"github.com/rclone/rclone/fs/rc"
-	"github.com/rclone/rclone/fstest"
+	_ "github.com/personalcore/storagecore/backend/all"
+	"github.com/personalcore/storagecore/cmd"
+	"github.com/personalcore/storagecore/cmd/serve/servetest"
+	"github.com/personalcore/storagecore/fs"
+	"github.com/personalcore/storagecore/fs/rc"
+	"github.com/personalcore/storagecore/fstest"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 )

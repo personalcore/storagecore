@@ -10,10 +10,10 @@ import (
 	"strings"
 	"time"
 
-	"github.com/rclone/rclone/cmd/bisync/bilib"
-	"github.com/rclone/rclone/fs"
-	"github.com/rclone/rclone/fs/filter"
-	"github.com/rclone/rclone/lib/terminal"
+	"github.com/personalcore/storagecore/cmd/bisync/bilib"
+	"github.com/personalcore/storagecore/fs"
+	"github.com/personalcore/storagecore/fs/filter"
+	"github.com/personalcore/storagecore/lib/terminal"
 	"golang.org/x/text/unicode/norm"
 )
 

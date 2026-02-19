@@ -7,8 +7,8 @@ import (
 	"testing"
 	"time"
 
-	"github.com/rclone/rclone/fs/fserrors"
-	"github.com/rclone/rclone/lib/pacer"
+	"github.com/personalcore/storagecore/fs/fserrors"
+	"github.com/personalcore/storagecore/lib/pacer"
 	"github.com/stretchr/testify/require"
 )
 

@@ -13,12 +13,12 @@ import (
 	"time"
 
 	"github.com/coreos/go-systemd/v22/daemon"
-	"github.com/rclone/rclone/cmd/mountlib"
-	"github.com/rclone/rclone/fs"
-	"github.com/rclone/rclone/fs/config"
-	"github.com/rclone/rclone/lib/atexit"
-	"github.com/rclone/rclone/lib/file"
-	"github.com/rclone/rclone/vfs/vfscommon"
+	"github.com/personalcore/storagecore/cmd/mountlib"
+	"github.com/personalcore/storagecore/fs"
+	"github.com/personalcore/storagecore/fs/config"
+	"github.com/personalcore/storagecore/lib/atexit"
+	"github.com/personalcore/storagecore/lib/file"
+	"github.com/personalcore/storagecore/vfs/vfscommon"
 )
 
 // Driver implements docker driver api

@@ -16,11 +16,11 @@ import (
 	"testing"
 	"time"
 
-	"github.com/rclone/rclone/fs"
-	"github.com/rclone/rclone/fs/config/configfile"
-	"github.com/rclone/rclone/fs/config/configmap"
-	"github.com/rclone/rclone/fstest"
-	"github.com/rclone/rclone/lib/rest"
+	"github.com/personalcore/storagecore/fs"
+	"github.com/personalcore/storagecore/fs/config/configfile"
+	"github.com/personalcore/storagecore/fs/config/configmap"
+	"github.com/personalcore/storagecore/fstest"
+	"github.com/personalcore/storagecore/lib/rest"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 )

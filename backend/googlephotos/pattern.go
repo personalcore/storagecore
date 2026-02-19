@@ -11,8 +11,8 @@ import (
 	"strings"
 	"time"
 
-	"github.com/rclone/rclone/backend/googlephotos/api"
-	"github.com/rclone/rclone/fs"
+	"github.com/personalcore/storagecore/backend/googlephotos/api"
+	"github.com/personalcore/storagecore/fs"
 )
 
 // lister describes the subset of the interfaces on Fs needed for the

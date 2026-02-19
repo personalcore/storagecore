@@ -16,14 +16,14 @@ import (
 
 	"github.com/mitchellh/go-homedir"
 
-	"github.com/rclone/rclone/fs"
-	"github.com/rclone/rclone/fs/cache"
-	"github.com/rclone/rclone/fs/config/configmap"
-	"github.com/rclone/rclone/fs/config/obscure"
-	"github.com/rclone/rclone/fs/fspath"
-	"github.com/rclone/rclone/fs/rc"
-	"github.com/rclone/rclone/lib/file"
-	"github.com/rclone/rclone/lib/random"
+	"github.com/personalcore/storagecore/fs"
+	"github.com/personalcore/storagecore/fs/cache"
+	"github.com/personalcore/storagecore/fs/config/configmap"
+	"github.com/personalcore/storagecore/fs/config/obscure"
+	"github.com/personalcore/storagecore/fs/fspath"
+	"github.com/personalcore/storagecore/fs/rc"
+	"github.com/personalcore/storagecore/lib/file"
+	"github.com/personalcore/storagecore/lib/random"
 )
 
 const (
@@ -72,7 +72,7 @@ const (
 // persistent storage. Rclone provides a default implementation to
 // load and save to a config file when this is imported
 //
-// import "github.com/rclone/rclone/fs/config/configfile"
+// import "github.com/personalcore/storagecore/fs/config/configfile"
 // configfile.Install()
 type Storage interface {
 	// GetSectionList returns a slice of strings with names for all the

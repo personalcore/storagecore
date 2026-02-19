@@ -8,8 +8,8 @@ import (
 	"io"
 	"testing"
 
-	"github.com/rclone/rclone/backend/hidrive/hidrivehash"
-	"github.com/rclone/rclone/backend/hidrive/hidrivehash/internal"
+	"github.com/personalcore/storagecore/backend/hidrive/hidrivehash"
+	"github.com/personalcore/storagecore/backend/hidrive/hidrivehash/internal"
 	"github.com/stretchr/testify/assert"
 )
 

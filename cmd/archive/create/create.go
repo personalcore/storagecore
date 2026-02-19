@@ -15,14 +15,14 @@ import (
 	"time"
 
 	"github.com/mholt/archives"
-	"github.com/rclone/rclone/cmd"
-	"github.com/rclone/rclone/cmd/archive"
-	"github.com/rclone/rclone/cmd/archive/files"
-	"github.com/rclone/rclone/fs"
-	"github.com/rclone/rclone/fs/config/flags"
-	"github.com/rclone/rclone/fs/filter"
-	"github.com/rclone/rclone/fs/operations"
-	"github.com/rclone/rclone/fs/walk"
+	"github.com/personalcore/storagecore/cmd"
+	"github.com/personalcore/storagecore/cmd/archive"
+	"github.com/personalcore/storagecore/cmd/archive/files"
+	"github.com/personalcore/storagecore/fs"
+	"github.com/personalcore/storagecore/fs/config/flags"
+	"github.com/personalcore/storagecore/fs/filter"
+	"github.com/personalcore/storagecore/fs/operations"
+	"github.com/personalcore/storagecore/fs/walk"
 	"github.com/spf13/cobra"
 )
 

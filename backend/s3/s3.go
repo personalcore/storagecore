@@ -44,26 +44,26 @@ import (
 	"golang.org/x/net/http/httpguts"
 	"golang.org/x/sync/errgroup"
 
-	"github.com/rclone/rclone/fs"
-	"github.com/rclone/rclone/fs/accounting"
-	"github.com/rclone/rclone/fs/chunksize"
-	"github.com/rclone/rclone/fs/config"
-	"github.com/rclone/rclone/fs/config/configmap"
-	"github.com/rclone/rclone/fs/config/configstruct"
-	"github.com/rclone/rclone/fs/fserrors"
-	"github.com/rclone/rclone/fs/fshttp"
-	"github.com/rclone/rclone/fs/hash"
-	"github.com/rclone/rclone/fs/list"
-	"github.com/rclone/rclone/fs/operations"
-	"github.com/rclone/rclone/lib/atexit"
-	"github.com/rclone/rclone/lib/bucket"
-	"github.com/rclone/rclone/lib/encoder"
-	"github.com/rclone/rclone/lib/multipart"
-	"github.com/rclone/rclone/lib/pacer"
-	"github.com/rclone/rclone/lib/pool"
-	"github.com/rclone/rclone/lib/readers"
-	"github.com/rclone/rclone/lib/rest"
-	"github.com/rclone/rclone/lib/version"
+	"github.com/personalcore/storagecore/fs"
+	"github.com/personalcore/storagecore/fs/accounting"
+	"github.com/personalcore/storagecore/fs/chunksize"
+	"github.com/personalcore/storagecore/fs/config"
+	"github.com/personalcore/storagecore/fs/config/configmap"
+	"github.com/personalcore/storagecore/fs/config/configstruct"
+	"github.com/personalcore/storagecore/fs/fserrors"
+	"github.com/personalcore/storagecore/fs/fshttp"
+	"github.com/personalcore/storagecore/fs/hash"
+	"github.com/personalcore/storagecore/fs/list"
+	"github.com/personalcore/storagecore/fs/operations"
+	"github.com/personalcore/storagecore/lib/atexit"
+	"github.com/personalcore/storagecore/lib/bucket"
+	"github.com/personalcore/storagecore/lib/encoder"
+	"github.com/personalcore/storagecore/lib/multipart"
+	"github.com/personalcore/storagecore/lib/pacer"
+	"github.com/personalcore/storagecore/lib/pool"
+	"github.com/personalcore/storagecore/lib/readers"
+	"github.com/personalcore/storagecore/lib/rest"
+	"github.com/personalcore/storagecore/lib/version"
 )
 
 // Register with Fs
@@ -549,7 +549,7 @@ There is currently an unsolved issue with the s3 (specifically minio) backend
 and HTTP/2.  HTTP/2 is enabled by default for the s3 backend but can be
 disabled here.  When the issue is solved this flag will be removed.
 
-See: https://github.com/rclone/rclone/issues/4673, https://github.com/rclone/rclone/issues/3631
+See: https://github.com/personalcore/storagecore/issues/4673, https://github.com/personalcore/storagecore/issues/3631
 
 `,
 		}, {
@@ -2187,7 +2187,7 @@ func (f *Fs) list(ctx context.Context, opt listOpt, fn listFn) error {
 	// it doesn't encode CommonPrefixes.
 	// See: https://tracker.ceph.com/issues/41870
 	//
-	// This does not work under IBM COS also: See https://github.com/rclone/rclone/issues/3345
+	// This does not work under IBM COS also: See https://github.com/personalcore/storagecore/issues/3345
 	// though maybe it does on some versions.
 	//
 	// This does work with minio but was only added relatively recently

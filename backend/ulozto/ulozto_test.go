@@ -6,14 +6,14 @@ import (
 	"testing"
 	"time"
 
-	"github.com/rclone/rclone/backend/ulozto/api"
-	"github.com/rclone/rclone/fs"
-	"github.com/rclone/rclone/fs/hash"
-	"github.com/rclone/rclone/fs/operations"
-	"github.com/rclone/rclone/fstest"
+	"github.com/personalcore/storagecore/backend/ulozto/api"
+	"github.com/personalcore/storagecore/fs"
+	"github.com/personalcore/storagecore/fs/hash"
+	"github.com/personalcore/storagecore/fs/operations"
+	"github.com/personalcore/storagecore/fstest"
 	"github.com/stretchr/testify/require"
 
-	"github.com/rclone/rclone/fstest/fstests"
+	"github.com/personalcore/storagecore/fstest/fstests"
 )
 
 // TestIntegration runs integration tests against the remote

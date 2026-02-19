@@ -4,8 +4,8 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/rclone/rclone/cmd"
-	"github.com/rclone/rclone/fs"
+	"github.com/personalcore/storagecore/cmd"
+	"github.com/personalcore/storagecore/fs"
 	"github.com/spf13/cobra"
 )
 

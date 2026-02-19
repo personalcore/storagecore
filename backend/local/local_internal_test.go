@@ -13,16 +13,16 @@ import (
 	"testing"
 	"time"
 
-	"github.com/rclone/rclone/fs"
-	"github.com/rclone/rclone/fs/accounting"
-	"github.com/rclone/rclone/fs/config/configmap"
-	"github.com/rclone/rclone/fs/filter"
-	"github.com/rclone/rclone/fs/hash"
-	"github.com/rclone/rclone/fs/object"
-	"github.com/rclone/rclone/fs/operations"
-	"github.com/rclone/rclone/fstest"
-	"github.com/rclone/rclone/lib/file"
-	"github.com/rclone/rclone/lib/readers"
+	"github.com/personalcore/storagecore/fs"
+	"github.com/personalcore/storagecore/fs/accounting"
+	"github.com/personalcore/storagecore/fs/config/configmap"
+	"github.com/personalcore/storagecore/fs/filter"
+	"github.com/personalcore/storagecore/fs/hash"
+	"github.com/personalcore/storagecore/fs/object"
+	"github.com/personalcore/storagecore/fs/operations"
+	"github.com/personalcore/storagecore/fstest"
+	"github.com/personalcore/storagecore/lib/file"
+	"github.com/personalcore/storagecore/lib/readers"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 )
@@ -323,7 +323,7 @@ func TestMetadata(t *testing.T) {
 	require.NoError(t, err)
 
 	// Check that operating on the symlink didn't change the file it was pointing to
-	// See: https://github.com/rclone/rclone/security/advisories/GHSA-hrxh-9w67-g4cv
+	// See: https://github.com/personalcore/storagecore/security/advisories/GHSA-hrxh-9w67-g4cv
 	assert.Equal(t, oMeta, oMetaNew, "metadata setting on symlink messed up file")
 
 	// Now run the same tests on the file

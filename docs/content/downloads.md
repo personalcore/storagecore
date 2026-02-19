@@ -42,7 +42,7 @@ in the Go Wiki.
 | MIPS - Little Endian | - | - | {{< download linux mipsle >}} | {{< download linux mipsle deb >}} | {{< download linux mipsle rpm >}} | - | - | - | - | - |
 
 <!-- markdownlint-disable-next-line no-bare-urls line-length -->
-You can also find a [mirror of the downloads on GitHub](https://github.com/rclone/rclone/releases/tag/{{< version >}}).
+You can also find a [mirror of the downloads on GitHub](https://github.com/personalcore/storagecore/releases/tag/{{< version >}}).
 
 <!-- markdownlint-disable-next-line no-bare-urls -->
 See also [Android builds](https://beta.rclone.org/{{% version %}}/testbuilds/).
@@ -86,7 +86,7 @@ v1.53.0-beta.4677.b657a2204
 
 The `Version Tag` is the version that the beta release will become
 when it is released. You can match the `Git Commit Hash` up with the
-[git log](https://github.com/rclone/rclone/commits/master).  The most
+[git log](https://github.com/personalcore/storagecore/commits/master).  The most
 recent release will have the largest `Version Tag` and `Commit Number`
 and will normally be at the end of the list.
 

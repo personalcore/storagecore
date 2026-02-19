@@ -8,9 +8,9 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/rclone/rclone/fs"
-	"github.com/rclone/rclone/fstest/mockdir"
-	"github.com/rclone/rclone/fstest/mockobject"
+	"github.com/personalcore/storagecore/fs"
+	"github.com/personalcore/storagecore/fstest/mockdir"
+	"github.com/personalcore/storagecore/fstest/mockobject"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 )

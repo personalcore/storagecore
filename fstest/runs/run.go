@@ -19,8 +19,8 @@ import (
 	"sync"
 	"time"
 
-	"github.com/rclone/rclone/fs"
-	"github.com/rclone/rclone/fstest/testserver"
+	"github.com/personalcore/storagecore/fs"
+	"github.com/personalcore/storagecore/fstest/testserver"
 )
 
 // Control concurrency per backend if required

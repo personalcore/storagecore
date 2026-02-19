@@ -392,9 +392,9 @@ too many callbacks to rclone from the kernel.
 In theory 0s should be the correct value for filesystems which can
 change outside the control of the kernel. However this causes quite a
 few problems such as
-[rclone using too much memory](https://github.com/rclone/rclone/issues/2157),
+[rclone using too much memory](https://github.com/personalcore/storagecore/issues/2157),
 [rclone not serving files to samba](https://forum.rclone.org/t/rclone-1-39-vs-1-40-mount-issue/5112)
-and [excessive time listing directories](https://github.com/rclone/rclone/issues/2095#issuecomment-371141147).
+and [excessive time listing directories](https://github.com/personalcore/storagecore/issues/2095#issuecomment-371141147).
 
 The kernel can cache the info about a file for the time given by
 `--attr-timeout`. You may see corruption if the remote file changes
@@ -875,7 +875,7 @@ The VFS will correctly resolve `linked-dir` but not
 but may be for other commands.
 
 **Note** that there is an outstanding issue with symlink support
-[issue #8245](https://github.com/rclone/rclone/issues/8245) with duplicate
+[issue #8245](https://github.com/personalcore/storagecore/issues/8245) with duplicate
 files being created when symlinks are moved into directories where
 there is a file of the same name (or vice versa).
 

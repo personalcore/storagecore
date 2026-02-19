@@ -5,7 +5,7 @@ import (
 	"os"
 	"strconv"
 
-	"github.com/rclone/rclone/fs"
+	"github.com/personalcore/storagecore/fs"
 )
 
 // FileMode is a command line friendly os.FileMode

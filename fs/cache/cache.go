@@ -8,9 +8,9 @@ import (
 	"sync"
 	"time"
 
-	"github.com/rclone/rclone/fs"
-	"github.com/rclone/rclone/fs/filter"
-	"github.com/rclone/rclone/lib/cache"
+	"github.com/personalcore/storagecore/fs"
+	"github.com/personalcore/storagecore/fs/filter"
+	"github.com/personalcore/storagecore/lib/cache"
 )
 
 var (

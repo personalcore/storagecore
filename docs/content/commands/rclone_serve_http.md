@@ -525,7 +525,7 @@ The VFS will correctly resolve `linked-dir` but not
 but may be for other commands.
 
 **Note** that there is an outstanding issue with symlink support
-[issue #8245](https://github.com/rclone/rclone/issues/8245) with duplicate
+[issue #8245](https://github.com/personalcore/storagecore/issues/8245) with duplicate
 files being created when symlinks are moved into directories where
 there is a file of the same name (or vice versa).
 
@@ -659,7 +659,7 @@ together, if `--auth-proxy` is set the authorized keys option will be
 ignored.
 
 There is an example program
-[bin/test_proxy.py](https://github.com/rclone/rclone/blob/master/bin/test_proxy.py)
+[bin/test_proxy.py](https://github.com/personalcore/storagecore/blob/master/bin/test_proxy.py)
 in the rclone source code.
 
 The program's job is to take a `user` and `pass` on the input and turn

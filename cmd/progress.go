@@ -10,10 +10,10 @@ import (
 	"sync"
 	"time"
 
-	"github.com/rclone/rclone/fs/accounting"
-	"github.com/rclone/rclone/fs/log"
-	"github.com/rclone/rclone/fs/operations"
-	"github.com/rclone/rclone/lib/terminal"
+	"github.com/personalcore/storagecore/fs/accounting"
+	"github.com/personalcore/storagecore/fs/log"
+	"github.com/personalcore/storagecore/fs/operations"
+	"github.com/personalcore/storagecore/lib/terminal"
 )
 
 const (

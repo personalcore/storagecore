@@ -17,10 +17,10 @@ import (
 	"sync"
 
 	billy "github.com/go-git/go-billy/v5"
-	"github.com/rclone/rclone/fs"
-	"github.com/rclone/rclone/fs/config"
-	"github.com/rclone/rclone/lib/encoder"
-	"github.com/rclone/rclone/lib/file"
+	"github.com/personalcore/storagecore/fs"
+	"github.com/personalcore/storagecore/fs/config"
+	"github.com/personalcore/storagecore/lib/encoder"
+	"github.com/personalcore/storagecore/lib/file"
 	"github.com/willscott/go-nfs"
 	nfshelper "github.com/willscott/go-nfs/helpers"
 )

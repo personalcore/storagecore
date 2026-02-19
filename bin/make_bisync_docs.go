@@ -14,9 +14,9 @@ import (
 	"slices"
 	"strings"
 
-	"github.com/rclone/rclone/fs"
-	"github.com/rclone/rclone/fs/operations"
-	"github.com/rclone/rclone/fstest/runs"
+	"github.com/personalcore/storagecore/fs"
+	"github.com/personalcore/storagecore/fs/operations"
+	"github.com/personalcore/storagecore/fstest/runs"
 	"github.com/stretchr/testify/assert/yaml"
 )
 

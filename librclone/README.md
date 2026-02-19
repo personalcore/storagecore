@@ -21,13 +21,13 @@ helped, you had to resort to the classic MINGW64 subsystem).
 Build a shared library like this (change from .so to .dll on Windows):
 
 ```console
-go build --buildmode=c-shared -o librclone.so github.com/rclone/rclone/librclone
+go build --buildmode=c-shared -o librclone.so github.com/personalcore/storagecore/librclone
 ```
 
 Build a static library like this (change from .a to .lib on Windows):
 
 ```console
-go build --buildmode=c-archive -o librclone.a github.com/rclone/rclone/librclone
+go build --buildmode=c-archive -o librclone.a github.com/personalcore/storagecore/librclone
 ```
 
 Both the above commands will also generate `librclone.h` which should
@@ -62,10 +62,10 @@ go run bin/resource_windows.go -binary librclone.dll -dir librclone
 
 For documentation see the Go documentation for:
 
-- [RcloneInitialize](https://pkg.go.dev/github.com/rclone/rclone/librclone#RcloneInitialize)
-- [RcloneFinalize](https://pkg.go.dev/github.com/rclone/rclone/librclone#RcloneFinalize)
-- [RcloneRPC](https://pkg.go.dev/github.com/rclone/rclone/librclone#RcloneRPC)
-- [RcloneFreeString](https://pkg.go.dev/github.com/rclone/rclone/librclone#RcloneFreeString)
+- [RcloneInitialize](https://pkg.go.dev/github.com/personalcore/storagecore/librclone#RcloneInitialize)
+- [RcloneFinalize](https://pkg.go.dev/github.com/personalcore/storagecore/librclone#RcloneFinalize)
+- [RcloneRPC](https://pkg.go.dev/github.com/personalcore/storagecore/librclone#RcloneRPC)
+- [RcloneFreeString](https://pkg.go.dev/github.com/personalcore/storagecore/librclone#RcloneFreeString)
 
 ### Linux C example
 
@@ -212,7 +212,7 @@ suitable for using with [gomobile](https://pkg.go.dev/golang.org/x/mobile/cmd/go
 using something like this.
 
 ```console
-gomobile bind -v -target=android -javapkg=org.rclone github.com/rclone/rclone/librclone/gomobile
+gomobile bind -v -target=android -javapkg=org.rclone github.com/personalcore/storagecore/librclone/gomobile
 ```
 
 The command generates an Android library (`aar`) that can be imported

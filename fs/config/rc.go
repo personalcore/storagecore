@@ -5,8 +5,8 @@ import (
 	"errors"
 	"os"
 
-	"github.com/rclone/rclone/fs"
-	"github.com/rclone/rclone/fs/rc"
+	"github.com/personalcore/storagecore/fs"
+	"github.com/personalcore/storagecore/fs/rc"
 )
 
 func init() {

@@ -17,20 +17,20 @@ import (
 	"time"
 
 	"github.com/jlaffaye/ftp"
-	"github.com/rclone/rclone/fs"
-	"github.com/rclone/rclone/fs/accounting"
-	"github.com/rclone/rclone/fs/config"
-	"github.com/rclone/rclone/fs/config/configmap"
-	"github.com/rclone/rclone/fs/config/configstruct"
-	"github.com/rclone/rclone/fs/config/obscure"
-	"github.com/rclone/rclone/fs/fserrors"
-	"github.com/rclone/rclone/fs/fshttp"
-	"github.com/rclone/rclone/fs/hash"
-	"github.com/rclone/rclone/lib/encoder"
-	"github.com/rclone/rclone/lib/env"
-	"github.com/rclone/rclone/lib/pacer"
-	"github.com/rclone/rclone/lib/proxy"
-	"github.com/rclone/rclone/lib/readers"
+	"github.com/personalcore/storagecore/fs"
+	"github.com/personalcore/storagecore/fs/accounting"
+	"github.com/personalcore/storagecore/fs/config"
+	"github.com/personalcore/storagecore/fs/config/configmap"
+	"github.com/personalcore/storagecore/fs/config/configstruct"
+	"github.com/personalcore/storagecore/fs/config/obscure"
+	"github.com/personalcore/storagecore/fs/fserrors"
+	"github.com/personalcore/storagecore/fs/fshttp"
+	"github.com/personalcore/storagecore/fs/hash"
+	"github.com/personalcore/storagecore/lib/encoder"
+	"github.com/personalcore/storagecore/lib/env"
+	"github.com/personalcore/storagecore/lib/pacer"
+	"github.com/personalcore/storagecore/lib/proxy"
+	"github.com/personalcore/storagecore/lib/readers"
 )
 
 var (
@@ -411,7 +411,7 @@ func shouldRetry(ctx context.Context, err error) (bool, error) {
 //
 // We can't share session caches between connections.
 //
-// See: https://github.com/rclone/rclone/issues/7234
+// See: https://github.com/personalcore/storagecore/issues/7234
 func (f *Fs) tlsConfig() *tls.Config {
 	var tlsConfig *tls.Config
 	if f.opt.TLS || f.opt.ExplicitTLS {
@@ -496,7 +496,7 @@ func (f *Fs) ftpConnection(ctx context.Context) (c *ftp.ServerConn, err error) {
 		tlsConn := tls.Client(conn, tlsConfig)
 		// Do the initial handshake - tls.Client doesn't do it for us
 		// If we do this then connections to proftpd/pureftpd lock up
-		// See: https://github.com/rclone/rclone/issues/6426
+		// See: https://github.com/personalcore/storagecore/issues/6426
 		// See: https://github.com/jlaffaye/ftp/issues/282
 		if false {
 			err = tlsConn.HandshakeContext(ctx)
@@ -1295,7 +1295,7 @@ func (f *ftpReadCloser) Close() error {
 	}
 	// mask the error if it was caused by a premature close
 	// NB StatusAboutToSend is to work around a bug in pureftpd
-	// See: https://github.com/rclone/rclone/issues/3445#issuecomment-521654257
+	// See: https://github.com/personalcore/storagecore/issues/3445#issuecomment-521654257
 	if errX := textprotoError(err); errX != nil {
 		switch errX.Code {
 		case ftp.StatusTransfertAborted, ftp.StatusFileUnavailable, ftp.StatusAboutToSend, ftp.StatusRequestedFileActionOK:

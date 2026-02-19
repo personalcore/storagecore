@@ -15,12 +15,12 @@ import (
 	"runtime/debug"
 	"strings"
 
-	"github.com/rclone/rclone/fs"
-	"github.com/rclone/rclone/fs/accounting"
-	"github.com/rclone/rclone/fs/config/configfile"
-	"github.com/rclone/rclone/fs/log"
-	"github.com/rclone/rclone/fs/rc"
-	"github.com/rclone/rclone/fs/rc/jobs"
+	"github.com/personalcore/storagecore/fs"
+	"github.com/personalcore/storagecore/fs/accounting"
+	"github.com/personalcore/storagecore/fs/config/configfile"
+	"github.com/personalcore/storagecore/fs/log"
+	"github.com/personalcore/storagecore/fs/rc"
+	"github.com/personalcore/storagecore/fs/rc/jobs"
 )
 
 // Initialize initializes rclone as a library

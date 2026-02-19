@@ -8,7 +8,7 @@ import (
 	"net/url"
 	"time"
 
-	"github.com/rclone/rclone/lib/rest"
+	"github.com/personalcore/storagecore/lib/rest"
 	"gopkg.in/validator.v2"
 )
 

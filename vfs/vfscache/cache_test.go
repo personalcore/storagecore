@@ -9,13 +9,13 @@ import (
 	"testing"
 	"time"
 
-	_ "github.com/rclone/rclone/backend/local" // import the local backend
-	"github.com/rclone/rclone/fs"
-	"github.com/rclone/rclone/fs/config"
-	"github.com/rclone/rclone/fstest"
-	"github.com/rclone/rclone/lib/diskusage"
-	"github.com/rclone/rclone/vfs/vfscache/writeback"
-	"github.com/rclone/rclone/vfs/vfscommon"
+	_ "github.com/personalcore/storagecore/backend/local" // import the local backend
+	"github.com/personalcore/storagecore/fs"
+	"github.com/personalcore/storagecore/fs/config"
+	"github.com/personalcore/storagecore/fstest"
+	"github.com/personalcore/storagecore/lib/diskusage"
+	"github.com/personalcore/storagecore/vfs/vfscache/writeback"
+	"github.com/personalcore/storagecore/vfs/vfscommon"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 )

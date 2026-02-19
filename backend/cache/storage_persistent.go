@@ -15,8 +15,8 @@ import (
 	"sync"
 	"time"
 
-	"github.com/rclone/rclone/fs"
-	"github.com/rclone/rclone/fs/walk"
+	"github.com/personalcore/storagecore/fs"
+	"github.com/personalcore/storagecore/fs/walk"
 	bolt "go.etcd.io/bbolt"
 	"go.etcd.io/bbolt/errors"
 )

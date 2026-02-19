@@ -22,14 +22,14 @@ import (
 	"path/filepath"
 	"strings"
 
-	"github.com/rclone/rclone/cmd/serve/proxy"
-	"github.com/rclone/rclone/fs"
-	"github.com/rclone/rclone/fs/config"
-	"github.com/rclone/rclone/lib/env"
-	"github.com/rclone/rclone/lib/file"
-	sdActivation "github.com/rclone/rclone/lib/sdactivation"
-	"github.com/rclone/rclone/vfs"
-	"github.com/rclone/rclone/vfs/vfscommon"
+	"github.com/personalcore/storagecore/cmd/serve/proxy"
+	"github.com/personalcore/storagecore/fs"
+	"github.com/personalcore/storagecore/fs/config"
+	"github.com/personalcore/storagecore/lib/env"
+	"github.com/personalcore/storagecore/lib/file"
+	sdActivation "github.com/personalcore/storagecore/lib/sdactivation"
+	"github.com/personalcore/storagecore/vfs"
+	"github.com/personalcore/storagecore/vfs/vfscommon"
 	"golang.org/x/crypto/ssh"
 )
 

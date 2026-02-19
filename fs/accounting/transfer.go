@@ -7,8 +7,8 @@ import (
 	"sync"
 	"time"
 
-	"github.com/rclone/rclone/fs"
-	"github.com/rclone/rclone/fs/rc"
+	"github.com/personalcore/storagecore/fs"
+	"github.com/personalcore/storagecore/fs/rc"
 )
 
 // TransferSnapshot represents state of an account at point in time.

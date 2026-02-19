@@ -3,7 +3,7 @@ package sync
 import (
 	"context"
 
-	"github.com/rclone/rclone/fs/rc"
+	"github.com/personalcore/storagecore/fs/rc"
 )
 
 func init() {

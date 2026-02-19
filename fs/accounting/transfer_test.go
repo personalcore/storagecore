@@ -6,9 +6,9 @@ import (
 	"io"
 	"testing"
 
-	"github.com/rclone/rclone/fs/rc"
-	"github.com/rclone/rclone/fstest/mockfs"
-	"github.com/rclone/rclone/fstest/mockobject"
+	"github.com/personalcore/storagecore/fs/rc"
+	"github.com/personalcore/storagecore/fstest/mockfs"
+	"github.com/personalcore/storagecore/fstest/mockobject"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 )

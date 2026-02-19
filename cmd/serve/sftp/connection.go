@@ -13,11 +13,11 @@ import (
 	"strings"
 
 	"github.com/pkg/sftp"
-	"github.com/rclone/rclone/fs"
-	"github.com/rclone/rclone/fs/hash"
-	"github.com/rclone/rclone/lib/terminal"
-	"github.com/rclone/rclone/vfs"
-	"github.com/rclone/rclone/vfs/vfscommon"
+	"github.com/personalcore/storagecore/fs"
+	"github.com/personalcore/storagecore/fs/hash"
+	"github.com/personalcore/storagecore/lib/terminal"
+	"github.com/personalcore/storagecore/vfs"
+	"github.com/personalcore/storagecore/vfs/vfscommon"
 	"golang.org/x/crypto/ssh"
 )
 

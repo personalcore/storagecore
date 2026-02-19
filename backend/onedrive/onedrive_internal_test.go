@@ -8,19 +8,19 @@ import (
 	"testing"
 	"time"
 
-	_ "github.com/rclone/rclone/backend/local"
-	"github.com/rclone/rclone/backend/onedrive/api"
-	"github.com/rclone/rclone/fs"
-	"github.com/rclone/rclone/fs/operations"
-	"github.com/rclone/rclone/fstest"
-	"github.com/rclone/rclone/fstest/fstests"
-	"github.com/rclone/rclone/lib/random"
+	_ "github.com/personalcore/storagecore/backend/local"
+	"github.com/personalcore/storagecore/backend/onedrive/api"
+	"github.com/personalcore/storagecore/fs"
+	"github.com/personalcore/storagecore/fs/operations"
+	"github.com/personalcore/storagecore/fstest"
+	"github.com/personalcore/storagecore/fstest/fstests"
+	"github.com/personalcore/storagecore/lib/random"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 )
 
-// go test -timeout 30m -run ^TestIntegration/FsMkdir/FsPutFiles/Internal$ github.com/rclone/rclone/backend/onedrive -remote TestOneDrive:meta -v
-// go test -timeout 30m -run ^TestIntegration/FsMkdir/FsPutFiles/Internal$ github.com/rclone/rclone/backend/onedrive -remote TestOneDriveBusiness:meta -v
+// go test -timeout 30m -run ^TestIntegration/FsMkdir/FsPutFiles/Internal$ github.com/personalcore/storagecore/backend/onedrive -remote TestOneDrive:meta -v
+// go test -timeout 30m -run ^TestIntegration/FsMkdir/FsPutFiles/Internal$ github.com/personalcore/storagecore/backend/onedrive -remote TestOneDriveBusiness:meta -v
 // go run ./fstest/test_all -remotes TestOneDriveBusiness:meta,TestOneDrive:meta -verbose -maxtries 1
 
 var (

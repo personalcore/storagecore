@@ -12,14 +12,14 @@ import (
 	"strings"
 	"time"
 
-	"github.com/rclone/rclone/backend/archive/archiver"
-	"github.com/rclone/rclone/fs"
-	"github.com/rclone/rclone/fs/dirtree"
-	"github.com/rclone/rclone/fs/hash"
-	"github.com/rclone/rclone/fs/log"
-	"github.com/rclone/rclone/lib/readers"
-	"github.com/rclone/rclone/vfs"
-	"github.com/rclone/rclone/vfs/vfscommon"
+	"github.com/personalcore/storagecore/backend/archive/archiver"
+	"github.com/personalcore/storagecore/fs"
+	"github.com/personalcore/storagecore/fs/dirtree"
+	"github.com/personalcore/storagecore/fs/hash"
+	"github.com/personalcore/storagecore/fs/log"
+	"github.com/personalcore/storagecore/lib/readers"
+	"github.com/personalcore/storagecore/vfs"
+	"github.com/personalcore/storagecore/vfs/vfscommon"
 )
 
 func init() {

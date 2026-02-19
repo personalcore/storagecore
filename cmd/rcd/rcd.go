@@ -5,13 +5,13 @@ import (
 	"context"
 	"strings"
 
-	"github.com/rclone/rclone/cmd"
-	"github.com/rclone/rclone/fs"
-	"github.com/rclone/rclone/fs/rc"
-	"github.com/rclone/rclone/fs/rc/rcflags"
-	"github.com/rclone/rclone/fs/rc/rcserver"
-	libhttp "github.com/rclone/rclone/lib/http"
-	"github.com/rclone/rclone/lib/systemd"
+	"github.com/personalcore/storagecore/cmd"
+	"github.com/personalcore/storagecore/fs"
+	"github.com/personalcore/storagecore/fs/rc"
+	"github.com/personalcore/storagecore/fs/rc/rcflags"
+	"github.com/personalcore/storagecore/fs/rc/rcserver"
+	libhttp "github.com/personalcore/storagecore/lib/http"
+	"github.com/personalcore/storagecore/lib/systemd"
 	"github.com/spf13/cobra"
 )
 

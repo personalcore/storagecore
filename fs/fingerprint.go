@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/rclone/rclone/fs/hash"
+	"github.com/personalcore/storagecore/fs/hash"
 )
 
 // Fingerprint produces a unique-ish string for an object.

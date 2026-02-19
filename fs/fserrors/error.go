@@ -11,7 +11,7 @@ import (
 	"strings"
 	"time"
 
-	liberrors "github.com/rclone/rclone/lib/errors"
+	liberrors "github.com/personalcore/storagecore/lib/errors"
 )
 
 // Must be satisfied for errors.Is/errors.As/Errors.Unwrap

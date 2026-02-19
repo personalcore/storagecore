@@ -4,7 +4,7 @@ import (
 	"context"
 	"testing"
 
-	"github.com/rclone/rclone/fs/config/configmap"
+	"github.com/personalcore/storagecore/fs/config/configmap"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 )

@@ -577,7 +577,7 @@ rclone copy "E:\folder name\folder name\folder name" remote:backup
 ```
 
 If you are using the root directory on its own then don't quote it
-(see [#464](https://github.com/rclone/rclone/issues/464) for why), e.g.
+(see [#464](https://github.com/personalcore/storagecore/issues/464) for why), e.g.
 
 ```bat
 rclone copy E:\ remote:backup
@@ -1475,7 +1475,7 @@ add multiple headers.
 rclone sync --interactive s3:test/src ~/dst --header-download "X-Amz-Meta-Test: Foo" --header-download "X-Amz-Meta-Test2: Bar"
 ```
 
-See GitHub issue [#59](https://github.com/rclone/rclone/issues/59) for
+See GitHub issue [#59](https://github.com/personalcore/storagecore/issues/59) for
 currently supported backends.
 
 ### --header-upload stringArray
@@ -1487,7 +1487,7 @@ multiple headers.
 rclone sync --interactive ~/src s3:test/dst --header-upload "Content-Disposition: attachment; filename='cool.html'" --header-upload "X-Amz-Meta-Test: FooBar"
 ```
 
-See GitHub issue [#59](https://github.com/rclone/rclone/issues/59) for
+See GitHub issue [#59](https://github.com/personalcore/storagecore/issues/59) for
 currently supported backends.
 
 ### --http-proxy string
@@ -1572,7 +1572,7 @@ after transfer.
 
 This can be useful for transferring files to and from OneDrive which
 occasionally misreports the size of image files (see
-[#399](https://github.com/rclone/rclone/issues/399) for more info).
+[#399](https://github.com/personalcore/storagecore/issues/399) for more info).
 
 ### -I, --ignore-times
 
@@ -2171,7 +2171,7 @@ json.dump(o, sys.stdout, indent="\t")
 ```
 
 You can find this example (slightly expanded) in the rclone source code at
-[bin/test_metadata_mapper.py](https://github.com/rclone/rclone/blob/master/bin/test_metadata_mapper.py).
+[bin/test_metadata_mapper.py](https://github.com/personalcore/storagecore/blob/master/bin/test_metadata_mapper.py).
 
 If you want to see the input to the metadata mapper and the output
 returned from it in the log you can use `-vv --dump mapper`.
@@ -2461,7 +2461,7 @@ password.
 
 See the [Configuration Encryption](#configuration-encryption) for more info.
 
-See a [Windows PowerShell example on the Wiki](https://github.com/rclone/rclone/wiki/Windows-Powershell-use-rclone-password-command-for-Config-file-password).
+See a [Windows PowerShell example on the Wiki](https://github.com/personalcore/storagecore/wiki/Windows-Powershell-use-rclone-password-command-for-Config-file-password).
 
 ### -P, --progress
 

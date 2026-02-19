@@ -11,7 +11,7 @@ import (
 	"io"
 	"time"
 
-	"github.com/rclone/rclone/lib/readers"
+	"github.com/personalcore/storagecore/lib/readers"
 )
 
 // protocol errors

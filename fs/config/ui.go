@@ -17,13 +17,13 @@ import (
 	"unicode/utf8"
 
 	"github.com/peterh/liner"
-	"github.com/rclone/rclone/fs"
-	"github.com/rclone/rclone/fs/config/configmap"
-	"github.com/rclone/rclone/fs/config/configstruct"
-	"github.com/rclone/rclone/fs/config/obscure"
-	"github.com/rclone/rclone/fs/driveletter"
-	"github.com/rclone/rclone/fs/fspath"
-	"github.com/rclone/rclone/lib/terminal"
+	"github.com/personalcore/storagecore/fs"
+	"github.com/personalcore/storagecore/fs/config/configmap"
+	"github.com/personalcore/storagecore/fs/config/configstruct"
+	"github.com/personalcore/storagecore/fs/config/obscure"
+	"github.com/personalcore/storagecore/fs/driveletter"
+	"github.com/personalcore/storagecore/fs/fspath"
+	"github.com/personalcore/storagecore/lib/terminal"
 	"golang.org/x/text/unicode/norm"
 )
 

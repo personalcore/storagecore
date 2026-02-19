@@ -11,7 +11,7 @@ import (
 	"strings"
 	"time"
 
-	"github.com/rclone/rclone/fs"
+	"github.com/personalcore/storagecore/fs"
 	"gopkg.in/natefinch/lumberjack.v2"
 )
 

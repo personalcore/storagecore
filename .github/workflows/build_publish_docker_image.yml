@@ -107,7 +107,7 @@ jobs:
           images: |
             ghcr.io/${{ env.REPO_NAME }}
           labels: |
-            org.opencontainers.image.url=https://github.com/rclone/rclone/pkgs/container/rclone
+            org.opencontainers.image.url=https://github.com/personalcore/storagecore/pkgs/container/rclone
             org.opencontainers.image.vendor=${{ github.repository_owner }}
             org.opencontainers.image.authors=rclone <https://github.com/rclone>
             org.opencontainers.image.source=${{ github.server_url }}/${{ github.repository }}
@@ -218,7 +218,7 @@ jobs:
             ${{ env.REPO_NAME }}
             ghcr.io/${{ env.REPO_NAME }}
           labels: |
-            org.opencontainers.image.url=https://github.com/rclone/rclone/pkgs/container/rclone
+            org.opencontainers.image.url=https://github.com/personalcore/storagecore/pkgs/container/rclone
             org.opencontainers.image.vendor=${{ github.repository_owner }}
             org.opencontainers.image.authors=rclone <https://github.com/rclone>
             org.opencontainers.image.source=${{ github.server_url }}/${{ github.repository }}

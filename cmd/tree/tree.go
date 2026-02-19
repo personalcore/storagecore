@@ -12,14 +12,14 @@ import (
 	"time"
 
 	"github.com/a8m/tree"
-	"github.com/rclone/rclone/cmd"
-	"github.com/rclone/rclone/fs"
-	"github.com/rclone/rclone/fs/config/flags"
-	"github.com/rclone/rclone/fs/dirtree"
-	"github.com/rclone/rclone/fs/log"
-	"github.com/rclone/rclone/fs/walk"
-	"github.com/rclone/rclone/lib/encoder"
-	"github.com/rclone/rclone/lib/terminal"
+	"github.com/personalcore/storagecore/cmd"
+	"github.com/personalcore/storagecore/fs"
+	"github.com/personalcore/storagecore/fs/config/flags"
+	"github.com/personalcore/storagecore/fs/dirtree"
+	"github.com/personalcore/storagecore/fs/log"
+	"github.com/personalcore/storagecore/fs/walk"
+	"github.com/personalcore/storagecore/lib/encoder"
+	"github.com/personalcore/storagecore/lib/terminal"
 	"github.com/spf13/cobra"
 )
 

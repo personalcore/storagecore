@@ -476,7 +476,7 @@ Union: Join multiple remotes to work together
 Home page (https://rclone.org/)
 .IP \[bu] 2
 GitHub project page for source and bug
-tracker (https://github.com/rclone/rclone)
+tracker (https://github.com/personalcore/storagecore)
 .IP \[bu] 2
 Rclone Forum (https://forum.rclone.org)
 .IP \[bu] 2
@@ -578,7 +578,7 @@ brew install rclone
 .fi
 .PP
 NOTE: This version of rclone will not support \f[V]mount\f[R] any more
-(see #5373 (https://github.com/rclone/rclone/issues/5373)).
+(see #5373 (https://github.com/personalcore/storagecore/issues/5373)).
 If mounting is wanted on macOS, either install a precompiled binary or
 enable the relevant option when installing from source.
 .PP
@@ -953,7 +953,7 @@ Then you can run the following:
 .IP
 .nf
 \f[C]
-git clone https://github.com/rclone/rclone.git
+git clone https://github.com/personalcore/storagecore.git
 cd rclone
 go build
 \f[R]
@@ -1018,7 +1018,7 @@ This can be done from the build command, by adding to the
 .IP
 .nf
 \f[C]
-go build -trimpath -ldflags \[dq]-s -X github.com/rclone/rclone/fs.Version=v9.9.9-test\[dq] -tags cmount
+go build -trimpath -ldflags \[dq]-s -X github.com/personalcore/storagecore/fs.Version=v9.9.9-test\[dq] -tags cmount
 \f[R]
 .fi
 .PP
@@ -1077,8 +1077,8 @@ make GOTAGS=cmount
 There are other make targets that can be used for more advanced builds,
 such as cross-compiling for all supported os/architectures, and
 packaging results into release artifacts.
-See Makefile (https://github.com/rclone/rclone/blob/master/Makefile) and
-cross-compile.go (https://github.com/rclone/rclone/blob/master/bin/cross-compile.go)
+See Makefile (https://github.com/personalcore/storagecore/blob/master/Makefile) and
+cross-compile.go (https://github.com/personalcore/storagecore/blob/master/bin/cross-compile.go)
 for details.
 .PP
 Another alternative method for source installation is to download the
@@ -1091,7 +1091,7 @@ executable will be in your GOPATH bin folder
 .IP
 .nf
 \f[C]
-go install github.com/rclone/rclone\[at]latest
+go install github.com/personalcore/storagecore\[at]latest
 \f[R]
 .fi
 .PP
@@ -1288,7 +1288,7 @@ network drives.
 This is currently not officially supported by Rclone, but with WinFsp
 version 2019.3 B2 / v1.5B2 or later it should be possible through path
 rewriting as described in
-#3340 (https://github.com/rclone/rclone/issues/3340).
+#3340 (https://github.com/personalcore/storagecore/issues/3340).
 .SS Third-party service integration
 .PP
 To Windows service running any rclone command, the excellent third-party
@@ -1721,7 +1721,7 @@ If metadata syncing is required then use the \f[V]--metadata\f[R] flag.
 .PP
 Note that the modification time and metadata for the root directory will
 \f[B]not\f[R] be synced.
-See issue #7652 (https://github.com/rclone/rclone/issues/7652) for more
+See issue #7652 (https://github.com/personalcore/storagecore/issues/7652) for more
 info.
 .PP
 \f[B]Note\f[R]: Use the \f[V]-P\f[R]/\f[V]--progress\f[R] flag to view
@@ -1974,7 +1974,7 @@ If metadata syncing is required then use the \f[V]--metadata\f[R] flag.
 .PP
 Note that the modification time and metadata for the root directory will
 \f[B]not\f[R] be synced.
-See <https://github.com/rclone/rclone/issues/7652> for more info.
+See <https://github.com/personalcore/storagecore/issues/7652> for more info.
 .PP
 \f[B]Note\f[R]: Use the \f[V]-P\f[R]/\f[V]--progress\f[R] flag to view
 real-time transfer statistics
@@ -2234,7 +2234,7 @@ If metadata syncing is required then use the \f[V]--metadata\f[R] flag.
 .PP
 Note that the modification time and metadata for the root directory will
 \f[B]not\f[R] be synced.
-See <https://github.com/rclone/rclone/issues/7652> for more info.
+See <https://github.com/personalcore/storagecore/issues/7652> for more info.
 .PP
 \f[B]Important\f[R]: Since this can cause data loss, test first with the
 \f[V]--dry-run\f[R] or the \f[V]--interactive\f[R]/\f[V]-i\f[R] flag.
@@ -8437,11 +8437,11 @@ too many callbacks to rclone from the kernel.
 In theory 0s should be the correct value for filesystems which can
 change outside the control of the kernel.
 However this causes quite a few problems such as rclone using too much
-memory (https://github.com/rclone/rclone/issues/2157), rclone not
+memory (https://github.com/personalcore/storagecore/issues/2157), rclone not
 serving files to
 samba (https://forum.rclone.org/t/rclone-1-39-vs-1-40-mount-issue/5112)
 and excessive time listing
-directories (https://github.com/rclone/rclone/issues/2095#issuecomment-371141147).
+directories (https://github.com/personalcore/storagecore/issues/2095#issuecomment-371141147).
 .PP
 The kernel can cache the info about a file for the time given by
 \f[V]--attr-timeout\f[R].
@@ -9003,7 +9003,7 @@ This is not a problem for the tested commands but may be for other
 commands.
 .PP
 \f[B]Note\f[R] that there is an outstanding issue with symlink support
-issue #8245 (https://github.com/rclone/rclone/issues/8245) with
+issue #8245 (https://github.com/personalcore/storagecore/issues/8245) with
 duplicate files being created when symlinks are moved into directories
 where there is a file of the same name (or vice versa).
 .SS VFS Case Sensitivity
@@ -10092,11 +10092,11 @@ too many callbacks to rclone from the kernel.
 In theory 0s should be the correct value for filesystems which can
 change outside the control of the kernel.
 However this causes quite a few problems such as rclone using too much
-memory (https://github.com/rclone/rclone/issues/2157), rclone not
+memory (https://github.com/personalcore/storagecore/issues/2157), rclone not
 serving files to
 samba (https://forum.rclone.org/t/rclone-1-39-vs-1-40-mount-issue/5112)
 and excessive time listing
-directories (https://github.com/rclone/rclone/issues/2095#issuecomment-371141147).
+directories (https://github.com/personalcore/storagecore/issues/2095#issuecomment-371141147).
 .PP
 The kernel can cache the info about a file for the time given by
 \f[V]--attr-timeout\f[R].
@@ -10658,7 +10658,7 @@ This is not a problem for the tested commands but may be for other
 commands.
 .PP
 \f[B]Note\f[R] that there is an outstanding issue with symlink support
-issue #8245 (https://github.com/rclone/rclone/issues/8245) with
+issue #8245 (https://github.com/personalcore/storagecore/issues/8245) with
 duplicate files being created when symlinks are moved into directories
 where there is a file of the same name (or vice versa).
 .SS VFS Case Sensitivity
@@ -12176,7 +12176,7 @@ This is not a problem for the tested commands but may be for other
 commands.
 .PP
 \f[B]Note\f[R] that there is an outstanding issue with symlink support
-issue #8245 (https://github.com/rclone/rclone/issues/8245) with
+issue #8245 (https://github.com/personalcore/storagecore/issues/8245) with
 duplicate files being created when symlinks are moved into directories
 where there is a file of the same name (or vice versa).
 .SS VFS Case Sensitivity
@@ -12880,7 +12880,7 @@ This is not a problem for the tested commands but may be for other
 commands.
 .PP
 \f[B]Note\f[R] that there is an outstanding issue with symlink support
-issue #8245 (https://github.com/rclone/rclone/issues/8245) with
+issue #8245 (https://github.com/personalcore/storagecore/issues/8245) with
 duplicate files being created when symlinks are moved into directories
 where there is a file of the same name (or vice versa).
 .SS VFS Case Sensitivity
@@ -13575,7 +13575,7 @@ This is not a problem for the tested commands but may be for other
 commands.
 .PP
 \f[B]Note\f[R] that there is an outstanding issue with symlink support
-issue #8245 (https://github.com/rclone/rclone/issues/8245) with
+issue #8245 (https://github.com/personalcore/storagecore/issues/8245) with
 duplicate files being created when symlinks are moved into directories
 where there is a file of the same name (or vice versa).
 .SS VFS Case Sensitivity
@@ -13730,7 +13730,7 @@ STDOUT.
 ignored.
 .PP
 There is an example program
-bin/test_proxy.py (https://github.com/rclone/rclone/blob/master/bin/test_proxy.py)
+bin/test_proxy.py (https://github.com/personalcore/storagecore/blob/master/bin/test_proxy.py)
 in the rclone source code.
 .PP
 The program\[aq]s job is to take a \f[V]user\f[R] and \f[V]pass\f[R] on
@@ -14604,7 +14604,7 @@ This is not a problem for the tested commands but may be for other
 commands.
 .PP
 \f[B]Note\f[R] that there is an outstanding issue with symlink support
-issue #8245 (https://github.com/rclone/rclone/issues/8245) with
+issue #8245 (https://github.com/personalcore/storagecore/issues/8245) with
 duplicate files being created when symlinks are moved into directories
 where there is a file of the same name (or vice versa).
 .SS VFS Case Sensitivity
@@ -14759,7 +14759,7 @@ STDOUT.
 ignored.
 .PP
 There is an example program
-bin/test_proxy.py (https://github.com/rclone/rclone/blob/master/bin/test_proxy.py)
+bin/test_proxy.py (https://github.com/personalcore/storagecore/blob/master/bin/test_proxy.py)
 in the rclone source code.
 .PP
 The program\[aq]s job is to take a \f[V]user\f[R] and \f[V]pass\f[R] on
@@ -15460,7 +15460,7 @@ This is not a problem for the tested commands but may be for other
 commands.
 .PP
 \f[B]Note\f[R] that there is an outstanding issue with symlink support
-issue #8245 (https://github.com/rclone/rclone/issues/8245) with
+issue #8245 (https://github.com/personalcore/storagecore/issues/8245) with
 duplicate files being created when symlinks are moved into directories
 where there is a file of the same name (or vice versa).
 .SS VFS Case Sensitivity
@@ -16069,19 +16069,19 @@ around a bug which will be fixed in due course.
 .SS Bugs
 .PP
 When uploading multipart files \f[V]serve s3\f[R] holds all the parts in
-memory (see #7453 (https://github.com/rclone/rclone/issues/7453)).
+memory (see #7453 (https://github.com/personalcore/storagecore/issues/7453)).
 This is a limitaton of the library rclone uses for serving S3 and will
 hopefully be fixed at some point.
 .PP
 Multipart server side copies do not work (see
-#7454 (https://github.com/rclone/rclone/issues/7454)).
+#7454 (https://github.com/personalcore/storagecore/issues/7454)).
 These take a very long time and eventually fail.
 The default threshold for multipart server side copies is 5G which is
 the maximum it can be, so files above this side will fail to be server
 side copied.
 .PP
 For a current list of \f[V]serve s3\f[R] bugs see the serve
-s3 (https://github.com/rclone/rclone/labels/serve%20s3) bug category on
+s3 (https://github.com/personalcore/storagecore/labels/serve%20s3) bug category on
 GitHub.
 .SS Limitations
 .PP
@@ -16688,7 +16688,7 @@ This is not a problem for the tested commands but may be for other
 commands.
 .PP
 \f[B]Note\f[R] that there is an outstanding issue with symlink support
-issue #8245 (https://github.com/rclone/rclone/issues/8245) with
+issue #8245 (https://github.com/personalcore/storagecore/issues/8245) with
 duplicate files being created when symlinks are moved into directories
 where there is a file of the same name (or vice versa).
 .SS VFS Case Sensitivity
@@ -17438,7 +17438,7 @@ This is not a problem for the tested commands but may be for other
 commands.
 .PP
 \f[B]Note\f[R] that there is an outstanding issue with symlink support
-issue #8245 (https://github.com/rclone/rclone/issues/8245) with
+issue #8245 (https://github.com/personalcore/storagecore/issues/8245) with
 duplicate files being created when symlinks are moved into directories
 where there is a file of the same name (or vice versa).
 .SS VFS Case Sensitivity
@@ -17593,7 +17593,7 @@ STDOUT.
 ignored.
 .PP
 There is an example program
-bin/test_proxy.py (https://github.com/rclone/rclone/blob/master/bin/test_proxy.py)
+bin/test_proxy.py (https://github.com/personalcore/storagecore/blob/master/bin/test_proxy.py)
 in the rclone source code.
 .PP
 The program\[aq]s job is to take a \f[V]user\f[R] and \f[V]pass\f[R] on
@@ -18534,7 +18534,7 @@ This is not a problem for the tested commands but may be for other
 commands.
 .PP
 \f[B]Note\f[R] that there is an outstanding issue with symlink support
-issue #8245 (https://github.com/rclone/rclone/issues/8245) with
+issue #8245 (https://github.com/personalcore/storagecore/issues/8245) with
 duplicate files being created when symlinks are moved into directories
 where there is a file of the same name (or vice versa).
 .SS VFS Case Sensitivity
@@ -18689,7 +18689,7 @@ STDOUT.
 ignored.
 .PP
 There is an example program
-bin/test_proxy.py (https://github.com/rclone/rclone/blob/master/bin/test_proxy.py)
+bin/test_proxy.py (https://github.com/personalcore/storagecore/blob/master/bin/test_proxy.py)
 in the rclone source code.
 .PP
 The program\[aq]s job is to take a \f[V]user\f[R] and \f[V]pass\f[R] on
@@ -19960,7 +19960,7 @@ rclone copy \[dq]E:\[rs]folder name\[rs]folder name\[rs]folder name\[dq] remote:
 .fi
 .PP
 If you are using the root directory on its own then don\[aq]t quote it
-(see #464 (https://github.com/rclone/rclone/issues/464) for why), e.g.
+(see #464 (https://github.com/personalcore/storagecore/issues/464) for why), e.g.
 .IP
 .nf
 \f[C]
@@ -21103,7 +21103,7 @@ rclone sync --interactive s3:test/src \[ti]/dst --header-download \[dq]X-Amz-Met
 \f[R]
 .fi
 .PP
-See GitHub issue #59 (https://github.com/rclone/rclone/issues/59) for
+See GitHub issue #59 (https://github.com/personalcore/storagecore/issues/59) for
 currently supported backends.
 .SS --header-upload stringArray
 .PP
@@ -21116,7 +21116,7 @@ rclone sync --interactive \[ti]/src s3:test/dst --header-upload \[dq]Content-Dis
 \f[R]
 .fi
 .PP
-See GitHub issue #59 (https://github.com/rclone/rclone/issues/59) for
+See GitHub issue #59 (https://github.com/personalcore/storagecore/issues/59) for
 currently supported backends.
 .SS --http-proxy string
 .PP
@@ -21211,7 +21211,7 @@ transfer.
 .PP
 This can be useful for transferring files to and from OneDrive which
 occasionally misreports the size of image files (see
-#399 (https://github.com/rclone/rclone/issues/399) for more info).
+#399 (https://github.com/personalcore/storagecore/issues/399) for more info).
 .SS -I, --ignore-times
 .PP
 Using this option will cause rclone to unconditionally upload all files
@@ -21897,7 +21897,7 @@ json.dump(o, sys.stdout, indent=\[dq]\[rs]t\[dq])
 .PP
 You can find this example (slightly expanded) in the rclone source code
 at
-bin/test_metadata_mapper.py (https://github.com/rclone/rclone/blob/master/bin/test_metadata_mapper.py).
+bin/test_metadata_mapper.py (https://github.com/personalcore/storagecore/blob/master/bin/test_metadata_mapper.py).
 .PP
 If you want to see the input to the metadata mapper and the output
 returned from it in the log you can use \f[V]-vv --dump mapper\f[R].
@@ -22222,7 +22222,7 @@ from the new password.
 See the Configuration Encryption for more info.
 .PP
 See a Windows PowerShell example on the
-Wiki (https://github.com/rclone/rclone/wiki/Windows-Powershell-use-rclone-password-command-for-Config-file-password).
+Wiki (https://github.com/personalcore/storagecore/wiki/Windows-Powershell-use-rclone-password-command-for-Config-file-password).
 .SS -P, --progress
 .PP
 This flag makes rclone update the stats in a static block in the
@@ -25006,7 +25006,7 @@ serve the GUI:
 .IP
 .nf
 \f[C]
-2019/08/25 11:40:14 NOTICE: A new release for gui is present at https://github.com/rclone/rclone-webui-react/releases/download/v0.0.6/currentbuild.zip
+2019/08/25 11:40:14 NOTICE: A new release for gui is present at https://github.com/personalcore/storagecore-webui-react/releases/download/v0.0.6/currentbuild.zip
 2019/08/25 11:40:14 NOTICE: Downloading webgui binary. Please wait. [Size: 3813937, Path :  /home/USER/.cache/rclone/webgui/v0.0.6.zip]
 2019/08/25 11:40:16 NOTICE: Unzipping
 2019/08/25 11:40:16 NOTICE: Serving remote control on http://127.0.0.1:5572/
@@ -25114,7 +25114,7 @@ Or instead of htpasswd if you just want a single user and password:
 .SS Project
 .PP
 The GUI is being developed in the: rclone/rclone-webui-react
-repository (https://github.com/rclone/rclone-webui-react).
+repository (https://github.com/personalcore/storagecore-webui-react).
 .PP
 Bug reports and contributions are very welcome :-)
 .PP
@@ -27635,7 +27635,7 @@ Used for adding a plugin to the webgui.
 This takes the following parameters:
 .IP \[bu] 2
 url - http url of the github repo where the plugin is hosted
-(http://github.com/rclone/rclone-webui-react).
+(http://github.com/personalcore/storagecore-webui-react).
 .PP
 Example:
 .PP
@@ -28454,14 +28454,14 @@ You can also use the \f[V]-text\f[R] flag to produce a textual summary
 $ go tool pprof -text http://localhost:5572/debug/pprof/heap
 Showing nodes accounting for 1537.03kB, 100% of 1537.03kB total
       flat  flat%   sum%        cum   cum%
- 1024.03kB 66.62% 66.62%  1024.03kB 66.62%  github.com/rclone/rclone/vendor/golang.org/x/net/http2/hpack.addDecoderNode
+ 1024.03kB 66.62% 66.62%  1024.03kB 66.62%  github.com/personalcore/storagecore/vendor/golang.org/x/net/http2/hpack.addDecoderNode
      513kB 33.38%   100%      513kB 33.38%  net/http.newBufioWriterSize
-         0     0%   100%  1024.03kB 66.62%  github.com/rclone/rclone/cmd/all.init
-         0     0%   100%  1024.03kB 66.62%  github.com/rclone/rclone/cmd/serve.init
-         0     0%   100%  1024.03kB 66.62%  github.com/rclone/rclone/cmd/serve/restic.init
-         0     0%   100%  1024.03kB 66.62%  github.com/rclone/rclone/vendor/golang.org/x/net/http2.init
-         0     0%   100%  1024.03kB 66.62%  github.com/rclone/rclone/vendor/golang.org/x/net/http2/hpack.init
-         0     0%   100%  1024.03kB 66.62%  github.com/rclone/rclone/vendor/golang.org/x/net/http2/hpack.init.0
+         0     0%   100%  1024.03kB 66.62%  github.com/personalcore/storagecore/cmd/all.init
+         0     0%   100%  1024.03kB 66.62%  github.com/personalcore/storagecore/cmd/serve.init
+         0     0%   100%  1024.03kB 66.62%  github.com/personalcore/storagecore/cmd/serve/restic.init
+         0     0%   100%  1024.03kB 66.62%  github.com/personalcore/storagecore/vendor/golang.org/x/net/http2.init
+         0     0%   100%  1024.03kB 66.62%  github.com/personalcore/storagecore/vendor/golang.org/x/net/http2/hpack.init
+         0     0%   100%  1024.03kB 66.62%  github.com/personalcore/storagecore/vendor/golang.org/x/net/http2/hpack.init.0
          0     0%   100%  1024.03kB 66.62%  main.init
          0     0%   100%      513kB 33.38%  net/http.(*conn).readRequest
          0     0%   100%      513kB 33.38%  net/http.(*conn).serve
@@ -31927,7 +31927,7 @@ When using \f[V]--resync\f[R], a newer version of a file on the Path2
 filesystem will (by default) be overwritten by the Path1 filesystem
 version.
 (Note that this is NOT entirely
-symmetrical (https://github.com/rclone/rclone/issues/5681#issuecomment-938761815),
+symmetrical (https://github.com/personalcore/storagecore/issues/5681#issuecomment-938761815),
 and more symmetrical options can be specified with the
 \f[V]--resync-mode\f[R] flag.)
 Carefully evaluate deltas using
@@ -33215,7 +33215,7 @@ known issues that are deemed unfixable for the time being:
 \f[V]TestWebdavOwncloud\f[R] (\f[V]webdav\f[R])
 .IP \[bu] 2
 \f[V]TestnStorage\f[R] (\f[V]netstorage\f[R]) (more
-info (https://github.com/rclone/rclone/blob/master/fstest/test_all/config.yaml))
+info (https://github.com/personalcore/storagecore/blob/master/fstest/test_all/config.yaml))
 .PP
 The above lists are updated for each stable release of rclone.
 For test results updated nightly based on the latest beta, visit
@@ -33313,7 +33313,7 @@ In many cases this is desirable, however, there are some scenarios in
 which bisync could be faster \f[I]without\f[R] \f[V]--fast-list\f[R],
 and there is also a known issue concerning Google Drive users with many
 empty
-directories (https://github.com/rclone/rclone/commit/cbf3d4356135814921382dd3285d859d15d0aa77).
+directories (https://github.com/personalcore/storagecore/commit/cbf3d4356135814921382dd3285d859d15d0aa77).
 For now, the recommended way to avoid using \f[V]--fast-list\f[R] is to
 add \f[V]--disable ListR\f[R] to all bisync commands.
 The default behavior may change in a future version.
@@ -34429,7 +34429,7 @@ From KEYS on this website - this file contains all past signing keys
 also.
 .IP \[bu] 2
 The git repository hosted on GitHub -
-<https://github.com/rclone/rclone/blob/master/docs/content/KEYS>
+<https://github.com/personalcore/storagecore/blob/master/docs/content/KEYS>
 .IP \[bu] 2
 \f[V]gpg --keyserver hkps://keys.openpgp.org --search nick\[at]craig-wood.com\f[R]
 .IP \[bu] 2
@@ -34447,7 +34447,7 @@ By cross-checking the integrity of the fingerprint across multiple
 domains you can be confident that you obtained the correct key.
 .IP \[bu] 2
 The source for this page on
-GitHub (https://github.com/rclone/rclone/blob/master/docs/content/release_signing.md).
+GitHub (https://github.com/personalcore/storagecore/blob/master/docs/content/release_signing.md).
 .IP \[bu] 2
 Through DNS \f[V]dig key.rclone.org txt\f[R]
 .PP
@@ -42310,8 +42310,8 @@ HTTP/2 is enabled by default for the s3 backend but can be disabled
 here.
 When the issue is solved this flag will be removed.
 .PP
-See: https://github.com/rclone/rclone/issues/4673,
-https://github.com/rclone/rclone/issues/3631
+See: https://github.com/personalcore/storagecore/issues/4673,
+https://github.com/personalcore/storagecore/issues/3631
 .PP
 Properties:
 .IP \[bu] 2
@@ -48628,7 +48628,7 @@ To sync a directory with 100,000,000 files in you would need
 approximately 100 GB of memory.
 At some point the amount of memory becomes difficult to provide so there
 is a workaround for
-this (https://github.com/rclone/rclone/wiki/Big-syncs-with-millions-of-files)
+this (https://github.com/personalcore/storagecore/wiki/Big-syncs-with-millions-of-files)
 which involves a bit of scripting.
 .PP
 At some point rclone will gain a sync mode which is effectively this
@@ -49265,7 +49265,7 @@ which remotes support SHA1.
 Sources which don\[aq]t support SHA1, in particular \f[V]crypt\f[R] will
 upload large files without SHA1 checksums.
 This may be fixed in the future (see
-#1767 (https://github.com/rclone/rclone/issues/1767)).
+#1767 (https://github.com/personalcore/storagecore/issues/1767)).
 .PP
 Files sizes below \f[V]--b2-upload-cutoff\f[R] will always have an SHA1
 regardless of the source.
@@ -49421,7 +49421,7 @@ The \f[V]b2_list_file_names\f[R] request will be sent once for every 1k
 files in the remote path, providing the checksum and modification time
 of the listed files.
 As of version 1.33 issue
-#818 (https://github.com/rclone/rclone/issues/818) causes extra requests
+#818 (https://github.com/personalcore/storagecore/issues/818) causes extra requests
 to be sent when using B2 with Crypt.
 When a copy operation does not require any files to be uploaded, no more
 requests will be sent.
@@ -50812,7 +50812,7 @@ installations and may be removed at some point.
 .PP
 The cache backend code is working but it currently doesn\[aq]t have a
 maintainer so there are outstanding
-bugs (https://github.com/rclone/rclone/issues?q=is%3Aopen+is%3Aissue+label%3Abug+label%3A%22Remote%3A+Cache%22)
+bugs (https://github.com/personalcore/storagecore/issues?q=is%3Aopen+is%3Aissue+label%3Abug+label%3A%22Remote%3A+Cache%22)
 which aren\[aq]t getting fixed.
 .PP
 The cache backend is due to be phased out in favour of the VFS caching
@@ -51076,11 +51076,11 @@ on them.
 Any reports or feedback on how cache behaves on this OS is greatly
 appreciated.
 .IP \[bu] 2
-Issue #1935 (https://github.com/rclone/rclone/issues/1935)
+Issue #1935 (https://github.com/personalcore/storagecore/issues/1935)
 .IP \[bu] 2
-Issue #1907 (https://github.com/rclone/rclone/issues/1907)
+Issue #1907 (https://github.com/personalcore/storagecore/issues/1907)
 .IP \[bu] 2
-Issue #1834 (https://github.com/rclone/rclone/issues/1834)
+Issue #1834 (https://github.com/personalcore/storagecore/issues/1834)
 .SS Risk of throttling
 .PP
 Future iterations of the cache backend will make use of the pooling
@@ -51103,9 +51103,9 @@ cache at the same time if configured to do so.
 .PP
 Future enhancements:
 .IP \[bu] 2
-Issue #1937 (https://github.com/rclone/rclone/issues/1937)
+Issue #1937 (https://github.com/personalcore/storagecore/issues/1937)
 .IP \[bu] 2
-Issue #1936 (https://github.com/rclone/rclone/issues/1936)
+Issue #1936 (https://github.com/personalcore/storagecore/issues/1936)
 .SS cache and crypt
 .PP
 One common scenario is to keep your data encrypted in the cloud provider
@@ -53351,7 +53351,7 @@ and should be changed.
 If you made up your own password, or used rclone version older than
 1.49.0 or newer than 1.53.2 to generate it, you are \f[I]not\f[R]
 affected by this issue.
-See issue #4783 (https://github.com/rclone/rclone/issues/4783) for more
+See issue #4783 (https://github.com/personalcore/storagecore/issues/4783) for more
 details, and a tool you can use to check if you are affected.
 .SS Example
 .PP
@@ -61054,7 +61054,7 @@ HTTP/2 is therefore disabled by default for the drive backend but can be
 re-enabled here.
 When the issue is solved this flag will be removed.
 .PP
-See: https://github.com/rclone/rclone/issues/3631
+See: https://github.com/personalcore/storagecore/issues/3631
 .PP
 Properties:
 .IP \[bu] 2
@@ -61079,7 +61079,7 @@ These will stop the in-progress sync.
 Note that this detection is relying on error message strings which
 Google don\[aq]t document so it may break in the future.
 .PP
-See: https://github.com/rclone/rclone/issues/3857
+See: https://github.com/personalcore/storagecore/issues/3857
 .PP
 Properties:
 .IP \[bu] 2
@@ -63560,7 +63560,7 @@ If you want to build the docker image
 .IP
 .nf
 \f[C]
-git clone https://github.com/rclone/rclone.git
+git clone https://github.com/personalcore/storagecore.git
 cd rclone/fstest/testserver/images/test-hdfs
 docker build --rm -t rclone/test-hdfs .
 \f[R]
@@ -63757,7 +63757,7 @@ Required: false
 .SS Limitations
 .IP \[bu] 2
 Erasure coding not supported, see issue
-#8808 (https://github.com/rclone/rclone/issues/8808)
+#8808 (https://github.com/personalcore/storagecore/issues/8808)
 .IP \[bu] 2
 No server-side \f[V]Move\f[R] or \f[V]DirMove\f[R].
 .IP \[bu] 2
@@ -71875,7 +71875,7 @@ for more information about the different scopes.
 .PP
 The \f[V]Sites.Read.All\f[R] permission is required if you need to
 search SharePoint sites when configuring the
-remote (https://github.com/rclone/rclone/pull/5883).
+remote (https://github.com/personalcore/storagecore/pull/5883).
 However, if that permission is not assigned, you need to exclude
 \f[V]Sites.Read.All\f[R] from your access scopes or set
 \f[V]disable_site_permission\f[R] option to true in the advanced
@@ -71910,7 +71910,7 @@ In the rclone config, set \f[V]token_url\f[R] to
 Note: If you have a special region, you may need a different host in
 step 4 and 5.
 Here are some
-hints (https://github.com/rclone/rclone/blob/bc23bf11db1c78c6ebbf8ea538fbebf7058b4176/backend/onedrive/onedrive.go#L86).
+hints (https://github.com/personalcore/storagecore/blob/bc23bf11db1c78c6ebbf8ea538fbebf7058b4176/backend/onedrive/onedrive.go#L86).
 .SS Using OAuth Client Credential flow
 .PP
 OAuth Client Credential flow will allow rclone to use permissions
@@ -72316,7 +72316,7 @@ causes rclone to use twice the storage on Onedrive business as when
 rclone sets the modification time after the upload Onedrive creates a
 new version.
 .PP
-See: https://github.com/rclone/rclone/issues/1716
+See: https://github.com/personalcore/storagecore/issues/1716
 .PP
 Properties:
 .IP \[bu] 2
@@ -73322,7 +73322,7 @@ typically longer than the original ones.
 OneDrive seems to be OK with at least 50,000 files in a folder, but at
 100,000 rclone will get errors listing the directory like
 \f[V]couldn\[cq]t list files: UnknownError:\f[R].
-See #2707 (https://github.com/rclone/rclone/issues/2707) for more info.
+See #2707 (https://github.com/personalcore/storagecore/issues/2707) for more info.
 .PP
 An official document about the limitations for different types of
 OneDrive can be found
@@ -73535,7 +73535,7 @@ To fix the permissions as an admin, take a look at the docs:
 .SS Can not access \f[V]Shared\f[R] with me files
 .PP
 Shared with me files is not supported by rclone
-currently (https://github.com/rclone/rclone/issues/4062), but there is a
+currently (https://github.com/personalcore/storagecore/issues/4062), but there is a
 workaround:
 .IP "1." 3
 Visit https://onedrive.live.com (https://onedrive.live.com/)
@@ -84694,7 +84694,7 @@ Office365 Education Accounts.
 This feature is only needed for a few of these Accounts, mostly
 Office365 Education ones.
 These accounts are sometimes not verified by the domain owner
-github#1975 (https://github.com/rclone/rclone/issues/1975)
+github#1975 (https://github.com/personalcore/storagecore/issues/1975)
 .PP
 This means that these accounts can\[aq]t be added using the official API
 (other Accounts should work with the \[dq]onedrive\[dq] option).
@@ -86008,7 +86008,7 @@ This is why you will see that your paths, for instance
 \f[V]\[rs]\[rs]?\[rs]UNC\[rs]server\[rs]share\f[R].
 .PP
 However, in rare cases this may cause problems with buggy file system
-drivers like EncFS (https://github.com/rclone/rclone/issues/261).
+drivers like EncFS (https://github.com/personalcore/storagecore/issues/261).
 To disable UNC conversion globally, add this to your
 \f[V].rclone.conf\f[R] file:
 .IP
@@ -86384,7 +86384,7 @@ copy - source file is being updated\[dq] if the file changes during
 upload.
 .PP
 However on some file systems this modification time check may fail (e.g.
-Glusterfs #2206 (https://github.com/rclone/rclone/issues/2206)) so this
+Glusterfs #2206 (https://github.com/personalcore/storagecore/issues/2206)) so this
 check can be disabled with this flag.
 .PP
 If this flag is set, rclone will use its best efforts to transfer a file
@@ -86816,7 +86816,7 @@ Options:
 .SH Changelog
 .SS v1.73.0 - 2026-01-30
 .PP
-See commits (https://github.com/rclone/rclone/compare/v1.72.0...v1.73.0)
+See commits (https://github.com/personalcore/storagecore/compare/v1.72.0...v1.73.0)
 .IP \[bu] 2
 New backends
 .RS 2
@@ -86975,7 +86975,7 @@ Eliminate unnecessary heap allocation (Qingwei Li)
 .RE
 .SS v1.72.1 - 2025-12-10
 .PP
-See commits (https://github.com/rclone/rclone/compare/v1.72.0...v1.72.1)
+See commits (https://github.com/personalcore/storagecore/compare/v1.72.0...v1.72.1)
 .IP \[bu] 2
 Bug Fixes
 .RS 2
@@ -87009,7 +87009,7 @@ Add missing regions for Selectel provider (Nick Craig-Wood)
 .RE
 .SS v1.72.0 - 2025-11-21
 .PP
-See commits (https://github.com/rclone/rclone/compare/v1.71.0...v1.72.0)
+See commits (https://github.com/personalcore/storagecore/compare/v1.71.0...v1.72.0)
 .IP \[bu] 2
 New backends
 .RS 2
@@ -87358,7 +87358,7 @@ Craig-Wood)
 .RE
 .SS v1.71.2 - 2025-10-20
 .PP
-See commits (https://github.com/rclone/rclone/compare/v1.71.1...v1.71.2)
+See commits (https://github.com/personalcore/storagecore/compare/v1.71.1...v1.71.2)
 .IP \[bu] 2
 Bug Fixes
 .RS 2
@@ -87412,7 +87412,7 @@ Fix unnecessary retries by using URL expire parameter (Youfu Zhang)
 .RE
 .SS v1.71.1 - 2025-09-24
 .PP
-See commits (https://github.com/rclone/rclone/compare/v1.71.0...v1.71.1)
+See commits (https://github.com/personalcore/storagecore/compare/v1.71.0...v1.71.1)
 .IP \[bu] 2
 Bug Fixes
 .RS 2
@@ -87473,7 +87473,7 @@ Fix server side copy files with spaces (Nick Craig-Wood)
 .RE
 .SS v1.71.0 - 2025-08-22
 .PP
-See commits (https://github.com/rclone/rclone/compare/v1.70.0...v1.71.0)
+See commits (https://github.com/personalcore/storagecore/compare/v1.70.0...v1.71.0)
 .IP \[bu] 2
 New S3 providers
 .RS 2
@@ -87770,7 +87770,7 @@ Improve multithreaded upload performance using multiple connections
 .RE
 .SS v1.70.3 - 2025-07-09
 .PP
-See commits (https://github.com/rclone/rclone/compare/v1.70.2...v1.70.3)
+See commits (https://github.com/personalcore/storagecore/compare/v1.70.2...v1.70.3)
 .IP \[bu] 2
 Bug Fixes
 .RS 2
@@ -87817,7 +87817,7 @@ Fix setting modtime to that of local object instead of remote
 .RE
 .SS v1.70.2 - 2025-06-27
 .PP
-See commits (https://github.com/rclone/rclone/compare/v1.70.1...v1.70.2)
+See commits (https://github.com/personalcore/storagecore/compare/v1.70.1...v1.70.2)
 .IP \[bu] 2
 Bug Fixes
 .RS 2
@@ -87846,7 +87846,7 @@ Craig-Wood)
 .RE
 .SS v1.70.1 - 2025-06-19
 .PP
-See commits (https://github.com/rclone/rclone/compare/v1.70.0...v1.70.1)
+See commits (https://github.com/personalcore/storagecore/compare/v1.70.0...v1.70.1)
 .IP \[bu] 2
 Bug Fixes
 .RS 2
@@ -87858,7 +87858,7 @@ doc fixes (albertony, Ed Craig-Wood, jinjingroad)
 .RE
 .SS v1.70.0 - 2025-06-17
 .PP
-See commits (https://github.com/rclone/rclone/compare/v1.69.0...v1.70.0)
+See commits (https://github.com/personalcore/storagecore/compare/v1.69.0...v1.70.0)
 .IP \[bu] 2
 New backends
 .RS 2
@@ -88186,7 +88186,7 @@ support (Klaas Freitag)
 .RE
 .SS v1.69.3 - 2025-05-21
 .PP
-See commits (https://github.com/rclone/rclone/compare/v1.69.2...v1.69.3)
+See commits (https://github.com/personalcore/storagecore/compare/v1.69.2...v1.69.3)
 .IP \[bu] 2
 Bug Fixes
 .RS 2
@@ -88199,7 +88199,7 @@ go1.24.3 (Nick Craig-Wood)
 .RE
 .SS v1.69.2 - 2025-05-01
 .PP
-See commits (https://github.com/rclone/rclone/compare/v1.69.1...v1.69.2)
+See commits (https://github.com/personalcore/storagecore/compare/v1.69.1...v1.69.2)
 .IP \[bu] 2
 Bug fixes
 .RS 2
@@ -88317,7 +88317,7 @@ Fix metadata ordering in permissions (Nick Craig-Wood)
 .RE
 .SS v1.69.1 - 2025-02-14
 .PP
-See commits (https://github.com/rclone/rclone/compare/v1.69.0...v1.69.1)
+See commits (https://github.com/personalcore/storagecore/compare/v1.69.0...v1.69.1)
 .IP \[bu] 2
 Bug Fixes
 .RS 2
@@ -88378,7 +88378,7 @@ Add latest Linode Object Storage endpoints (jbagwell-akamai)
 .RE
 .SS v1.69.0 - 2025-01-12
 .PP
-See commits (https://github.com/rclone/rclone/compare/v1.68.0...v1.69.0)
+See commits (https://github.com/personalcore/storagecore/compare/v1.68.0...v1.69.0)
 .IP \[bu] 2
 New backends
 .RS 2
@@ -88755,7 +88755,7 @@ Make upload cutoff configurable (buengese)
 .RE
 .SS v1.68.2 - 2024-11-15
 .PP
-See commits (https://github.com/rclone/rclone/compare/v1.68.1...v1.68.2)
+See commits (https://github.com/personalcore/storagecore/compare/v1.68.1...v1.68.2)
 .IP \[bu] 2
 Security fixes
 .RS 2
@@ -88768,7 +88768,7 @@ Only affects users using \f[V]--metadata\f[R] and \f[V]--links\f[R] and
 copying files to the local backend
 .IP \[bu] 2
 See
-<https://github.com/rclone/rclone/security/advisories/GHSA-hrxh-9w67-g4cv>
+<https://github.com/personalcore/storagecore/security/advisories/GHSA-hrxh-9w67-g4cv>
 .RE
 .IP \[bu] 2
 build: bump github.com/golang-jwt/jwt/v4 from 4.5.0 to 4.5.1
@@ -88836,7 +88836,7 @@ Fix multitenant multipart uploads with CEPH (Nick Craig-Wood)
 .RE
 .SS v1.68.1 - 2024-09-24
 .PP
-See commits (https://github.com/rclone/rclone/compare/v1.68.0...v1.68.1)
+See commits (https://github.com/personalcore/storagecore/compare/v1.68.0...v1.68.1)
 .IP \[bu] 2
 Bug Fixes
 .RS 2
@@ -88881,7 +88881,7 @@ Fix rclone ignoring static credentials when \f[V]env_auth=true\f[R]
 .RE
 .SS v1.68.0 - 2024-09-08
 .PP
-See commits (https://github.com/rclone/rclone/compare/v1.67.0...v1.68.0)
+See commits (https://github.com/personalcore/storagecore/compare/v1.67.0...v1.68.0)
 .IP \[bu] 2
 New backends
 .RS 2
@@ -88904,7 +88904,7 @@ The matrix of providers and auth methods is huge and there could be
 problems with obscure combinations.
 .IP \[bu] 2
 Please report problems in a new
-issue (https://github.com/rclone/rclone/issues/new/choose) on Github.
+issue (https://github.com/personalcore/storagecore/issues/new/choose) on Github.
 .RE
 .RE
 .IP \[bu] 2
@@ -89232,7 +89232,7 @@ Craig-Wood)
 .RE
 .SS v1.67.0 - 2024-06-14
 .PP
-See commits (https://github.com/rclone/rclone/compare/v1.66.0...v1.67.0)
+See commits (https://github.com/personalcore/storagecore/compare/v1.66.0...v1.67.0)
 .IP \[bu] 2
 New backends
 .RS 2
@@ -89670,7 +89670,7 @@ Sleep for 60 seconds if rate limit error received (Nick Craig-Wood)
 .RE
 .SS v1.66.0 - 2024-03-10
 .PP
-See commits (https://github.com/rclone/rclone/compare/v1.65.0...v1.66.0)
+See commits (https://github.com/personalcore/storagecore/compare/v1.65.0...v1.66.0)
 .IP \[bu] 2
 Major features
 .RS 2
@@ -90183,7 +90183,7 @@ Müller)
 .RE
 .SS v1.65.2 - 2024-01-24
 .PP
-See commits (https://github.com/rclone/rclone/compare/v1.65.1...v1.65.2)
+See commits (https://github.com/personalcore/storagecore/compare/v1.65.1...v1.65.2)
 .IP \[bu] 2
 Bug Fixes
 .RS 2
@@ -90205,11 +90205,11 @@ Azure Blob
 .RS 2
 .IP \[bu] 2
 \f[B]IMPORTANT\f[R] Fix data corruption bug - see
-#7590 (https://github.com/rclone/rclone/issues/7590) (Nick Craig-Wood)
+#7590 (https://github.com/personalcore/storagecore/issues/7590) (Nick Craig-Wood)
 .RE
 .SS v1.65.1 - 2024-01-08
 .PP
-See commits (https://github.com/rclone/rclone/compare/v1.65.0...v1.65.1)
+See commits (https://github.com/personalcore/storagecore/compare/v1.65.0...v1.65.1)
 .IP \[bu] 2
 Bug Fixes
 .RS 2
@@ -90343,7 +90343,7 @@ Fix rclone move a file over itself deleting the file (Nick Craig-Wood)
 .RE
 .SS v1.65.0 - 2023-11-26
 .PP
-See commits (https://github.com/rclone/rclone/compare/v1.64.0...v1.65.0)
+See commits (https://github.com/personalcore/storagecore/compare/v1.64.0...v1.65.0)
 .IP \[bu] 2
 New backends
 .RS 2
@@ -90633,7 +90633,7 @@ Added an rclone vendor to work with \f[V]rclone serve webdav\f[R]
 .RE
 .SS v1.64.2 - 2023-10-19
 .PP
-See commits (https://github.com/rclone/rclone/compare/v1.64.1...v1.64.2)
+See commits (https://github.com/personalcore/storagecore/compare/v1.64.1...v1.64.2)
 .IP \[bu] 2
 Bug Fixes
 .RS 2
@@ -90645,7 +90645,7 @@ build: Fix docker build running out of space (Nick Craig-Wood)
 .RE
 .SS v1.64.1 - 2023-10-17
 .PP
-See commits (https://github.com/rclone/rclone/compare/v1.64.0...v1.64.1)
+See commits (https://github.com/personalcore/storagecore/compare/v1.64.0...v1.64.1)
 .IP \[bu] 2
 Bug Fixes
 .RS 2
@@ -90744,7 +90744,7 @@ Update storj.io/uplink to v1.12.0 (Kaloyan Raev)
 .RE
 .SS v1.64.0 - 2023-09-11
 .PP
-See commits (https://github.com/rclone/rclone/compare/v1.63.0...v1.64.0)
+See commits (https://github.com/personalcore/storagecore/compare/v1.63.0...v1.64.0)
 .IP \[bu] 2
 New backends
 .RS 2
@@ -91126,7 +91126,7 @@ Craig-Wood)
 .RE
 .SS v1.63.1 - 2023-07-17
 .PP
-See commits (https://github.com/rclone/rclone/compare/v1.63.0...v1.63.1)
+See commits (https://github.com/personalcore/storagecore/compare/v1.63.0...v1.63.1)
 .IP \[bu] 2
 Bug Fixes
 .RS 2
@@ -91180,7 +91180,7 @@ Nextcloud chunking: add more guidance for the user to check the config
 .RE
 .SS v1.63.0 - 2023-06-30
 .PP
-See commits (https://github.com/rclone/rclone/compare/v1.62.0...v1.63.0)
+See commits (https://github.com/personalcore/storagecore/compare/v1.62.0...v1.63.0)
 .IP \[bu] 2
 New backends
 .RS 2
@@ -91667,7 +91667,7 @@ Fix downloads with \f[V]Range:\f[R] header returning the wrong data
 .RE
 .SS v1.62.2 - 2023-03-16
 .PP
-See commits (https://github.com/rclone/rclone/compare/v1.62.1...v1.62.2)
+See commits (https://github.com/personalcore/storagecore/compare/v1.62.1...v1.62.2)
 .IP \[bu] 2
 Bug Fixes
 .RS 2
@@ -91684,7 +91684,7 @@ Fix 426 errors on downloads with vsftpd (Lesmiscore)
 .RE
 .SS v1.62.1 - 2023-03-15
 .PP
-See commits (https://github.com/rclone/rclone/compare/v1.62.0...v1.62.1)
+See commits (https://github.com/personalcore/storagecore/compare/v1.62.0...v1.62.1)
 .IP \[bu] 2
 Bug Fixes
 .RS 2
@@ -91699,7 +91699,7 @@ Craig-Wood)
 .RE
 .SS v1.62.0 - 2023-03-14
 .PP
-See commits (https://github.com/rclone/rclone/compare/v1.61.0...v1.62.0)
+See commits (https://github.com/personalcore/storagecore/compare/v1.61.0...v1.62.0)
 .IP \[bu] 2
 New Features
 .RS 2
@@ -91985,7 +91985,7 @@ Fix interop with davrods server (Nick Craig-Wood)
 .RE
 .SS v1.61.1 - 2022-12-23
 .PP
-See commits (https://github.com/rclone/rclone/compare/v1.61.0...v1.61.1)
+See commits (https://github.com/personalcore/storagecore/compare/v1.61.0...v1.61.1)
 .IP \[bu] 2
 Bug Fixes
 .RS 2
@@ -92038,7 +92038,7 @@ storj: Update endpoints (Kaloyan Raev)
 .RE
 .SS v1.61.0 - 2022-12-20
 .PP
-See commits (https://github.com/rclone/rclone/compare/v1.60.0...v1.61.0)
+See commits (https://github.com/personalcore/storagecore/compare/v1.60.0...v1.61.0)
 .IP \[bu] 2
 New backends
 .RS 2
@@ -92302,7 +92302,7 @@ Implement server side Copy (Kaloyan Raev)
 .RE
 .SS v1.60.1 - 2022-11-17
 .PP
-See commits (https://github.com/rclone/rclone/compare/v1.60.0...v1.60.1)
+See commits (https://github.com/personalcore/storagecore/compare/v1.60.0...v1.60.1)
 .IP \[bu] 2
 Bug Fixes
 .RS 2
@@ -92388,7 +92388,7 @@ Craig-Wood)
 .RE
 .SS v1.60.0 - 2022-10-21
 .PP
-See commits (https://github.com/rclone/rclone/compare/v1.59.0...v1.60.0)
+See commits (https://github.com/personalcore/storagecore/compare/v1.59.0...v1.60.0)
 .IP \[bu] 2
 New backends
 .RS 2
@@ -92608,7 +92608,7 @@ Propagate SlowHash feature to fix hasher interaction (Lesmiscore)
 .RE
 .SS v1.59.2 - 2022-09-15
 .PP
-See commits (https://github.com/rclone/rclone/compare/v1.59.1...v1.59.2)
+See commits (https://github.com/personalcore/storagecore/compare/v1.59.1...v1.59.2)
 .IP \[bu] 2
 Bug Fixes
 .RS 2
@@ -92643,7 +92643,7 @@ Fix chunksize calculations producing too many parts (Nick Craig-Wood)
 .RE
 .SS v1.59.1 - 2022-08-08
 .PP
-See commits (https://github.com/rclone/rclone/compare/v1.59.0...v1.59.1)
+See commits (https://github.com/personalcore/storagecore/compare/v1.59.0...v1.59.1)
 .IP \[bu] 2
 Bug Fixes
 .RS 2
@@ -92736,7 +92736,7 @@ Fix panic due to misalignment of struct field in 32 bit architectures
 .RE
 .SS v1.59.0 - 2022-07-09
 .PP
-See commits (https://github.com/rclone/rclone/compare/v1.58.0...v1.59.0)
+See commits (https://github.com/personalcore/storagecore/compare/v1.58.0...v1.59.0)
 .IP \[bu] 2
 New backends
 .RS 2
@@ -92908,7 +92908,7 @@ Mount
 .RS 2
 .IP \[bu] 2
 Support \f[V]windows/arm64\f[R] (may still be problems - see
-#5828 (https://github.com/rclone/rclone/issues/5828)) (Nick Craig-Wood)
+#5828 (https://github.com/personalcore/storagecore/issues/5828)) (Nick Craig-Wood)
 .IP \[bu] 2
 Log IO errors at ERROR level (Nick Craig-Wood)
 .IP \[bu] 2
@@ -93186,7 +93186,7 @@ Add Japan and China regions (buengese)
 .RE
 .SS v1.58.1 - 2022-04-29
 .PP
-See commits (https://github.com/rclone/rclone/compare/v1.58.0...v1.58.1)
+See commits (https://github.com/personalcore/storagecore/compare/v1.58.0...v1.58.1)
 .IP \[bu] 2
 Bug Fixes
 .RS 2
@@ -93298,7 +93298,7 @@ Don\[aq]t override Referer if user sets it (Nick Craig-Wood)
 .RE
 .SS v1.58.0 - 2022-03-18
 .PP
-See commits (https://github.com/rclone/rclone/compare/v1.57.0...v1.58.0)
+See commits (https://github.com/personalcore/storagecore/compare/v1.57.0...v1.58.0)
 .IP \[bu] 2
 New backends
 .RS 2
@@ -93376,7 +93376,7 @@ Fix ARM architecture version in .deb packages after nfpm change (Nick
 Craig-Wood)
 .IP \[bu] 2
 Hard fork \f[V]github.com/jlaffaye/ftp\f[R] to fix
-\f[V]go get github.com/rclone/rclone\f[R] (Nick Craig-Wood)
+\f[V]go get github.com/personalcore/storagecore\f[R] (Nick Craig-Wood)
 .RE
 .IP \[bu] 2
 oauthutil: Fix crash when webbrowser requests \f[V]/robots.txt\f[R]
@@ -93685,7 +93685,7 @@ Add permanent deletion support (deinferno)
 .RE
 .SS v1.57.0 - 2021-11-01
 .PP
-See commits (https://github.com/rclone/rclone/compare/v1.56.0...v1.57.0)
+See commits (https://github.com/personalcore/storagecore/compare/v1.56.0...v1.57.0)
 .IP \[bu] 2
 New backends
 .RS 2
@@ -94031,7 +94031,7 @@ Fix rename not working with union of local disk and bucket based remote
 .RE
 .SS v1.56.2 - 2021-10-01
 .PP
-See commits (https://github.com/rclone/rclone/compare/v1.56.1...v1.56.2)
+See commits (https://github.com/personalcore/storagecore/compare/v1.56.1...v1.56.2)
 .IP \[bu] 2
 Bug Fixes
 .RS 2
@@ -94049,7 +94049,7 @@ Fix deadlock after failed update when concurrency=1 (Ivan Andreev)
 .RE
 .SS v1.56.1 - 2021-09-19
 .PP
-See commits (https://github.com/rclone/rclone/compare/v1.56.0...v1.56.1)
+See commits (https://github.com/personalcore/storagecore/compare/v1.56.0...v1.56.1)
 .IP \[bu] 2
 Bug Fixes
 .RS 2
@@ -94143,7 +94143,7 @@ Fix initial connection after config re-arrangement (Nick Craig-Wood)
 .RE
 .SS v1.56.0 - 2021-07-20
 .PP
-See commits (https://github.com/rclone/rclone/compare/v1.55.0...v1.56.0)
+See commits (https://github.com/personalcore/storagecore/compare/v1.55.0...v1.56.0)
 .IP \[bu] 2
 New backends
 .RS 2
@@ -94532,7 +94532,7 @@ Add headers option (Antoon Prins)
 .RE
 .SS v1.55.1 - 2021-04-26
 .PP
-See commits (https://github.com/rclone/rclone/compare/v1.55.0...v1.55.1)
+See commits (https://github.com/personalcore/storagecore/compare/v1.55.0...v1.55.1)
 .IP \[bu] 2
 Bug Fixes
 .RS 2
@@ -94630,7 +94630,7 @@ Do not ask for mountpoint twice when using headless setup (buengese)
 .RE
 .SS v1.55.0 - 2021-03-31
 .PP
-See commits (https://github.com/rclone/rclone/compare/v1.54.0...v1.55.0)
+See commits (https://github.com/personalcore/storagecore/compare/v1.54.0...v1.55.0)
 .IP \[bu] 2
 New commands
 .RS 2
@@ -95053,7 +95053,7 @@ than EU (buengese)
 .RE
 .SS v1.54.1 - 2021-03-08
 .PP
-See commits (https://github.com/rclone/rclone/compare/v1.54.0...v1.54.1)
+See commits (https://github.com/personalcore/storagecore/compare/v1.54.0...v1.54.1)
 .IP \[bu] 2
 Bug Fixes
 .RS 2
@@ -95149,7 +95149,7 @@ Fix custom client id\[aq]s (buengese)
 .RE
 .SS v1.54.0 - 2021-02-02
 .PP
-See commits (https://github.com/rclone/rclone/compare/v1.53.0...v1.54.0)
+See commits (https://github.com/personalcore/storagecore/compare/v1.53.0...v1.54.0)
 .IP \[bu] 2
 New backends
 .RS 2
@@ -95721,7 +95721,7 @@ Craig-Wood)
 .RE
 .SS v1.53.4 - 2021-01-20
 .PP
-See commits (https://github.com/rclone/rclone/compare/v1.53.3...v1.53.4)
+See commits (https://github.com/personalcore/storagecore/compare/v1.53.3...v1.53.4)
 .IP \[bu] 2
 Bug Fixes
 .RS 2
@@ -95831,7 +95831,7 @@ Add \[dq]Depth: 0\[dq] to GET requests to fix bitrix (Nick Craig-Wood)
 .RE
 .SS v1.53.3 - 2020-11-19
 .PP
-See commits (https://github.com/rclone/rclone/compare/v1.53.2...v1.53.3)
+See commits (https://github.com/personalcore/storagecore/compare/v1.53.2...v1.53.3)
 .IP \[bu] 2
 Bug Fixes
 .RS 2
@@ -95843,7 +95843,7 @@ CVE-2020-28924 (Nick Craig-Wood)
 Passwords you have generated with \f[V]rclone config\f[R] may be
 insecure
 .IP \[bu] 2
-See issue #4783 (https://github.com/rclone/rclone/issues/4783) for more
+See issue #4783 (https://github.com/personalcore/storagecore/issues/4783) for more
 details and a checking tool
 .RE
 .IP \[bu] 2
@@ -95864,7 +95864,7 @@ Fix backend due to API swapping integers for strings (Nick Craig-Wood)
 .RE
 .SS v1.53.2 - 2020-10-26
 .PP
-See commits (https://github.com/rclone/rclone/compare/v1.53.1...v1.53.2)
+See commits (https://github.com/personalcore/storagecore/compare/v1.53.1...v1.53.2)
 .IP \[bu] 2
 Bug Fixes
 .RS 2
@@ -95995,7 +95995,7 @@ Create root directories if none exist (Nick Craig-Wood)
 .RE
 .SS v1.53.1 - 2020-09-13
 .PP
-See commits (https://github.com/rclone/rclone/compare/v1.53.0...v1.53.1)
+See commits (https://github.com/personalcore/storagecore/compare/v1.53.0...v1.53.1)
 .IP \[bu] 2
 Bug Fixes
 .RS 2
@@ -96069,7 +96069,7 @@ Do not retry 400 errors (Evan Harris)
 .RE
 .SS v1.53.0 - 2020-09-02
 .PP
-See commits (https://github.com/rclone/rclone/compare/v1.52.0...v1.53.0)
+See commits (https://github.com/personalcore/storagecore/compare/v1.52.0...v1.53.0)
 .IP \[bu] 2
 New Features
 .RS 2
@@ -96568,7 +96568,7 @@ Fix directory creation with 4shared (Nick Craig-Wood)
 .RE
 .SS v1.52.3 - 2020-08-07
 .PP
-See commits (https://github.com/rclone/rclone/compare/v1.52.2...v1.52.3)
+See commits (https://github.com/personalcore/storagecore/compare/v1.52.2...v1.52.3)
 .IP \[bu] 2
 Bug Fixes
 .RS 2
@@ -96642,7 +96642,7 @@ Craig-Wood)
 .RE
 .SS v1.52.2 - 2020-06-24
 .PP
-See commits (https://github.com/rclone/rclone/compare/v1.52.1...v1.52.2)
+See commits (https://github.com/personalcore/storagecore/compare/v1.52.1...v1.52.2)
 .IP \[bu] 2
 Bug Fixes
 .RS 2
@@ -96710,7 +96710,7 @@ Craig-Wood)
 .RE
 .SS v1.52.1 - 2020-06-10
 .PP
-See commits (https://github.com/rclone/rclone/compare/v1.52.0...v1.52.1)
+See commits (https://github.com/personalcore/storagecore/compare/v1.52.0...v1.52.1)
 .IP \[bu] 2
 Bug Fixes
 .RS 2
@@ -96797,7 +96797,7 @@ Set UserAgent to rclone (Caleb Case)
 Special thanks to Martin Michlmayr for proof reading and correcting all
 the docs and Edward Barker for helping re-write the front page.
 .PP
-See commits (https://github.com/rclone/rclone/compare/v1.51.0...v1.52.0)
+See commits (https://github.com/personalcore/storagecore/compare/v1.51.0...v1.52.0)
 .IP \[bu] 2
 New backends
 .RS 2
@@ -97943,7 +97943,7 @@ Swap Azure/go-ansiterm for mattn/go-colorable (Nick Craig-Wood)
 Dockerfile fixes (Matei David)
 .IP \[bu] 2
 Add plugin
-support (https://github.com/rclone/rclone/blob/master/CONTRIBUTING.md#writing-a-plugin)
+support (https://github.com/personalcore/storagecore/blob/master/CONTRIBUTING.md#writing-a-plugin)
 for backends and commands (Richard Patel)
 .RE
 .IP \[bu] 2
@@ -103311,10 +103311,10 @@ This ability may be added in the future (probably via a flag/option).
 Bugs are stored in rclone\[aq]s GitHub project:
 .IP \[bu] 2
 Reported
-bugs (https://github.com/rclone/rclone/issues?q=is%3Aopen+is%3Aissue+label%3Abug)
+bugs (https://github.com/personalcore/storagecore/issues?q=is%3Aopen+is%3Aissue+label%3Abug)
 .IP \[bu] 2
 Known
-issues (https://github.com/rclone/rclone/issues?q=is%3Aopen+is%3Aissue+milestone%3A%22Known+Problem%22)
+issues (https://github.com/personalcore/storagecore/issues?q=is%3Aopen+is%3Aissue+milestone%3A%22Known+Problem%22)
 .SH Frequently Asked Questions
 .SS Do all cloud storage systems support all rclone commands
 .PP
@@ -103639,7 +103639,7 @@ Before rclone v1.70 has to load this entirely into memory as rclone
 objects.
 Each rclone object takes 0.5k-1k of memory.
 There is a workaround for
-this (https://github.com/rclone/rclone/wiki/Big-syncs-with-millions-of-files)
+this (https://github.com/personalcore/storagecore/wiki/Big-syncs-with-millions-of-files)
 which involves a bit of scripting.
 .PP
 However with rclone v1.70 and later rclone will automatically save
@@ -105920,7 +105920,7 @@ For business support or sponsorship enquiries please see:
 .PP
 The project\[aq]s repository is located at:
 .IP \[bu] 2
-<https://github.com/rclone/rclone>
+<https://github.com/personalcore/storagecore>
 .PP
 There you can file bug reports or contribute with pull requests.
 .SS Twitter

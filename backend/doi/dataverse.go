@@ -11,9 +11,9 @@ import (
 	"strings"
 	"time"
 
-	"github.com/rclone/rclone/backend/doi/api"
-	"github.com/rclone/rclone/fs"
-	"github.com/rclone/rclone/lib/rest"
+	"github.com/personalcore/storagecore/backend/doi/api"
+	"github.com/personalcore/storagecore/fs"
+	"github.com/personalcore/storagecore/lib/rest"
 )
 
 // Returns true if resolvedURL is likely a DOI hosted on a Dataverse intallation

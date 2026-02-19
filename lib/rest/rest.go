@@ -18,8 +18,8 @@ import (
 	"net/url"
 	"sync"
 
-	"github.com/rclone/rclone/fs"
-	"github.com/rclone/rclone/lib/readers"
+	"github.com/personalcore/storagecore/fs"
+	"github.com/personalcore/storagecore/lib/readers"
 )
 
 // Client contains the info to sustain the API

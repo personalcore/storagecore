@@ -16,17 +16,17 @@ import (
 	"runtime"
 	"syscall/js"
 
-	"github.com/rclone/rclone/fs"
-	"github.com/rclone/rclone/fs/rc"
+	"github.com/personalcore/storagecore/fs"
+	"github.com/personalcore/storagecore/fs/rc"
 
 	// Core functionality we need
-	_ "github.com/rclone/rclone/fs/operations"
-	_ "github.com/rclone/rclone/fs/sync"
+	_ "github.com/personalcore/storagecore/fs/operations"
+	_ "github.com/personalcore/storagecore/fs/sync"
 
-	//	_ "github.com/rclone/rclone/backend/all" // import all backends
+	//	_ "github.com/personalcore/storagecore/backend/all" // import all backends
 
 	// Backends
-	_ "github.com/rclone/rclone/backend/memory"
+	_ "github.com/personalcore/storagecore/backend/memory"
 )
 
 var (

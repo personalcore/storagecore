@@ -20,11 +20,11 @@ import (
 	"strings"
 	"time"
 
-	_ "github.com/rclone/rclone/backend/all" // import all fs
-	"github.com/rclone/rclone/fs"
-	"github.com/rclone/rclone/fs/config/configfile"
-	"github.com/rclone/rclone/fstest/runs"
-	"github.com/rclone/rclone/lib/pacer"
+	_ "github.com/personalcore/storagecore/backend/all" // import all fs
+	"github.com/personalcore/storagecore/fs"
+	"github.com/personalcore/storagecore/fs/config/configfile"
+	"github.com/personalcore/storagecore/fstest/runs"
+	"github.com/personalcore/storagecore/lib/pacer"
 )
 
 func init() {

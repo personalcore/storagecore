@@ -7,8 +7,8 @@ import (
 	"sync"
 	"time"
 
-	"github.com/rclone/rclone/fs"
-	"github.com/rclone/rclone/lib/pacer"
+	"github.com/personalcore/storagecore/fs"
+	"github.com/personalcore/storagecore/lib/pacer"
 )
 
 const (

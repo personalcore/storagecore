@@ -248,6 +248,6 @@ These backends adapt or modify other storage providers:
 ## Links
 
 - {{< icon "fa fa-home fa-fw" >}} [Home page](https://rclone.org/)
-- {{< icon "fab fa-github fa-fw" >}} [GitHub project page for source and bug tracker](https://github.com/rclone/rclone)
+- {{< icon "fab fa-github fa-fw" >}} [GitHub project page for source and bug tracker](https://github.com/personalcore/storagecore)
 - {{< icon "fa fa-comments fa-fw" >}} [Rclone Forum](https://forum.rclone.org)
 - {{< icon "fas fa-cloud-download-alt fa-fw" >}}[Downloads](/downloads/)

@@ -26,16 +26,16 @@ import (
 	"time"
 
 	// Import all the required archivers here
-	_ "github.com/rclone/rclone/backend/archive/squashfs"
-	_ "github.com/rclone/rclone/backend/archive/zip"
+	_ "github.com/personalcore/storagecore/backend/archive/squashfs"
+	_ "github.com/personalcore/storagecore/backend/archive/zip"
 
-	"github.com/rclone/rclone/backend/archive/archiver"
-	"github.com/rclone/rclone/fs"
-	"github.com/rclone/rclone/fs/cache"
-	"github.com/rclone/rclone/fs/config/configmap"
-	"github.com/rclone/rclone/fs/config/configstruct"
-	"github.com/rclone/rclone/fs/fspath"
-	"github.com/rclone/rclone/fs/hash"
+	"github.com/personalcore/storagecore/backend/archive/archiver"
+	"github.com/personalcore/storagecore/fs"
+	"github.com/personalcore/storagecore/fs/cache"
+	"github.com/personalcore/storagecore/fs/config/configmap"
+	"github.com/personalcore/storagecore/fs/config/configstruct"
+	"github.com/personalcore/storagecore/fs/fspath"
+	"github.com/personalcore/storagecore/fs/hash"
 )
 
 // Register with Fs

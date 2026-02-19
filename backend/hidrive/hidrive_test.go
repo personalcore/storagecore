@@ -4,8 +4,8 @@ package hidrive
 import (
 	"testing"
 
-	"github.com/rclone/rclone/fs"
-	"github.com/rclone/rclone/fstest/fstests"
+	"github.com/personalcore/storagecore/fs"
+	"github.com/personalcore/storagecore/fstest/fstests"
 )
 
 // TestIntegration runs integration tests against the remote.

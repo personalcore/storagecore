@@ -7,11 +7,11 @@ import (
 	"fmt"
 	"regexp"
 
-	"github.com/rclone/rclone/fs"
-	"github.com/rclone/rclone/fs/fspath"
-	"github.com/rclone/rclone/fs/list"
-	"github.com/rclone/rclone/fs/operations"
-	"github.com/rclone/rclone/fstest/runs"
+	"github.com/personalcore/storagecore/fs"
+	"github.com/personalcore/storagecore/fs/fspath"
+	"github.com/personalcore/storagecore/fs/list"
+	"github.com/personalcore/storagecore/fs/operations"
+	"github.com/personalcore/storagecore/fstest/runs"
 )
 
 // MatchTestRemote matches the remote names used for testing (copied

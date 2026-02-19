@@ -4,8 +4,8 @@ package linkbox_test
 import (
 	"testing"
 
-	"github.com/rclone/rclone/backend/linkbox"
-	"github.com/rclone/rclone/fstest/fstests"
+	"github.com/personalcore/storagecore/backend/linkbox"
+	"github.com/personalcore/storagecore/fstest/fstests"
 )
 
 // TestIntegration runs integration tests against the remote

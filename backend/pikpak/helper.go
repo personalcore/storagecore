@@ -19,11 +19,11 @@ import (
 	"sync"
 	"time"
 
-	"github.com/rclone/rclone/backend/pikpak/api"
-	"github.com/rclone/rclone/fs"
-	"github.com/rclone/rclone/fs/config/configmap"
-	"github.com/rclone/rclone/fs/fserrors"
-	"github.com/rclone/rclone/lib/rest"
+	"github.com/personalcore/storagecore/backend/pikpak/api"
+	"github.com/personalcore/storagecore/fs"
+	"github.com/personalcore/storagecore/fs/config/configmap"
+	"github.com/personalcore/storagecore/fs/fserrors"
+	"github.com/personalcore/storagecore/lib/rest"
 )
 
 // Globals

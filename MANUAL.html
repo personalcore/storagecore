@@ -548,7 +548,7 @@ S3, that work out of the box.)</p>
 <h2 id="links">Links</h2>
 <ul>
 <li><a href="https://rclone.org/">Home page</a></li>
-<li><a href="https://github.com/rclone/rclone">GitHub project page for
+<li><a href="https://github.com/personalcore/storagecore">GitHub project page for
 source and bug tracker</a></li>
 <li><a href="https://forum.rclone.org">Rclone Forum</a></li>
 <li><a href="https://rclone.org/downloads/">Downloads</a></li>
@@ -606,7 +606,7 @@ details.</p>
 <pre class="console"><code>brew install rclone</code></pre>
 <p>NOTE: This version of rclone will not support <code>mount</code> any
 more (see <a
-href="https://github.com/rclone/rclone/issues/5373">#5373</a>). If
+href="https://github.com/personalcore/storagecore/issues/5373">#5373</a>). If
 mounting is wanted on macOS, either install a precompiled binary or
 enable the relevant option when <a href="#source">installing from
 source</a>.</p>
@@ -864,7 +864,7 @@ installed. Go version 1.24 or newer is required, the latest release is
 recommended. You can get it from your package manager, or download it
 from <a href="https://golang.org/dl/">golang.org/dl</a>. Then you can
 run the following:</p>
-<pre class="console"><code>git clone https://github.com/rclone/rclone.git
+<pre class="console"><code>git clone https://github.com/personalcore/storagecore.git
 cd rclone
 go build</code></pre>
 <p>This will check out the rclone source in subfolder rclone, which you
@@ -907,7 +907,7 @@ suffix but customize the number), or <code>fs.VersionSuffix</code> (to
 keep default number but customize the suffix). This can be done from the
 build command, by adding to the <code>-ldflags</code> argument value as
 shown below.</p>
-<pre class="console"><code>go build -trimpath -ldflags &quot;-s -X github.com/rclone/rclone/fs.Version=v9.9.9-test&quot; -tags cmount</code></pre>
+<pre class="console"><code>go build -trimpath -ldflags &quot;-s -X github.com/personalcore/storagecore/fs.Version=v9.9.9-test&quot; -tags cmount</code></pre>
 <p>On Windows, the official executables also have the version
 information, as well as a file icon, embedded as binary resources. To
 get that with your own build you need to run the following command
@@ -938,9 +938,9 @@ build:</p>
 <p>There are other make targets that can be used for more advanced
 builds, such as cross-compiling for all supported os/architectures, and
 packaging results into release artifacts. See <a
-href="https://github.com/rclone/rclone/blob/master/Makefile">Makefile</a>
+href="https://github.com/personalcore/storagecore/blob/master/Makefile">Makefile</a>
 and <a
-href="https://github.com/rclone/rclone/blob/master/bin/cross-compile.go">cross-compile.go</a>
+href="https://github.com/personalcore/storagecore/blob/master/bin/cross-compile.go">cross-compile.go</a>
 for details.</p>
 <p>Another alternative method for source installation is to download the
 source, build and install rclone - all in one operation, as a regular Go
@@ -948,7 +948,7 @@ package. The source will be stored it in the Go module cache, and the
 resulting executable will be in your GOPATH bin folder
 (<code>$(go env GOPATH)/bin</code>, which corresponds to
 <code>~/go/bin/rclone</code> by default).</p>
-<pre class="console"><code>go install github.com/rclone/rclone@latest</code></pre>
+<pre class="console"><code>go install github.com/personalcore/storagecore@latest</code></pre>
 <p>In some situations, rclone executable size might be too big for
 deployment in very restricted environments when all backends with large
 SDKs are included. To limit binary size unused backends can be commented
@@ -1104,7 +1104,7 @@ also implements a network provider that integrates into Windows standard
 methods for managing network drives. This is currently not officially
 supported by Rclone, but with WinFsp version 2019.3 B2 / v1.5B2 or later
 it should be possible through path rewriting as described in <a
-href="https://github.com/rclone/rclone/issues/3340">#3340</a>.</p>
+href="https://github.com/personalcore/storagecore/issues/3340">#3340</a>.</p>
 <h5 id="third-party-service-integration">Third-party service
 integration</h5>
 <p>To Windows service running any rclone command, the excellent
@@ -1383,7 +1383,7 @@ the backend supports it. If metadata syncing is required then use the
 <code>--metadata</code> flag.</p>
 <p>Note that the modification time and metadata for the root directory
 will <strong>not</strong> be synced. See <a
-href="https://github.com/rclone/rclone/issues/7652">issue #7652</a> for
+href="https://github.com/personalcore/storagecore/issues/7652">issue #7652</a> for
 more info.</p>
 <p><strong>Note</strong>: Use the
 <code>-P</code>/<code>--progress</code> flag to view real-time transfer
@@ -1579,8 +1579,8 @@ the backend supports it. If metadata syncing is required then use the
 <code>--metadata</code> flag.</p>
 <p>Note that the modification time and metadata for the root directory
 will <strong>not</strong> be synced. See <a
-href="https://github.com/rclone/rclone/issues/7652"
-class="uri">https://github.com/rclone/rclone/issues/7652</a> for more
+href="https://github.com/personalcore/storagecore/issues/7652"
+class="uri">https://github.com/personalcore/storagecore/issues/7652</a> for more
 info.</p>
 <p><strong>Note</strong>: Use the
 <code>-P</code>/<code>--progress</code> flag to view real-time transfer
@@ -1784,8 +1784,8 @@ the backend supports it. If metadata syncing is required then use the
 <code>--metadata</code> flag.</p>
 <p>Note that the modification time and metadata for the root directory
 will <strong>not</strong> be synced. See <a
-href="https://github.com/rclone/rclone/issues/7652"
-class="uri">https://github.com/rclone/rclone/issues/7652</a> for more
+href="https://github.com/personalcore/storagecore/issues/7652"
+class="uri">https://github.com/personalcore/storagecore/issues/7652</a> for more
 info.</p>
 <p><strong>Important</strong>: Since this can cause data loss, test
 first with the <code>--dry-run</code> or the
@@ -6079,11 +6079,11 @@ avoid too many callbacks to rclone from the kernel.</p>
 <p>In theory 0s should be the correct value for filesystems which can
 change outside the control of the kernel. However this causes quite a
 few problems such as <a
-href="https://github.com/rclone/rclone/issues/2157">rclone using too
+href="https://github.com/personalcore/storagecore/issues/2157">rclone using too
 much memory</a>, <a
 href="https://forum.rclone.org/t/rclone-1-39-vs-1-40-mount-issue/5112">rclone
 not serving files to samba</a> and <a
-href="https://github.com/rclone/rclone/issues/2095#issuecomment-371141147">excessive
+href="https://github.com/personalcore/storagecore/issues/2095#issuecomment-371141147">excessive
 time listing directories</a>.</p>
 <p>The kernel can cache the info about a file for the time given by
 <code>--attr-timeout</code>. You may see corruption if the remote file
@@ -6465,7 +6465,7 @@ tree</p>
 <code>linked-dir/file.txt</code>. This is not a problem for the tested
 commands but may be for other commands.</p>
 <p><strong>Note</strong> that there is an outstanding issue with symlink
-support <a href="https://github.com/rclone/rclone/issues/8245">issue
+support <a href="https://github.com/personalcore/storagecore/issues/8245">issue
 #8245</a> with duplicate files being created when symlinks are moved
 into directories where there is a file of the same name (or vice
 versa).</p>
@@ -7295,11 +7295,11 @@ avoid too many callbacks to rclone from the kernel.</p>
 <p>In theory 0s should be the correct value for filesystems which can
 change outside the control of the kernel. However this causes quite a
 few problems such as <a
-href="https://github.com/rclone/rclone/issues/2157">rclone using too
+href="https://github.com/personalcore/storagecore/issues/2157">rclone using too
 much memory</a>, <a
 href="https://forum.rclone.org/t/rclone-1-39-vs-1-40-mount-issue/5112">rclone
 not serving files to samba</a> and <a
-href="https://github.com/rclone/rclone/issues/2095#issuecomment-371141147">excessive
+href="https://github.com/personalcore/storagecore/issues/2095#issuecomment-371141147">excessive
 time listing directories</a>.</p>
 <p>The kernel can cache the info about a file for the time given by
 <code>--attr-timeout</code>. You may see corruption if the remote file
@@ -7682,7 +7682,7 @@ tree</p>
 <code>linked-dir/file.txt</code>. This is not a problem for the tested
 commands but may be for other commands.</p>
 <p><strong>Note</strong> that there is an outstanding issue with symlink
-support <a href="https://github.com/rclone/rclone/issues/8245">issue
+support <a href="https://github.com/personalcore/storagecore/issues/8245">issue
 #8245</a> with duplicate files being created when symlinks are moved
 into directories where there is a file of the same name (or vice
 versa).</p>
@@ -8783,7 +8783,7 @@ tree</p>
 <code>linked-dir/file.txt</code>. This is not a problem for the tested
 commands but may be for other commands.</p>
 <p><strong>Note</strong> that there is an outstanding issue with symlink
-support <a href="https://github.com/rclone/rclone/issues/8245">issue
+support <a href="https://github.com/personalcore/storagecore/issues/8245">issue
 #8245</a> with duplicate files being created when symlinks are moved
 into directories where there is a file of the same name (or vice
 versa).</p>
@@ -9292,7 +9292,7 @@ tree</p>
 <code>linked-dir/file.txt</code>. This is not a problem for the tested
 commands but may be for other commands.</p>
 <p><strong>Note</strong> that there is an outstanding issue with symlink
-support <a href="https://github.com/rclone/rclone/issues/8245">issue
+support <a href="https://github.com/personalcore/storagecore/issues/8245">issue
 #8245</a> with duplicate files being created when symlinks are moved
 into directories where there is a file of the same name (or vice
 versa).</p>
@@ -9798,7 +9798,7 @@ tree</p>
 <code>linked-dir/file.txt</code>. This is not a problem for the tested
 commands but may be for other commands.</p>
 <p><strong>Note</strong> that there is an outstanding issue with symlink
-support <a href="https://github.com/rclone/rclone/issues/8245">issue
+support <a href="https://github.com/personalcore/storagecore/issues/8245">issue
 #8245</a> with duplicate files being created when symlinks are moved
 into directories where there is a file of the same name (or vice
 versa).</p>
@@ -9918,7 +9918,7 @@ with input on STDIN and output on STDOUT.</p>
 <code>--auth-proxy</code> is set the authorized keys option will be
 ignored.</p>
 <p>There is an example program <a
-href="https://github.com/rclone/rclone/blob/master/bin/test_proxy.py">bin/test_proxy.py</a>
+href="https://github.com/personalcore/storagecore/blob/master/bin/test_proxy.py">bin/test_proxy.py</a>
 in the rclone source code.</p>
 <p>The program's job is to take a <code>user</code> and
 <code>pass</code> on the input and turn those into the config for a
@@ -10572,7 +10572,7 @@ tree</p>
 <code>linked-dir/file.txt</code>. This is not a problem for the tested
 commands but may be for other commands.</p>
 <p><strong>Note</strong> that there is an outstanding issue with symlink
-support <a href="https://github.com/rclone/rclone/issues/8245">issue
+support <a href="https://github.com/personalcore/storagecore/issues/8245">issue
 #8245</a> with duplicate files being created when symlinks are moved
 into directories where there is a file of the same name (or vice
 versa).</p>
@@ -10692,7 +10692,7 @@ with input on STDIN and output on STDOUT.</p>
 <code>--auth-proxy</code> is set the authorized keys option will be
 ignored.</p>
 <p>There is an example program <a
-href="https://github.com/rclone/rclone/blob/master/bin/test_proxy.py">bin/test_proxy.py</a>
+href="https://github.com/personalcore/storagecore/blob/master/bin/test_proxy.py">bin/test_proxy.py</a>
 in the rclone source code.</p>
 <p>The program's job is to take a <code>user</code> and
 <code>pass</code> on the input and turn those into the config for a
@@ -11191,7 +11191,7 @@ tree</p>
 <code>linked-dir/file.txt</code>. This is not a problem for the tested
 commands but may be for other commands.</p>
 <p><strong>Note</strong> that there is an outstanding issue with symlink
-support <a href="https://github.com/rclone/rclone/issues/8245">issue
+support <a href="https://github.com/personalcore/storagecore/issues/8245">issue
 #8245</a> with duplicate files being created when symlinks are moved
 into directories where there is a file of the same name (or vice
 versa).</p>
@@ -11633,16 +11633,16 @@ course.</p>
 <h2 id="bugs">Bugs</h2>
 <p>When uploading multipart files <code>serve s3</code> holds all the
 parts in memory (see <a
-href="https://github.com/rclone/rclone/issues/7453">#7453</a>). This is
+href="https://github.com/personalcore/storagecore/issues/7453">#7453</a>). This is
 a limitaton of the library rclone uses for serving S3 and will hopefully
 be fixed at some point.</p>
 <p>Multipart server side copies do not work (see <a
-href="https://github.com/rclone/rclone/issues/7454">#7454</a>). These
+href="https://github.com/personalcore/storagecore/issues/7454">#7454</a>). These
 take a very long time and eventually fail. The default threshold for
 multipart server side copies is 5G which is the maximum it can be, so
 files above this side will fail to be server side copied.</p>
 <p>For a current list of <code>serve s3</code> bugs see the <a
-href="https://github.com/rclone/rclone/labels/serve%20s3">serve s3</a>
+href="https://github.com/personalcore/storagecore/labels/serve%20s3">serve s3</a>
 bug category on GitHub.</p>
 <h2 id="limitations-2">Limitations</h2>
 <p><code>serve s3</code> will treat all directories in the root as
@@ -12054,7 +12054,7 @@ tree</p>
 <code>linked-dir/file.txt</code>. This is not a problem for the tested
 commands but may be for other commands.</p>
 <p><strong>Note</strong> that there is an outstanding issue with symlink
-support <a href="https://github.com/rclone/rclone/issues/8245">issue
+support <a href="https://github.com/personalcore/storagecore/issues/8245">issue
 #8245</a> with duplicate files being created when symlinks are moved
 into directories where there is a file of the same name (or vice
 versa).</p>
@@ -12599,7 +12599,7 @@ tree</p>
 <code>linked-dir/file.txt</code>. This is not a problem for the tested
 commands but may be for other commands.</p>
 <p><strong>Note</strong> that there is an outstanding issue with symlink
-support <a href="https://github.com/rclone/rclone/issues/8245">issue
+support <a href="https://github.com/personalcore/storagecore/issues/8245">issue
 #8245</a> with duplicate files being created when symlinks are moved
 into directories where there is a file of the same name (or vice
 versa).</p>
@@ -12719,7 +12719,7 @@ with input on STDIN and output on STDOUT.</p>
 <code>--auth-proxy</code> is set the authorized keys option will be
 ignored.</p>
 <p>There is an example program <a
-href="https://github.com/rclone/rclone/blob/master/bin/test_proxy.py">bin/test_proxy.py</a>
+href="https://github.com/personalcore/storagecore/blob/master/bin/test_proxy.py">bin/test_proxy.py</a>
 in the rclone source code.</p>
 <p>The program's job is to take a <code>user</code> and
 <code>pass</code> on the input and turn those into the config for a
@@ -13412,7 +13412,7 @@ tree</p>
 <code>linked-dir/file.txt</code>. This is not a problem for the tested
 commands but may be for other commands.</p>
 <p><strong>Note</strong> that there is an outstanding issue with symlink
-support <a href="https://github.com/rclone/rclone/issues/8245">issue
+support <a href="https://github.com/personalcore/storagecore/issues/8245">issue
 #8245</a> with duplicate files being created when symlinks are moved
 into directories where there is a file of the same name (or vice
 versa).</p>
@@ -13532,7 +13532,7 @@ with input on STDIN and output on STDOUT.</p>
 <code>--auth-proxy</code> is set the authorized keys option will be
 ignored.</p>
 <p>There is an example program <a
-href="https://github.com/rclone/rclone/blob/master/bin/test_proxy.py">bin/test_proxy.py</a>
+href="https://github.com/personalcore/storagecore/blob/master/bin/test_proxy.py">bin/test_proxy.py</a>
 in the rclone source code.</p>
 <p>The program's job is to take a <code>user</code> and
 <code>pass</code> on the input and turn those into the config for a
@@ -14367,7 +14367,7 @@ e.g.</p>
 <div class="sourceCode" id="cb667"><pre
 class="sourceCode bat"><code class="sourceCode dosbat"><span id="cb667-1"><a href="#cb667-1" aria-hidden="true" tabindex="-1"></a>rclone copy <span class="st">&quot;E:\folder name\folder name\folder name&quot;</span> remote:backup</span></code></pre></div>
 <p>If you are using the root directory on its own then don't quote it
-(see <a href="https://github.com/rclone/rclone/issues/464">#464</a> for
+(see <a href="https://github.com/personalcore/storagecore/issues/464">#464</a> for
 why), e.g.</p>
 <div class="sourceCode" id="cb668"><pre
 class="sourceCode bat"><code class="sourceCode dosbat"><span id="cb668-1"><a href="#cb668-1" aria-hidden="true" tabindex="-1"></a>rclone copy E:\ remote:backup</span></code></pre></div>
@@ -15184,14 +15184,14 @@ with care.</p>
 repeated to add multiple headers.</p>
 <pre class="console"><code>rclone sync --interactive s3:test/src ~/dst --header-download &quot;X-Amz-Meta-Test: Foo&quot; --header-download &quot;X-Amz-Meta-Test2: Bar&quot;</code></pre>
 <p>See GitHub issue <a
-href="https://github.com/rclone/rclone/issues/59">#59</a> for currently
+href="https://github.com/personalcore/storagecore/issues/59">#59</a> for currently
 supported backends.</p>
 <h3 id="header-upload-stringarray">--header-upload stringArray</h3>
 <p>Add an HTTP header for all upload transactions. The flag can be
 repeated to add multiple headers.</p>
 <pre class="console"><code>rclone sync --interactive ~/src s3:test/dst --header-upload &quot;Content-Disposition: attachment; filename=&#39;cool.html&#39;&quot; --header-upload &quot;X-Amz-Meta-Test: FooBar&quot;</code></pre>
 <p>See GitHub issue <a
-href="https://github.com/rclone/rclone/issues/59">#59</a> for currently
+href="https://github.com/personalcore/storagecore/issues/59">#59</a> for currently
 supported backends.</p>
 <h3 id="http-proxy-string">--http-proxy string</h3>
 <p>Use this option to set an HTTP proxy for all HTTP based services to
@@ -15261,7 +15261,7 @@ checks the checksum.</p>
 after transfer.</p>
 <p>This can be useful for transferring files to and from OneDrive which
 occasionally misreports the size of image files (see <a
-href="https://github.com/rclone/rclone/issues/399">#399</a> for more
+href="https://github.com/personalcore/storagecore/issues/399">#399</a> for more
 info).</p>
 <h3 id="i---ignore-times">-I, --ignore-times</h3>
 <p>Using this option will cause rclone to unconditionally upload all
@@ -15763,7 +15763,7 @@ class="sourceCode python"><code class="sourceCode python"><span id="cb701-1"><a 
 <span id="cb701-14"><a href="#cb701-14" aria-hidden="true" tabindex="-1"></a>json.dump(o, sys.stdout, indent<span class="op">=</span><span class="st">&quot;</span><span class="ch">\t</span><span class="st">&quot;</span>)</span></code></pre></div>
 <p>You can find this example (slightly expanded) in the rclone source
 code at <a
-href="https://github.com/rclone/rclone/blob/master/bin/test_metadata_mapper.py">bin/test_metadata_mapper.py</a>.</p>
+href="https://github.com/personalcore/storagecore/blob/master/bin/test_metadata_mapper.py">bin/test_metadata_mapper.py</a>.</p>
 <p>If you want to see the input to the metadata mapper and the output
 returned from it in the log you can use
 <code>-vv --dump mapper</code>.</p>
@@ -16027,7 +16027,7 @@ password.</p>
 <p>See the <a href="#configuration-encryption">Configuration
 Encryption</a> for more info.</p>
 <p>See a <a
-href="https://github.com/rclone/rclone/wiki/Windows-Powershell-use-rclone-password-command-for-Config-file-password">Windows
+href="https://github.com/personalcore/storagecore/wiki/Windows-Powershell-use-rclone-password-command-for-Config-file-password">Windows
 PowerShell example on the Wiki</a>.</p>
 <h3 id="p---progress">-P, --progress</h3>
 <p>This flag makes rclone update the stats in a static block in the
@@ -17991,7 +17991,7 @@ display the GUI in a web browser.</p>
 <pre class="console"><code>rclone rcd --rc-web-gui</code></pre>
 <p>This will produce logs like this and rclone needs to continue to run
 to serve the GUI:</p>
-<pre class="text"><code>2019/08/25 11:40:14 NOTICE: A new release for gui is present at https://github.com/rclone/rclone-webui-react/releases/download/v0.0.6/currentbuild.zip
+<pre class="text"><code>2019/08/25 11:40:14 NOTICE: A new release for gui is present at https://github.com/personalcore/storagecore-webui-react/releases/download/v0.0.6/currentbuild.zip
 2019/08/25 11:40:14 NOTICE: Downloading webgui binary. Please wait. [Size: 3813937, Path :  /home/USER/.cache/rclone/webgui/v0.0.6.zip]
 2019/08/25 11:40:16 NOTICE: Unzipping
 2019/08/25 11:40:16 NOTICE: Serving remote control on http://127.0.0.1:5572/</code></pre>
@@ -18072,7 +18072,7 @@ password:</p>
 </ul>
 <h2 id="project">Project</h2>
 <p>The GUI is being developed in the: <a
-href="https://github.com/rclone/rclone-webui-react">rclone/rclone-webui-react
+href="https://github.com/personalcore/storagecore-webui-react">rclone/rclone-webui-react
 repository</a>.</p>
 <p>Bug reports and contributions are very welcome :-)</p>
 <p>If you have questions then please ask them on the <a
@@ -19888,7 +19888,7 @@ url</h3>
 <p>This takes the following parameters:</p>
 <ul>
 <li>url - http url of the github repo where the plugin is hosted
-(http://github.com/rclone/rclone-webui-react).</li>
+(http://github.com/personalcore/storagecore-webui-react).</li>
 </ul>
 <p>Example:</p>
 <p>rclone rc pluginsctl/addPlugin</p>
@@ -20424,14 +20424,14 @@ summary</p>
 <pre class="console"><code>$ go tool pprof -text http://localhost:5572/debug/pprof/heap
 Showing nodes accounting for 1537.03kB, 100% of 1537.03kB total
       flat  flat%   sum%        cum   cum%
- 1024.03kB 66.62% 66.62%  1024.03kB 66.62%  github.com/rclone/rclone/vendor/golang.org/x/net/http2/hpack.addDecoderNode
+ 1024.03kB 66.62% 66.62%  1024.03kB 66.62%  github.com/personalcore/storagecore/vendor/golang.org/x/net/http2/hpack.addDecoderNode
      513kB 33.38%   100%      513kB 33.38%  net/http.newBufioWriterSize
-         0     0%   100%  1024.03kB 66.62%  github.com/rclone/rclone/cmd/all.init
-         0     0%   100%  1024.03kB 66.62%  github.com/rclone/rclone/cmd/serve.init
-         0     0%   100%  1024.03kB 66.62%  github.com/rclone/rclone/cmd/serve/restic.init
-         0     0%   100%  1024.03kB 66.62%  github.com/rclone/rclone/vendor/golang.org/x/net/http2.init
-         0     0%   100%  1024.03kB 66.62%  github.com/rclone/rclone/vendor/golang.org/x/net/http2/hpack.init
-         0     0%   100%  1024.03kB 66.62%  github.com/rclone/rclone/vendor/golang.org/x/net/http2/hpack.init.0
+         0     0%   100%  1024.03kB 66.62%  github.com/personalcore/storagecore/cmd/all.init
+         0     0%   100%  1024.03kB 66.62%  github.com/personalcore/storagecore/cmd/serve.init
+         0     0%   100%  1024.03kB 66.62%  github.com/personalcore/storagecore/cmd/serve/restic.init
+         0     0%   100%  1024.03kB 66.62%  github.com/personalcore/storagecore/vendor/golang.org/x/net/http2.init
+         0     0%   100%  1024.03kB 66.62%  github.com/personalcore/storagecore/vendor/golang.org/x/net/http2/hpack.init
+         0     0%   100%  1024.03kB 66.62%  github.com/personalcore/storagecore/vendor/golang.org/x/net/http2/hpack.init.0
          0     0%   100%  1024.03kB 66.62%  main.init
          0     0%   100%      513kB 33.38%  net/http.(*conn).readRequest
          0     0%   100%      513kB 33.38%  net/http.(*conn).serve
@@ -23195,7 +23195,7 @@ verify that both paths are valid.</p>
 <p>When using <code>--resync</code>, a newer version of a file on the
 Path2 filesystem will (by default) be overwritten by the Path1
 filesystem version. (Note that this is <a
-href="https://github.com/rclone/rclone/issues/5681#issuecomment-938761815">NOT
+href="https://github.com/personalcore/storagecore/issues/5681#issuecomment-938761815">NOT
 entirely symmetrical</a>, and more symmetrical options can be specified
 with the <a href="#resync-mode"><code>--resync-mode</code></a> flag.)
 Carefully evaluate deltas using <a
@@ -24251,7 +24251,7 @@ known issues that are deemed unfixable for the time being:</p>
 <li><code>TestnStorage</code> (<code>netstorage</code>)
 <!--- end list_ignores - DO NOT EDIT THIS SECTION - use make commanddocs --->
 (<a
-href="https://github.com/rclone/rclone/blob/master/fstest/test_all/config.yaml">more
+href="https://github.com/personalcore/storagecore/blob/master/fstest/test_all/config.yaml">more
 info</a>)</li>
 </ul>
 <p>The above lists are updated for each stable release of rclone. For
@@ -24338,7 +24338,7 @@ href="https://rclone.org/docs/#fast-list"><code>--fast-list</code></a>
 by default, for backends that support it. In many cases this is
 desirable, however, there are some scenarios in which bisync could be
 faster <em>without</em> <code>--fast-list</code>, and there is also a <a
-href="https://github.com/rclone/rclone/commit/cbf3d4356135814921382dd3285d859d15d0aa77">known
+href="https://github.com/personalcore/storagecore/commit/cbf3d4356135814921382dd3285d859d15d0aa77">known
 issue concerning Google Drive users with many empty directories</a>. For
 now, the recommended way to avoid using <code>--fast-list</code> is to
 add <code>--disable ListR</code> to all bisync commands. The default
@@ -25259,8 +25259,8 @@ signature with a public key compiled into the rclone binary.</p>
 <li>From <a href="/KEYS">KEYS</a> on this website - this file contains
 all past signing keys also.</li>
 <li>The git repository hosted on GitHub - <a
-href="https://github.com/rclone/rclone/blob/master/docs/content/KEYS"
-class="uri">https://github.com/rclone/rclone/blob/master/docs/content/KEYS</a></li>
+href="https://github.com/personalcore/storagecore/blob/master/docs/content/KEYS"
+class="uri">https://github.com/personalcore/storagecore/blob/master/docs/content/KEYS</a></li>
 <li><code>gpg --keyserver hkps://keys.openpgp.org --search nick@craig-wood.com</code></li>
 <li><code>gpg --keyserver hkps://keyserver.ubuntu.com --search nick@craig-wood.com</code></li>
 <li><a href="https://www.craig-wood.com/nick/pub/pgp-key.txt"
@@ -25275,7 +25275,7 @@ fingerprint across multiple domains you can be confident that you
 obtained the correct key.</p>
 <ul>
 <li>The <a
-href="https://github.com/rclone/rclone/blob/master/docs/content/release_signing.md">source
+href="https://github.com/personalcore/storagecore/blob/master/docs/content/release_signing.md">source
 for this page on GitHub</a>.</li>
 <li>Through DNS <code>dig key.rclone.org txt</code></li>
 </ul>
@@ -30461,8 +30461,8 @@ used)</p>
 backend and HTTP/2. HTTP/2 is enabled by default for the s3 backend but
 can be disabled here. When the issue is solved this flag will be
 removed.</p>
-<p>See: https://github.com/rclone/rclone/issues/4673,
-https://github.com/rclone/rclone/issues/3631</p>
+<p>See: https://github.com/personalcore/storagecore/issues/4673,
+https://github.com/personalcore/storagecore/issues/3631</p>
 <p>Properties:</p>
 <ul>
 <li>Config: disable_http2</li>
@@ -35402,7 +35402,7 @@ for large directories.</p>
 <p>To sync a directory with 100,000,000 files in you would need
 approximately 100 GB of memory. At some point the amount of memory
 becomes difficult to provide so there is <a
-href="https://github.com/rclone/rclone/wiki/Big-syncs-with-millions-of-files">a
+href="https://github.com/personalcore/storagecore/wiki/Big-syncs-with-millions-of-files">a
 workaround for this</a> which involves a bit of scripting.</p>
 <p>At some point rclone will gain a sync mode which is effectively this
 workaround but built in to rclone.</p>
@@ -35868,7 +35868,7 @@ exactly which remotes support SHA1.</p>
 <p>Sources which don't support SHA1, in particular <code>crypt</code>
 will upload large files without SHA1 checksums. This may be fixed in the
 future (see <a
-href="https://github.com/rclone/rclone/issues/1767">#1767</a>).</p>
+href="https://github.com/personalcore/storagecore/issues/1767">#1767</a>).</p>
 <p>Files sizes below <code>--b2-upload-cutoff</code> will always have an
 SHA1 regardless of the source.</p>
 <h3 id="transfers">Transfers</h3>
@@ -35972,7 +35972,7 @@ different scenarios.</p>
 <p>The <code>b2_list_file_names</code> request will be sent once for
 every 1k files in the remote path, providing the checksum and
 modification time of the listed files. As of version 1.33 issue <a
-href="https://github.com/rclone/rclone/issues/818">#818</a> causes extra
+href="https://github.com/personalcore/storagecore/issues/818">#818</a> causes extra
 requests to be sent when using B2 with Crypt. When a copy operation does
 not require any files to be uploaded, no more requests will be sent.</p>
 <p>Uploading files that do not require chunking, will send 2 requests
@@ -36934,7 +36934,7 @@ installations and may be removed at some point.</p>
 <h2 id="status">Status</h2>
 <p>The cache backend code is working but it currently doesn't have a
 maintainer so there are <a
-href="https://github.com/rclone/rclone/issues?q=is%3Aopen+is%3Aissue+label%3Abug+label%3A%22Remote%3A+Cache%22">outstanding
+href="https://github.com/personalcore/storagecore/issues?q=is%3Aopen+is%3Aissue+label%3Abug+label%3A%22Remote%3A+Cache%22">outstanding
 bugs</a> which aren't getting fixed.</p>
 <p>The cache backend is due to be phased out in favour of the VFS
 caching layer eventually which is more tightly integrated into
@@ -37141,11 +37141,11 @@ on them.</p>
 <p>Any reports or feedback on how cache behaves on this OS is greatly
 appreciated.</p>
 <ul>
-<li><a href="https://github.com/rclone/rclone/issues/1935">Issue
+<li><a href="https://github.com/personalcore/storagecore/issues/1935">Issue
 #1935</a></li>
-<li><a href="https://github.com/rclone/rclone/issues/1907">Issue
+<li><a href="https://github.com/personalcore/storagecore/issues/1907">Issue
 #1907</a></li>
-<li><a href="https://github.com/rclone/rclone/issues/1834">Issue
+<li><a href="https://github.com/personalcore/storagecore/issues/1834">Issue
 #1834</a></li>
 </ul>
 <h4 id="risk-of-throttling">Risk of throttling</h4>
@@ -37166,9 +37166,9 @@ the cache at the same time if configured to do so.</li>
 </ul>
 <p>Future enhancements:</p>
 <ul>
-<li><a href="https://github.com/rclone/rclone/issues/1937">Issue
+<li><a href="https://github.com/personalcore/storagecore/issues/1937">Issue
 #1937</a></li>
-<li><a href="https://github.com/rclone/rclone/issues/1936">Issue
+<li><a href="https://github.com/personalcore/storagecore/issues/1936">Issue
 #1936</a></li>
 </ul>
 <h4 id="cache-and-crypt">cache and crypt</h4>
@@ -38854,7 +38854,7 @@ password generator was fixed in rclone version 1.53.3 (released
 secure and should be changed. If you made up your own password, or used
 rclone version older than 1.49.0 or newer than 1.53.2 to generate it,
 you are <em>not</em> affected by this issue. See <a
-href="https://github.com/rclone/rclone/issues/4783">issue #4783</a> for
+href="https://github.com/personalcore/storagecore/issues/4783">issue #4783</a> for
 more details, and a tool you can use to check if you are affected.</p>
 <h3 id="example">Example</h3>
 <p>Create the following file structure using "standard" file name
@@ -44319,7 +44319,7 @@ configurations.</p>
 and HTTP/2. HTTP/2 is therefore disabled by default for the drive
 backend but can be re-enabled here. When the issue is solved this flag
 will be removed.</p>
-<p>See: https://github.com/rclone/rclone/issues/3631</p>
+<p>See: https://github.com/personalcore/storagecore/issues/3631</p>
 <p>Properties:</p>
 <ul>
 <li>Config: disable_http2</li>
@@ -44336,7 +44336,7 @@ When this flag is set it causes these errors to be fatal. These will
 stop the in-progress sync.</p>
 <p>Note that this detection is relying on error message strings which
 Google don't document so it may break in the future.</p>
-<p>See: https://github.com/rclone/rclone/issues/3857</p>
+<p>See: https://github.com/personalcore/storagecore/issues/3857</p>
 <p>Properties:</p>
 <ul>
 <li>Config: stop_on_upload_limit</li>
@@ -46016,7 +46016,7 @@ own HDFS instance for testing</h3>
 href="https://hadoop.apache.org/docs/stable/hadoop-project-dist/hadoop-common/SingleCluster.html">manual
 setup</a> or use the docker image from the tests:</p>
 <p>If you want to build the docker image</p>
-<pre class="console"><code>git clone https://github.com/rclone/rclone.git
+<pre class="console"><code>git clone https://github.com/personalcore/storagecore.git
 cd rclone/fstest/testserver/images/test-hdfs
 docker build --rm -t rclone/test-hdfs .</code></pre>
 <p>Or you can just use the latest one pushed</p>
@@ -46157,7 +46157,7 @@ section in the overview</a> for more info.</p>
 <h2 id="limitations-19">Limitations</h2>
 <ul>
 <li>Erasure coding not supported, see <a
-href="https://github.com/rclone/rclone/issues/8808">issue #8808</a></li>
+href="https://github.com/personalcore/storagecore/issues/8808">issue #8808</a></li>
 <li>No server-side <code>Move</code> or <code>DirMove</code>.</li>
 <li>Checksums not implemented.</li>
 </ul>
@@ -52008,7 +52008,7 @@ requested by rclone. See <a
 href="https://docs.microsoft.com/en-us/graph/permissions-reference#files-permissions">Microsoft
 Docs</a> for more information about the different scopes.</p>
 <p>The <code>Sites.Read.All</code> permission is required if you need to
-<a href="https://github.com/rclone/rclone/pull/5883">search SharePoint
+<a href="https://github.com/personalcore/storagecore/pull/5883">search SharePoint
 sites when configuring the remote</a>. However, if that permission is
 not assigned, you need to exclude <code>Sites.Read.All</code> from your
 access scopes or set <code>disable_site_permission</code> option to true
@@ -52039,7 +52039,7 @@ ID</a> of your organization.</li>
 </ol>
 <p>Note: If you have a special region, you may need a different host in
 step 4 and 5. Here are <a
-href="https://github.com/rclone/rclone/blob/bc23bf11db1c78c6ebbf8ea538fbebf7058b4176/backend/onedrive/onedrive.go#L86">some
+href="https://github.com/personalcore/storagecore/blob/bc23bf11db1c78c6ebbf8ea538fbebf7058b4176/backend/onedrive/onedrive.go#L86">some
 hints</a>.</p>
 <h3 id="using-oauth-client-credential-flow">Using OAuth Client
 Credential flow</h3>
@@ -52348,7 +52348,7 @@ chunk_size.</p>
 causes rclone to use twice the storage on Onedrive business as when
 rclone sets the modification time after the upload Onedrive creates a
 new version.</p>
-<p>See: https://github.com/rclone/rclone/issues/1716</p>
+<p>See: https://github.com/personalcore/storagecore/issues/1716</p>
 <p>Properties:</p>
 <ul>
 <li>Config: upload_cutoff</li>
@@ -53070,7 +53070,7 @@ typically longer than the original ones.</p>
 <p>OneDrive seems to be OK with at least 50,000 files in a folder, but
 at 100,000 rclone will get errors listing the directory like
 <code>couldn’t list files: UnknownError:</code>. See <a
-href="https://github.com/rclone/rclone/issues/2707">#2707</a> for more
+href="https://github.com/personalcore/storagecore/issues/2707">#2707</a> for more
 info.</p>
 <p>An official document about the limitations for different types of
 OneDrive can be found <a
@@ -53229,7 +53229,7 @@ href="https://support.microsoft.com/en-us/office/set-up-and-manage-access-reques
 <h3 id="can-not-access-shared-with-me-files">Can not access
 <code>Shared</code> with me files</h3>
 <p>Shared with me files is not supported by rclone <a
-href="https://github.com/rclone/rclone/issues/4062">currently</a>, but
+href="https://github.com/personalcore/storagecore/issues/4062">currently</a>, but
 there is a workaround:</p>
 <ol type="1">
 <li>Visit <a
@@ -61204,7 +61204,7 @@ currently fixed 10 MB.</p>
 or Office365 Education Accounts. This feature is only needed for a few
 of these Accounts, mostly Office365 Education ones. These accounts are
 sometimes not verified by the domain owner <a
-href="https://github.com/rclone/rclone/issues/1975">github#1975</a></p>
+href="https://github.com/personalcore/storagecore/issues/1975">github#1975</a></p>
 <p>This means that these accounts can't be added using the official API
 (other Accounts should work with the "onedrive" option). However, it is
 possible to access them using webdav.</p>
@@ -62135,7 +62135,7 @@ in the output, and <code>\\server\share</code> as
 <code>\\?\UNC\server\share</code>.</p>
 <p>However, in rare cases this may cause problems with buggy file system
 drivers like <a
-href="https://github.com/rclone/rclone/issues/261">EncFS</a>. To disable
+href="https://github.com/personalcore/storagecore/issues/261">EncFS</a>. To disable
 UNC conversion globally, add this to your <code>.rclone.conf</code>
 file:</p>
 <div class="sourceCode" id="cb1742"><pre
@@ -62369,7 +62369,7 @@ they are being uploaded and aborts with a message which starts "can't
 copy - source file is being updated" if the file changes during
 upload.</p>
 <p>However on some file systems this modification time check may fail
-(e.g. <a href="https://github.com/rclone/rclone/issues/2206">Glusterfs
+(e.g. <a href="https://github.com/personalcore/storagecore/issues/2206">Glusterfs
 #2206</a>) so this check can be disabled with this flag.</p>
 <p>If this flag is set, rclone will use its best efforts to transfer a
 file which is being updated. If the file is only having things appended
@@ -62676,7 +62676,7 @@ the output.</p>
 <h1 id="changelog-1">Changelog</h1>
 <h2 id="v1.73.0---2026-01-30">v1.73.0 - 2026-01-30</h2>
 <p><a
-href="https://github.com/rclone/rclone/compare/v1.72.0...v1.73.0">See
+href="https://github.com/personalcore/storagecore/compare/v1.72.0...v1.73.0">See
 commits</a></p>
 <ul>
 <li>New backends
@@ -62789,7 +62789,7 @@ Craig-Wood)</li>
 </ul>
 <h2 id="v1.72.1---2025-12-10">v1.72.1 - 2025-12-10</h2>
 <p><a
-href="https://github.com/rclone/rclone/compare/v1.72.0...v1.72.1">See
+href="https://github.com/personalcore/storagecore/compare/v1.72.0...v1.72.1">See
 commits</a></p>
 <ul>
 <li>Bug Fixes
@@ -62815,7 +62815,7 @@ href="https://pkg.go.dev/vuln/GO-2025-4155">CVE-2025-61729</a></li>
 </ul>
 <h2 id="v1.72.0---2025-11-21">v1.72.0 - 2025-11-21</h2>
 <p><a
-href="https://github.com/rclone/rclone/compare/v1.71.0...v1.72.0">See
+href="https://github.com/personalcore/storagecore/compare/v1.71.0...v1.72.0">See
 commits</a></p>
 <ul>
 <li>New backends
@@ -63063,7 +63063,7 @@ caching (viocha)</li>
 </ul>
 <h2 id="v1.71.2---2025-10-20">v1.71.2 - 2025-10-20</h2>
 <p><a
-href="https://github.com/rclone/rclone/compare/v1.71.1...v1.71.2">See
+href="https://github.com/personalcore/storagecore/compare/v1.71.1...v1.71.2">See
 commits</a></p>
 <ul>
 <li>Bug Fixes
@@ -63105,7 +63105,7 @@ Zhang)</li>
 </ul>
 <h2 id="v1.71.1---2025-09-24">v1.71.1 - 2025-09-24</h2>
 <p><a
-href="https://github.com/rclone/rclone/compare/v1.71.0...v1.71.1">See
+href="https://github.com/personalcore/storagecore/compare/v1.71.0...v1.71.1">See
 commits</a></p>
 <ul>
 <li>Bug Fixes
@@ -63151,7 +63151,7 @@ Jean-Christophe Cura, Nick Craig-Wood, nielash)</li>
 </ul>
 <h2 id="v1.71.0---2025-08-22">v1.71.0 - 2025-08-22</h2>
 <p><a
-href="https://github.com/rclone/rclone/compare/v1.70.0...v1.71.0">See
+href="https://github.com/personalcore/storagecore/compare/v1.70.0...v1.71.0">See
 commits</a></p>
 <ul>
 <li>New S3 providers
@@ -63364,7 +63364,7 @@ Baral)</li>
 </ul>
 <h2 id="v1.70.3---2025-07-09">v1.70.3 - 2025-07-09</h2>
 <p><a
-href="https://github.com/rclone/rclone/compare/v1.70.2...v1.70.3">See
+href="https://github.com/personalcore/storagecore/compare/v1.70.2...v1.70.3">See
 commits</a></p>
 <ul>
 <li>Bug Fixes
@@ -63402,7 +63402,7 @@ Bizzarri)</li>
 </ul>
 <h2 id="v1.70.2---2025-06-27">v1.70.2 - 2025-06-27</h2>
 <p><a
-href="https://github.com/rclone/rclone/compare/v1.70.1...v1.70.2">See
+href="https://github.com/personalcore/storagecore/compare/v1.70.1...v1.70.2">See
 commits</a></p>
 <ul>
 <li>Bug Fixes
@@ -63424,7 +63424,7 @@ Craig-Wood)</li>
 </ul>
 <h2 id="v1.70.1---2025-06-19">v1.70.1 - 2025-06-19</h2>
 <p><a
-href="https://github.com/rclone/rclone/compare/v1.70.0...v1.70.1">See
+href="https://github.com/personalcore/storagecore/compare/v1.70.0...v1.70.1">See
 commits</a></p>
 <ul>
 <li>Bug Fixes
@@ -63436,7 +63436,7 @@ Craig-Wood)</li>
 </ul>
 <h2 id="v1.70.0---2025-06-17">v1.70.0 - 2025-06-17</h2>
 <p><a
-href="https://github.com/rclone/rclone/compare/v1.69.0...v1.70.0">See
+href="https://github.com/personalcore/storagecore/compare/v1.69.0...v1.70.0">See
 commits</a></p>
 <ul>
 <li>New backends
@@ -63666,7 +63666,7 @@ upload support (Klaas Freitag)</li>
 </ul>
 <h2 id="v1.69.3---2025-05-21">v1.69.3 - 2025-05-21</h2>
 <p><a
-href="https://github.com/rclone/rclone/compare/v1.69.2...v1.69.3">See
+href="https://github.com/personalcore/storagecore/compare/v1.69.2...v1.69.3">See
 commits</a></p>
 <ul>
 <li>Bug Fixes
@@ -63679,7 +63679,7 @@ go1.24.3 (Nick Craig-Wood)</li>
 </ul>
 <h2 id="v1.69.2---2025-05-01">v1.69.2 - 2025-05-01</h2>
 <p><a
-href="https://github.com/rclone/rclone/compare/v1.69.1...v1.69.2">See
+href="https://github.com/personalcore/storagecore/compare/v1.69.1...v1.69.2">See
 commits</a></p>
 <ul>
 <li>Bug fixes
@@ -63763,7 +63763,7 @@ a folder (Nick Craig-Wood)</li>
 </ul>
 <h2 id="v1.69.1---2025-02-14">v1.69.1 - 2025-02-14</h2>
 <p><a
-href="https://github.com/rclone/rclone/compare/v1.69.0...v1.69.1">See
+href="https://github.com/personalcore/storagecore/compare/v1.69.0...v1.69.1">See
 commits</a></p>
 <ul>
 <li>Bug Fixes
@@ -63807,7 +63807,7 @@ was specified (Nick Craig-Wood)</li>
 </ul>
 <h2 id="v1.69.0---2025-01-12">v1.69.0 - 2025-01-12</h2>
 <p><a
-href="https://github.com/rclone/rclone/compare/v1.68.0...v1.69.0">See
+href="https://github.com/personalcore/storagecore/compare/v1.68.0...v1.69.0">See
 commits</a></p>
 <ul>
 <li>New backends
@@ -64077,7 +64077,7 @@ encoding of filenames for the upload API (buengese)</li>
 </ul>
 <h2 id="v1.68.2---2024-11-15">v1.68.2 - 2024-11-15</h2>
 <p><a
-href="https://github.com/rclone/rclone/compare/v1.68.1...v1.68.2">See
+href="https://github.com/personalcore/storagecore/compare/v1.68.1...v1.68.2">See
 commits</a></p>
 <ul>
 <li>Security fixes
@@ -64089,8 +64089,8 @@ Craig-Wood)
 <li>Only affects users using <code>--metadata</code> and
 <code>--links</code> and copying files to the local backend</li>
 <li>See <a
-href="https://github.com/rclone/rclone/security/advisories/GHSA-hrxh-9w67-g4cv"
-class="uri">https://github.com/rclone/rclone/security/advisories/GHSA-hrxh-9w67-g4cv</a></li>
+href="https://github.com/personalcore/storagecore/security/advisories/GHSA-hrxh-9w67-g4cv"
+class="uri">https://github.com/personalcore/storagecore/security/advisories/GHSA-hrxh-9w67-g4cv</a></li>
 </ul></li>
 <li>build: bump github.com/golang-jwt/jwt/v4 from 4.5.0 to 4.5.1
 (dependabot)
@@ -64143,7 +64143,7 @@ to SDKv2 (Nick Craig-Wood)</li>
 </ul>
 <h2 id="v1.68.1---2024-09-24">v1.68.1 - 2024-09-24</h2>
 <p><a
-href="https://github.com/rclone/rclone/compare/v1.68.0...v1.68.1">See
+href="https://github.com/personalcore/storagecore/compare/v1.68.0...v1.68.1">See
 commits</a></p>
 <ul>
 <li>Bug Fixes
@@ -64179,7 +64179,7 @@ Craig-Wood)</li>
 </ul>
 <h2 id="v1.68.0---2024-09-08">v1.68.0 - 2024-09-08</h2>
 <p><a
-href="https://github.com/rclone/rclone/compare/v1.67.0...v1.68.0">See
+href="https://github.com/personalcore/storagecore/compare/v1.67.0...v1.68.0">See
 commits</a></p>
 <ul>
 <li>New backends
@@ -64199,7 +64199,7 @@ unsupported.
 <li>The matrix of providers and auth methods is huge and there could be
 problems with obscure combinations.</li>
 <li>Please report problems in a <a
-href="https://github.com/rclone/rclone/issues/new/choose">new issue</a>
+href="https://github.com/personalcore/storagecore/issues/new/choose">new issue</a>
 on Github.</li>
 </ul></li>
 </ul></li>
@@ -64434,7 +64434,7 @@ Craig-Wood)</li>
 </ul>
 <h2 id="v1.67.0---2024-06-14">v1.67.0 - 2024-06-14</h2>
 <p><a
-href="https://github.com/rclone/rclone/compare/v1.66.0...v1.67.0">See
+href="https://github.com/personalcore/storagecore/compare/v1.66.0...v1.67.0">See
 commits</a></p>
 <ul>
 <li>New backends
@@ -64747,7 +64747,7 @@ Craig-Wood)</li>
 </ul>
 <h2 id="v1.66.0---2024-03-10">v1.66.0 - 2024-03-10</h2>
 <p><a
-href="https://github.com/rclone/rclone/compare/v1.65.0...v1.66.0">See
+href="https://github.com/personalcore/storagecore/compare/v1.65.0...v1.66.0">See
 commits</a></p>
 <ul>
 <li>Major features
@@ -65114,7 +65114,7 @@ allows to exclude shared files and folders when listing remote resources
 </ul>
 <h2 id="v1.65.2---2024-01-24">v1.65.2 - 2024-01-24</h2>
 <p><a
-href="https://github.com/rclone/rclone/compare/v1.65.1...v1.65.2">See
+href="https://github.com/personalcore/storagecore/compare/v1.65.1...v1.65.2">See
 commits</a></p>
 <ul>
 <li>Bug Fixes
@@ -65132,13 +65132,13 @@ Craig-Wood)</li>
 <li>Azure Blob
 <ul>
 <li><strong>IMPORTANT</strong> Fix data corruption bug - see <a
-href="https://github.com/rclone/rclone/issues/7590">#7590</a> (Nick
+href="https://github.com/personalcore/storagecore/issues/7590">#7590</a> (Nick
 Craig-Wood)</li>
 </ul></li>
 </ul>
 <h2 id="v1.65.1---2024-01-08">v1.65.1 - 2024-01-08</h2>
 <p><a
-href="https://github.com/rclone/rclone/compare/v1.65.0...v1.65.1">See
+href="https://github.com/personalcore/storagecore/compare/v1.65.0...v1.65.1">See
 commits</a></p>
 <ul>
 <li>Bug Fixes
@@ -65239,7 +65239,7 @@ Craig-Wood)</li>
 </ul>
 <h2 id="v1.65.0---2023-11-26">v1.65.0 - 2023-11-26</h2>
 <p><a
-href="https://github.com/rclone/rclone/compare/v1.64.0...v1.65.0">See
+href="https://github.com/personalcore/storagecore/compare/v1.64.0...v1.65.0">See
 commits</a></p>
 <ul>
 <li>New backends
@@ -65444,7 +65444,7 @@ Craig-Wood)</li>
 </ul>
 <h2 id="v1.64.2---2023-10-19">v1.64.2 - 2023-10-19</h2>
 <p><a
-href="https://github.com/rclone/rclone/compare/v1.64.1...v1.64.2">See
+href="https://github.com/personalcore/storagecore/compare/v1.64.1...v1.64.2">See
 commits</a></p>
 <ul>
 <li>Bug Fixes
@@ -65456,7 +65456,7 @@ Craig-Wood)</li>
 </ul>
 <h2 id="v1.64.1---2023-10-17">v1.64.1 - 2023-10-17</h2>
 <p><a
-href="https://github.com/rclone/rclone/compare/v1.64.0...v1.64.1">See
+href="https://github.com/personalcore/storagecore/compare/v1.64.0...v1.64.1">See
 commits</a></p>
 <ul>
 <li>Bug Fixes
@@ -65529,7 +65529,7 @@ Craig-Wood)</li>
 </ul>
 <h2 id="v1.64.0---2023-09-11">v1.64.0 - 2023-09-11</h2>
 <p><a
-href="https://github.com/rclone/rclone/compare/v1.63.0...v1.64.0">See
+href="https://github.com/personalcore/storagecore/compare/v1.63.0...v1.64.0">See
 commits</a></p>
 <ul>
 <li>New backends
@@ -65807,7 +65807,7 @@ Craig-Wood)</li>
 </ul>
 <h2 id="v1.63.1---2023-07-17">v1.63.1 - 2023-07-17</h2>
 <p><a
-href="https://github.com/rclone/rclone/compare/v1.63.0...v1.63.1">See
+href="https://github.com/personalcore/storagecore/compare/v1.63.0...v1.63.1">See
 commits</a></p>
 <ul>
 <li>Bug Fixes
@@ -65850,7 +65850,7 @@ config (darix)</li>
 </ul>
 <h2 id="v1.63.0---2023-06-30">v1.63.0 - 2023-06-30</h2>
 <p><a
-href="https://github.com/rclone/rclone/compare/v1.62.0...v1.63.0">See
+href="https://github.com/personalcore/storagecore/compare/v1.62.0...v1.63.0">See
 commits</a></p>
 <ul>
 <li>New backends
@@ -66204,7 +66204,7 @@ data (Nick Craig-Wood)</li>
 </ul>
 <h2 id="v1.62.2---2023-03-16">v1.62.2 - 2023-03-16</h2>
 <p><a
-href="https://github.com/rclone/rclone/compare/v1.62.1...v1.62.2">See
+href="https://github.com/personalcore/storagecore/compare/v1.62.1...v1.62.2">See
 commits</a></p>
 <ul>
 <li>Bug Fixes
@@ -66220,7 +66220,7 @@ Craig-Wood)</li>
 </ul>
 <h2 id="v1.62.1---2023-03-15">v1.62.1 - 2023-03-15</h2>
 <p><a
-href="https://github.com/rclone/rclone/compare/v1.62.0...v1.62.1">See
+href="https://github.com/personalcore/storagecore/compare/v1.62.0...v1.62.1">See
 commits</a></p>
 <ul>
 <li>Bug Fixes
@@ -66234,7 +66234,7 @@ Craig-Wood)</li>
 </ul>
 <h2 id="v1.62.0---2023-03-14">v1.62.0 - 2023-03-14</h2>
 <p><a
-href="https://github.com/rclone/rclone/compare/v1.61.0...v1.62.0">See
+href="https://github.com/personalcore/storagecore/compare/v1.61.0...v1.62.0">See
 commits</a></p>
 <ul>
 <li>New Features
@@ -66431,7 +66431,7 @@ Craig-Wood)</li>
 </ul>
 <h2 id="v1.61.1---2022-12-23">v1.61.1 - 2022-12-23</h2>
 <p><a
-href="https://github.com/rclone/rclone/compare/v1.61.0...v1.61.1">See
+href="https://github.com/personalcore/storagecore/compare/v1.61.0...v1.61.1">See
 commits</a></p>
 <ul>
 <li>Bug Fixes
@@ -66471,7 +66471,7 @@ refactor (Nick Craig-Wood)</li>
 </ul>
 <h2 id="v1.61.0---2022-12-20">v1.61.0 - 2022-12-20</h2>
 <p><a
-href="https://github.com/rclone/rclone/compare/v1.60.0...v1.61.0">See
+href="https://github.com/personalcore/storagecore/compare/v1.60.0...v1.61.0">See
 commits</a></p>
 <ul>
 <li>New backends
@@ -66664,7 +66664,7 @@ Craig-Wood)</li>
 </ul>
 <h2 id="v1.60.1---2022-11-17">v1.60.1 - 2022-11-17</h2>
 <p><a
-href="https://github.com/rclone/rclone/compare/v1.60.0...v1.60.1">See
+href="https://github.com/personalcore/storagecore/compare/v1.60.0...v1.60.1">See
 commits</a></p>
 <ul>
 <li>Bug Fixes
@@ -66728,7 +66728,7 @@ Craig-Wood)</li>
 </ul>
 <h2 id="v1.60.0---2022-10-21">v1.60.0 - 2022-10-21</h2>
 <p><a
-href="https://github.com/rclone/rclone/compare/v1.59.0...v1.60.0">See
+href="https://github.com/personalcore/storagecore/compare/v1.59.0...v1.60.0">See
 commits</a></p>
 <ul>
 <li>New backends
@@ -66890,7 +66890,7 @@ of system metadata (Nick Craig-Wood)</li>
 </ul>
 <h2 id="v1.59.2---2022-09-15">v1.59.2 - 2022-09-15</h2>
 <p><a
-href="https://github.com/rclone/rclone/compare/v1.59.1...v1.59.2">See
+href="https://github.com/personalcore/storagecore/compare/v1.59.1...v1.59.2">See
 commits</a></p>
 <ul>
 <li>Bug Fixes
@@ -66921,7 +66921,7 @@ Craig-Wood)</li>
 </ul>
 <h2 id="v1.59.1---2022-08-08">v1.59.1 - 2022-08-08</h2>
 <p><a
-href="https://github.com/rclone/rclone/compare/v1.59.0...v1.59.1">See
+href="https://github.com/personalcore/storagecore/compare/v1.59.0...v1.59.1">See
 commits</a></p>
 <ul>
 <li>Bug Fixes
@@ -66995,7 +66995,7 @@ architectures (r-ricci)</li>
 </ul>
 <h2 id="v1.59.0---2022-07-09">v1.59.0 - 2022-07-09</h2>
 <p><a
-href="https://github.com/rclone/rclone/compare/v1.58.0...v1.59.0">See
+href="https://github.com/personalcore/storagecore/compare/v1.58.0...v1.59.0">See
 commits</a></p>
 <ul>
 <li>New backends
@@ -67124,7 +67124,7 @@ size/timestamp changing) (albertony)</li>
 <li>Mount
 <ul>
 <li>Support <code>windows/arm64</code> (may still be problems - see <a
-href="https://github.com/rclone/rclone/issues/5828">#5828</a>) (Nick
+href="https://github.com/personalcore/storagecore/issues/5828">#5828</a>) (Nick
 Craig-Wood)</li>
 <li>Log IO errors at ERROR level (Nick Craig-Wood)</li>
 <li>Ignore <code>_netdev</code> mount argument (Hugal31)</li>
@@ -67320,7 +67320,7 @@ files (Nick Craig-Wood)</li>
 </ul>
 <h2 id="v1.58.1---2022-04-29">v1.58.1 - 2022-04-29</h2>
 <p><a
-href="https://github.com/rclone/rclone/compare/v1.58.0...v1.58.1">See
+href="https://github.com/personalcore/storagecore/compare/v1.58.0...v1.58.1">See
 commits</a></p>
 <ul>
 <li>Bug Fixes
@@ -67400,7 +67400,7 @@ Rey-Jarthon)</li>
 </ul>
 <h2 id="v1.58.0---2022-03-18">v1.58.0 - 2022-03-18</h2>
 <p><a
-href="https://github.com/rclone/rclone/compare/v1.57.0...v1.58.0">See
+href="https://github.com/personalcore/storagecore/compare/v1.57.0...v1.58.0">See
 commits</a></p>
 <ul>
 <li>New backends
@@ -67457,7 +67457,7 @@ versions (albertony)</li>
 <li>Fix ARM architecture version in .deb packages after nfpm change
 (Nick Craig-Wood)</li>
 <li>Hard fork <code>github.com/jlaffaye/ftp</code> to fix
-<code>go get github.com/rclone/rclone</code> (Nick Craig-Wood)</li>
+<code>go get github.com/personalcore/storagecore</code> (Nick Craig-Wood)</li>
 </ul></li>
 <li>oauthutil: Fix crash when webbrowser requests
 <code>/robots.txt</code> (Nick Craig-Wood)</li>
@@ -67678,7 +67678,7 @@ Craig-Wood)</li>
 </ul>
 <h2 id="v1.57.0---2021-11-01">v1.57.0 - 2021-11-01</h2>
 <p><a
-href="https://github.com/rclone/rclone/compare/v1.56.0...v1.57.0">See
+href="https://github.com/personalcore/storagecore/compare/v1.56.0...v1.57.0">See
 commits</a></p>
 <ul>
 <li>New backends
@@ -67921,7 +67921,7 @@ remote (Nick Craig-Wood)</li>
 </ul>
 <h2 id="v1.56.2---2021-10-01">v1.56.2 - 2021-10-01</h2>
 <p><a
-href="https://github.com/rclone/rclone/compare/v1.56.1...v1.56.2">See
+href="https://github.com/personalcore/storagecore/compare/v1.56.1...v1.56.2">See
 commits</a></p>
 <ul>
 <li>Bug Fixes
@@ -67938,7 +67938,7 @@ Andreev)</li>
 </ul>
 <h2 id="v1.56.1---2021-09-19">v1.56.1 - 2021-09-19</h2>
 <p><a
-href="https://github.com/rclone/rclone/compare/v1.56.0...v1.56.1">See
+href="https://github.com/personalcore/storagecore/compare/v1.56.0...v1.56.1">See
 commits</a></p>
 <ul>
 <li>Bug Fixes
@@ -68007,7 +68007,7 @@ Craig-Wood)</li>
 </ul>
 <h2 id="v1.56.0---2021-07-20">v1.56.0 - 2021-07-20</h2>
 <p><a
-href="https://github.com/rclone/rclone/compare/v1.55.0...v1.56.0">See
+href="https://github.com/personalcore/storagecore/compare/v1.55.0...v1.56.0">See
 commits</a></p>
 <ul>
 <li>New backends
@@ -68278,7 +68278,7 @@ Craig-Wood)</li>
 </ul>
 <h2 id="v1.55.1---2021-04-26">v1.55.1 - 2021-04-26</h2>
 <p><a
-href="https://github.com/rclone/rclone/compare/v1.55.0...v1.55.1">See
+href="https://github.com/personalcore/storagecore/compare/v1.55.0...v1.55.1">See
 commits</a></p>
 <ul>
 <li>Bug Fixes
@@ -68350,7 +68350,7 @@ Craig-Wood)</li>
 </ul>
 <h2 id="v1.55.0---2021-03-31">v1.55.0 - 2021-03-31</h2>
 <p><a
-href="https://github.com/rclone/rclone/compare/v1.54.0...v1.55.0">See
+href="https://github.com/personalcore/storagecore/compare/v1.54.0...v1.55.0">See
 commits</a></p>
 <ul>
 <li>New commands
@@ -68653,7 +68653,7 @@ other than EU (buengese)</li>
 </ul>
 <h2 id="v1.54.1---2021-03-08">v1.54.1 - 2021-03-08</h2>
 <p><a
-href="https://github.com/rclone/rclone/compare/v1.54.0...v1.54.1">See
+href="https://github.com/personalcore/storagecore/compare/v1.54.0...v1.54.1">See
 commits</a></p>
 <ul>
 <li>Bug Fixes
@@ -68721,7 +68721,7 @@ transport (Nick Craig-Wood)</li>
 </ul>
 <h2 id="v1.54.0---2021-02-02">v1.54.0 - 2021-02-02</h2>
 <p><a
-href="https://github.com/rclone/rclone/compare/v1.53.0...v1.54.0">See
+href="https://github.com/personalcore/storagecore/compare/v1.53.0...v1.54.0">See
 commits</a></p>
 <ul>
 <li>New backends
@@ -69121,7 +69121,7 @@ Menezes)</li>
 </ul>
 <h2 id="v1.53.4---2021-01-20">v1.53.4 - 2021-01-20</h2>
 <p><a
-href="https://github.com/rclone/rclone/compare/v1.53.3...v1.53.4">See
+href="https://github.com/personalcore/storagecore/compare/v1.53.3...v1.53.4">See
 commits</a></p>
 <ul>
 <li>Bug Fixes
@@ -69202,7 +69202,7 @@ Craig-Wood)</li>
 </ul>
 <h2 id="v1.53.3---2020-11-19">v1.53.3 - 2020-11-19</h2>
 <p><a
-href="https://github.com/rclone/rclone/compare/v1.53.2...v1.53.3">See
+href="https://github.com/personalcore/storagecore/compare/v1.53.2...v1.53.3">See
 commits</a></p>
 <ul>
 <li>Bug Fixes
@@ -69212,7 +69212,7 @@ CVE-2020-28924 (Nick Craig-Wood)
 <ul>
 <li>Passwords you have generated with <code>rclone config</code> may be
 insecure</li>
-<li>See <a href="https://github.com/rclone/rclone/issues/4783">issue
+<li>See <a href="https://github.com/personalcore/storagecore/issues/4783">issue
 #4783</a> for more details and a checking tool</li>
 </ul></li>
 <li>random: Seed math/rand in one place with crypto strong seed (Nick
@@ -69230,7 +69230,7 @@ Craig-Wood)</li>
 </ul>
 <h2 id="v1.53.2---2020-10-26">v1.53.2 - 2020-10-26</h2>
 <p><a
-href="https://github.com/rclone/rclone/compare/v1.53.1...v1.53.2">See
+href="https://github.com/personalcore/storagecore/compare/v1.53.1...v1.53.2">See
 commits</a></p>
 <ul>
 <li>Bug Fixes
@@ -69325,7 +69325,7 @@ King)</li>
 </ul>
 <h2 id="v1.53.1---2020-09-13">v1.53.1 - 2020-09-13</h2>
 <p><a
-href="https://github.com/rclone/rclone/compare/v1.53.0...v1.53.1">See
+href="https://github.com/personalcore/storagecore/compare/v1.53.0...v1.53.1">See
 commits</a></p>
 <ul>
 <li>Bug Fixes
@@ -69380,7 +69380,7 @@ Craig-Wood)</li>
 </ul>
 <h2 id="v1.53.0---2020-09-02">v1.53.0 - 2020-09-02</h2>
 <p><a
-href="https://github.com/rclone/rclone/compare/v1.52.0...v1.53.0">See
+href="https://github.com/personalcore/storagecore/compare/v1.52.0...v1.53.0">See
 commits</a></p>
 <ul>
 <li>New Features
@@ -69737,7 +69737,7 @@ Craig-Wood)</li>
 </ul>
 <h2 id="v1.52.3---2020-08-07">v1.52.3 - 2020-08-07</h2>
 <p><a
-href="https://github.com/rclone/rclone/compare/v1.52.2...v1.52.3">See
+href="https://github.com/personalcore/storagecore/compare/v1.52.2...v1.52.3">See
 commits</a></p>
 <ul>
 <li>Bug Fixes
@@ -69792,7 +69792,7 @@ Craig-Wood)</li>
 </ul>
 <h2 id="v1.52.2---2020-06-24">v1.52.2 - 2020-06-24</h2>
 <p><a
-href="https://github.com/rclone/rclone/compare/v1.52.1...v1.52.2">See
+href="https://github.com/personalcore/storagecore/compare/v1.52.1...v1.52.2">See
 commits</a></p>
 <ul>
 <li>Bug Fixes
@@ -69842,7 +69842,7 @@ Craig-Wood)</li>
 </ul>
 <h2 id="v1.52.1---2020-06-10">v1.52.1 - 2020-06-10</h2>
 <p><a
-href="https://github.com/rclone/rclone/compare/v1.52.0...v1.52.1">See
+href="https://github.com/personalcore/storagecore/compare/v1.52.0...v1.52.1">See
 commits</a></p>
 <ul>
 <li>Bug Fixes
@@ -69906,7 +69906,7 @@ Craig-Wood)</li>
 <p>Special thanks to Martin Michlmayr for proof reading and correcting
 all the docs and Edward Barker for helping re-write the front page.</p>
 <p><a
-href="https://github.com/rclone/rclone/compare/v1.51.0...v1.52.0">See
+href="https://github.com/personalcore/storagecore/compare/v1.51.0...v1.52.0">See
 commits</a></p>
 <ul>
 <li>New backends
@@ -70705,7 +70705,7 @@ FULLWIDTH symbols</a>.</li>
 <li>Swap Azure/go-ansiterm for mattn/go-colorable (Nick Craig-Wood)</li>
 <li>Dockerfile fixes (Matei David)</li>
 <li>Add <a
-href="https://github.com/rclone/rclone/blob/master/CONTRIBUTING.md#writing-a-plugin">plugin
+href="https://github.com/personalcore/storagecore/blob/master/CONTRIBUTING.md#writing-a-plugin">plugin
 support</a> for backends and commands (Richard Patel)</li>
 </ul></li>
 <li>config
@@ -74465,10 +74465,10 @@ objects and costs more. This ability may be added in the future
 <p>Bugs are stored in rclone's GitHub project:</p>
 <ul>
 <li><a
-href="https://github.com/rclone/rclone/issues?q=is%3Aopen+is%3Aissue+label%3Abug">Reported
+href="https://github.com/personalcore/storagecore/issues?q=is%3Aopen+is%3Aissue+label%3Abug">Reported
 bugs</a></li>
 <li><a
-href="https://github.com/rclone/rclone/issues?q=is%3Aopen+is%3Aissue+milestone%3A%22Known+Problem%22">Known
+href="https://github.com/personalcore/storagecore/issues?q=is%3Aopen+is%3Aissue+milestone%3A%22Known+Problem%22">Known
 issues</a></li>
 </ul>
 <!-- markdownlint-disable heading-increment -->
@@ -74696,7 +74696,7 @@ CPU usage.</p>
 directory with millions of files in.</p>
 <p>Before rclone v1.70 has to load this entirely into memory as rclone
 objects. Each rclone object takes 0.5k-1k of memory. There is <a
-href="https://github.com/rclone/rclone/wiki/Big-syncs-with-millions-of-files">a
+href="https://github.com/personalcore/storagecore/wiki/Big-syncs-with-millions-of-files">a
 workaround for this</a> which involves a bit of scripting.</p>
 <p>However with rclone v1.70 and later rclone will automatically save
 directory entries to disk when a directory with more than <a
@@ -77084,8 +77084,8 @@ class="email">sponsorship@rclone.com</a></li>
 <h2 id="github-repository">GitHub repository</h2>
 <p>The project's repository is located at:</p>
 <ul>
-<li><a href="https://github.com/rclone/rclone"
-class="uri">https://github.com/rclone/rclone</a></li>
+<li><a href="https://github.com/personalcore/storagecore"
+class="uri">https://github.com/personalcore/storagecore</a></li>
 </ul>
 <p>There you can file bug reports or contribute with pull requests.</p>
 <h2 id="twitter">Twitter</h2>

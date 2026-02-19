@@ -6,8 +6,8 @@ import (
 	"context"
 	"testing"
 
-	"github.com/rclone/rclone/fs/rc"
-	"github.com/rclone/rclone/fs/rc/jobs"
+	"github.com/personalcore/storagecore/fs/rc"
+	"github.com/personalcore/storagecore/fs/rc/jobs"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 )

@@ -39,21 +39,21 @@ import (
 	"github.com/dropbox/dropbox-sdk-go-unofficial/v6/dropbox/sharing"
 	"github.com/dropbox/dropbox-sdk-go-unofficial/v6/dropbox/team"
 	"github.com/dropbox/dropbox-sdk-go-unofficial/v6/dropbox/users"
-	"github.com/rclone/rclone/backend/dropbox/dbhash"
-	"github.com/rclone/rclone/fs"
-	"github.com/rclone/rclone/fs/config"
-	"github.com/rclone/rclone/fs/config/configmap"
-	"github.com/rclone/rclone/fs/config/configstruct"
-	"github.com/rclone/rclone/fs/config/obscure"
-	"github.com/rclone/rclone/fs/fserrors"
-	"github.com/rclone/rclone/fs/hash"
-	"github.com/rclone/rclone/fs/list"
-	"github.com/rclone/rclone/fs/operations"
-	"github.com/rclone/rclone/lib/batcher"
-	"github.com/rclone/rclone/lib/encoder"
-	"github.com/rclone/rclone/lib/oauthutil"
-	"github.com/rclone/rclone/lib/pacer"
-	"github.com/rclone/rclone/lib/readers"
+	"github.com/personalcore/storagecore/backend/dropbox/dbhash"
+	"github.com/personalcore/storagecore/fs"
+	"github.com/personalcore/storagecore/fs/config"
+	"github.com/personalcore/storagecore/fs/config/configmap"
+	"github.com/personalcore/storagecore/fs/config/configstruct"
+	"github.com/personalcore/storagecore/fs/config/obscure"
+	"github.com/personalcore/storagecore/fs/fserrors"
+	"github.com/personalcore/storagecore/fs/hash"
+	"github.com/personalcore/storagecore/fs/list"
+	"github.com/personalcore/storagecore/fs/operations"
+	"github.com/personalcore/storagecore/lib/batcher"
+	"github.com/personalcore/storagecore/lib/encoder"
+	"github.com/personalcore/storagecore/lib/oauthutil"
+	"github.com/personalcore/storagecore/lib/pacer"
+	"github.com/personalcore/storagecore/lib/readers"
 	"golang.org/x/oauth2"
 )
 
@@ -1334,7 +1334,7 @@ func (f *Fs) Move(ctx context.Context, src fs.Object, remote string) (fs.Object,
 		case files.MoveV2APIError:
 			// There seems to be a bit of eventual consistency here which causes this to
 			// fail on just created objects
-			// See: https://github.com/rclone/rclone/issues/8881
+			// See: https://github.com/personalcore/storagecore/issues/8881
 			if e.EndpointError != nil && e.EndpointError.FromLookup != nil && e.EndpointError.FromLookup.Tag == files.LookupErrorNotFound {
 				fs.Debugf(srcObj, "Retrying move on %v error", err)
 				return true, err

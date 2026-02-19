@@ -12,7 +12,7 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/rclone/rclone/fs/config/configmap"
+	"github.com/personalcore/storagecore/fs/config/configmap"
 )
 
 const (

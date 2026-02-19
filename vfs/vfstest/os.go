@@ -4,8 +4,8 @@ import (
 	"os"
 	"time"
 
-	"github.com/rclone/rclone/lib/file"
-	"github.com/rclone/rclone/vfs"
+	"github.com/personalcore/storagecore/lib/file"
+	"github.com/personalcore/storagecore/vfs"
 )
 
 // Oser defines the things that the "os" package can do

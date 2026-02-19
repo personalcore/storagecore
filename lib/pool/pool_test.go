@@ -9,8 +9,8 @@ import (
 	"testing"
 	"time"
 
-	"github.com/rclone/rclone/fs"
-	"github.com/rclone/rclone/fstest/testy"
+	"github.com/personalcore/storagecore/fs"
+	"github.com/personalcore/storagecore/fstest/testy"
 	"github.com/stretchr/testify/assert"
 )
 
